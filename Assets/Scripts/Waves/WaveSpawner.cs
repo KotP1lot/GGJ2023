@@ -9,7 +9,7 @@ public class WaveSpawner : MonoBehaviour
     private int currentEnemy;
     private int currentWave;
     private int enemiesLeftToSpawn;
-
+    public MainTree mainTree;
     private void Start()
     {
         enemiesLeftToSpawn = waves[0].WaveSettings.Length;
@@ -22,6 +22,7 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(waves[currentWave].WaveSettings[currentEnemy].SpawnDelay);
             GameObject enemy = Instantiate(waves[currentWave].WaveSettings[currentEnemy].Enemy, waves[currentWave].WaveSettings[currentEnemy].Spawner.transform.position, Quaternion.identity);
             enemy.GetComponent<Enemy>().StartMoving(waves[currentWave].WaveSettings[currentEnemy].Spawner.GetComponent<SpawnController>().MovingPoints, waves[currentWave].WaveSettings[currentEnemy].Spawner.GetComponent<SpawnController>().Exit);
+            enemy.GetComponent<Enemy>().mainTree = mainTree; 
             enemiesLeftToSpawn--;
             currentEnemy++;
             StartCoroutine(EnemySpawn());
