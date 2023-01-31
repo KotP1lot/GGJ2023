@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     void Start()
     {
-        startPosition = gameObject.transform.position;
+        startPosition = transform.position;
         startTime = Time.time;
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,15 +31,29 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void RotateIntoMoveDirection(Vector3 start, Vector3 target)
+    {
+        Vector3 newDirection = (target - start);
+        float x = newDirection.x;
+        float y = newDirection.y;
+        float rotationAngle = Mathf.Atan2(y, x) * 180 / Mathf.PI;
+        gameObject.transform.rotation = Quaternion.AngleAxis(rotationAngle,
+       Vector3.forward);
+    }
+    private void MoveIntoPoint(Vector3 start, Vector3 target) 
+    {
+        pathLength = Vector2.Distance(start, target);
+        totalTimeForPath = pathLength / moveSpeed;
+        float currentTimeOnPath = Time.time - startTime;
+        gameObject.transform.position = Vector2.Lerp(startPosition,
+        target, currentTimeOnPath / totalTimeForPath);
+    }
     void FixedUpdate()
     {
         if (target != null)
         {
-            pathLength = Vector2.Distance(startPosition, target.transform.position);
-            totalTimeForPath = pathLength / moveSpeed;
-            float currentTimeOnPath = Time.time - startTime;
-            gameObject.transform.position = Vector2.Lerp(startPosition,
-            target.transform.position, currentTimeOnPath / totalTimeForPath);
+            MoveIntoPoint(startPosition, target.transform.position);
+            RotateIntoMoveDirection(startPosition, target.transform.position);
         }
         else
         {

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4501296352636344133
+--- !u!1 &1665784834624057553
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4501296352636344131}
-  - component: {fileID: 4501296352636344130}
-  - component: {fileID: 4501296352636344129}
-  - component: {fileID: 81401993541199030}
+  - component: {fileID: 45057055265466530}
+  - component: {fileID: 5382811699039346247}
+  - component: {fileID: 1060489457237448902}
+  - component: {fileID: 7980332995881577651}
   m_Layer: 0
-  m_Name: RangeTower
-  m_TagString: Untagged
+  m_Name: ShrubRoots
+  m_TagString: ShrubRoots
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4501296352636344131
+--- !u!4 &45057055265466530
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4501296352636344133}
+  m_GameObject: {fileID: 1665784834624057553}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3, y: 2.2546477, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4501296353538446375}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4501296352636344130
+--- !u!212 &5382811699039346247
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4501296352636344133}
+  m_GameObject: {fileID: 1665784834624057553}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1348759047, guid: 9804e415ff6f85a4b8b66bbd98ba308d, type: 3}
+  m_Sprite: {fileID: -1427287769, guid: f3db79c4e34918b41891ea55ef922b9c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,13 +86,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &4501296352636344129
-CircleCollider2D:
+--- !u!61 &1060489457237448902
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4501296352636344133}
+  m_GameObject: {fileID: 1665784834624057553}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -101,59 +100,27 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.3125}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &81401993541199030
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &7980332995881577651
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4501296352636344133}
+  m_GameObject: {fileID: 1665784834624057553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841d4ce96fece4e4d86f339f15999e4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bbc3c414867f464eb5beb959953ee68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvlList:
-  - NewLvLCost: 1
-    AttackSpeed: 1
-    Damage: 1
-    Range: 3
-  - NewLvLCost: 2
-    AttackSpeed: 2
-    Damage: 2
-    Range: 3
-  prefabForAttack: {fileID: 4779018594819824861, guid: aa5df49afa7360248a96013d15fafe9b, type: 3}
-  spawnPointForAttack: {fileID: 4501296353538446375}
---- !u!1 &4501296353538446374
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4501296353538446375}
-  m_Layer: 0
-  m_Name: spawnPointForAttack
-  m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4501296353538446375
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4501296353538446374}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4501296352636344131}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
