@@ -53,9 +53,15 @@ public class Tower : MonoBehaviour
     {
        
     }
-    private void Upgrade() 
+    public bool Upgrade(float money) 
     {
-        currentLvL++;
+        if (money >= lvlList[currentLvL].NewLvLCost)
+        {
+            currentLvL++;
+            return true;
+        }
+        else return false;
+       
     }
 
     private void OnDrawGizmos()
