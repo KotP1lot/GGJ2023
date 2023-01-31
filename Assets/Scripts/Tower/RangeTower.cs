@@ -7,7 +7,7 @@ public class RangeTower : Tower
     override protected void Attack()
     {
         lastAttackTime = Time.time;
-        Debug.Log("Attack " + enemylist[0].GetComponent<Enemy>().indexEnemy);
+      //  Debug.Log("Attack " + enemylist[0].GetComponent<Enemy>().indexEnemy);
         var bullet = Instantiate(prefabForAttack, spawnPointForAttack.position, Quaternion.identity);
         bullet.GetComponent<Bullet>().target = enemylist[0];
     }

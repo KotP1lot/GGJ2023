@@ -46,7 +46,6 @@ public class Enemy : MonoBehaviour
 
         if (Vector2.Distance(transform.position, endPosition) == 0)
         {
-            Debug.Log("Negri Pidorasi");
             if (currentPoint < movingPoints.Count - 2)
             {
                 currentPoint++;
