@@ -99,7 +99,7 @@ public class Tower : MonoBehaviour
     #region Trigger Func
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<EnemyDetect>() != null)
+        if (collision.GetComponent<Enemy>() != null)
         {
             enemylist.Add(collision.gameObject);
         }

@@ -13,7 +13,6 @@ public class ShrubsTower : Tower
     [SerializeField] private float attackTime;
 
     private Tilemap pathObj;
-    private Tilemap envObj;
     private List<Vector3Int> FindPathCells(Vector3 shrubPos)
     {
         List<Vector3Int> cells = new List<Vector3Int>();
@@ -62,7 +61,6 @@ public class ShrubsTower : Tower
     {
         base.OnAnimationTrigger();
         pathObj = GameObject.Find(pathLayer).GetComponent<Tilemap>();
-        envObj = GameObject.Find(envLayer).GetComponent<Tilemap>();
 
         List<Vector3Int> wereToSpawn = FindPathCells(transform.position);
 

@@ -28,7 +28,11 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject == target)
         {
             Enemy enemy = target.GetComponent<Enemy>();
-            // enemy.TakeDamage(damage);
+            enemy.TakeDamage(damage);
+            if (whatIsBullet == BulletType.Log) 
+            {
+                enemy.StartStun(1f); 
+            }
             Destroy(gameObject);
         }
     }

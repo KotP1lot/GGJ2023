@@ -11,7 +11,6 @@ public class AYETower : Tower
     {
         if (!attacking)
         {
-            Debug.Log("Mushroom attack");
             base.Attack();
         }
   

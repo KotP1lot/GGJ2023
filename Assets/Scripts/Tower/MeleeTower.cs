@@ -37,8 +37,8 @@ public class MeleeTower : Tower
 
         foreach (Collider2D collider in colliders)
         {
-            if (collider.gameObject.TryGetComponent<EnemyDetect>(out EnemyDetect enemy)) return;//«Ã≤Õ»“» Õ¿ ≈Õ≈Ã≤
-             //   Debug.Log("Hit");
+            if (collider.gameObject.TryGetComponent<Enemy>(out Enemy enemy))
+                enemy.TakeDamage(lvlList[currentLvL].Damage);
         }
     }
     protected override void Attack()

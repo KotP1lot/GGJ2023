@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -1179767977, guid: 9804e415ff6f85a4b8b66bbd98ba308d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -118,13 +118,13 @@ MonoBehaviour:
   lvlList:
   - LvLCost: 0
     AttackSpeed: 2
-    Damage: 23
+    Damage: 90
     Range: 1
-  pathLayer: 
-  envLayer: 
-  shrubRoots: {fileID: 0}
+  pathLayer: Path
+  envLayer: Ground
+  shrubRoots: {fileID: 1665784834624057553, guid: 51efad089cee4ce44b35cc2b1b2e68e8, type: 3}
   attacking: 0
-  attackTime: 0
+  attackTime: 4
 --- !u!95 &7160580134105488698
 Animator:
   serializedVersion: 4

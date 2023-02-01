@@ -19,7 +19,7 @@ public class ShrubRoots : MonoBehaviour
         if (collision.gameObject.TryGetComponent<Enemy>(out Enemy enemy))
         {
             enemyList.Add(enemy);
-            // enemy.Slow(slowDebuff);
+            enemy.Slow(slowDebuff);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -27,7 +27,7 @@ public class ShrubRoots : MonoBehaviour
         if (collision.gameObject.TryGetComponent<Enemy>(out Enemy enemy))
         {
             enemyList.Remove(enemy);
-            // enemy.UnSlow(slowDebuff);
+            enemy.Unslow();
         }
     }
     public void SpawnRoot(float time, int slowDebuff)
@@ -41,7 +41,7 @@ public class ShrubRoots : MonoBehaviour
         yield return new WaitForSeconds(timeToDestroy);
         foreach (Enemy enemy in enemyList) 
         {
-            // enemy.UnSlow(slowDebuff);
+            enemy.Unslow();
         }
         Destroy(gameObject);
     }

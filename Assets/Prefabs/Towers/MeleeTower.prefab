@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -2004521119, guid: 9804e415ff6f85a4b8b66bbd98ba308d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -118,8 +118,8 @@ MonoBehaviour:
   lvlList:
   - LvLCost: 0
     AttackSpeed: 1
-    Damage: 1
-    Range: 3
+    Damage: 2
+    Range: 1
 --- !u!95 &8782249212851806534
 Animator:
   serializedVersion: 4
