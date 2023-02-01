@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 6652610880512826917}
   - component: {fileID: 6652610880512826918}
   - component: {fileID: 3385852413027980845}
+  - component: {fileID: 4850764684174366521}
   m_Layer: 0
   m_Name: AYETower
   m_TagString: Untagged
@@ -200,14 +201,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvlList:
-  - NewLvLCost: 1
+  - LvLCost: 0
     AttackSpeed: 3
     Damage: 1
     Range: 2
-  - NewLvLCost: 1
+  - LvLCost: 0
     AttackSpeed: 1
     Damage: 1
     Range: 1
   AYEobj: {fileID: 4475059428840278593}
   attacking: 0
   attackTime: 6
+--- !u!95 &4850764684174366521
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6652610880512826914}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f04528f775b50e643a0ccf165631de0e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

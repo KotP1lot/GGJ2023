@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 3150514285341019456}
   - component: {fileID: 3150514285341019459}
   - component: {fileID: 1508146831071461044}
+  - component: {fileID: -2719608854489264032}
   m_Layer: 0
   m_Name: BearTower
   m_TagString: Untagged
@@ -147,13 +148,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvlList:
-  - NewLvLCost: 1
+  - LvLCost: 0
     AttackSpeed: 1
     Damage: 1
     Range: 9
-  - NewLvLCost: 2
+  - LvLCost: 0
     AttackSpeed: 2
     Damage: 2
     Range: 3
   prefabForAttack: {fileID: 4779018594819824861, guid: 86d49877d7c85a042a0f3b2d4d3569c5, type: 3}
   spawnPointForAttack: {fileID: 3150514284430528037}
+--- !u!95 &-2719608854489264032
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3150514285341019463}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f04528f775b50e643a0ccf165631de0e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

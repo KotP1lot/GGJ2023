@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,10 +13,7 @@ public class AYETower : Tower
     {
         if (!attacking)
         {
-            AYEobj.SetActive(true);
-            attacking = true;
-            AYEobj.transform.localScale = new Vector2(lvlList[currentLvL].Range * 2, lvlList[currentLvL].Range * 2);
-            StartCoroutine(Attacking());
+            base.Attack();
         }
   
     }
@@ -28,6 +26,13 @@ public class AYETower : Tower
         attacking = false;
     }
 
-
+    public override void OnAnimationTrigger()
+    {
+        base.OnAnimationTrigger();
+        AYEobj.SetActive(true);
+        attacking = true;
+        AYEobj.transform.localScale = new Vector2(lvlList[currentLvL].Range * 2, lvlList[currentLvL].Range * 2);
+        StartCoroutine(Attacking());
+    }
 
 }

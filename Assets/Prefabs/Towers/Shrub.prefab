@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8281444766967710034}
   - component: {fileID: 8281444766967710033}
   - component: {fileID: 5196978454647846}
+  - component: {fileID: 7160580134105488698}
   m_Layer: 0
   m_Name: Shrub
   m_TagString: Untagged
@@ -115,7 +116,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvlList:
-  - NewLvLCost: 123
+  - LvLCost: 0
     AttackSpeed: 2
     Damage: 23
     Range: 1
+  pathLayer: 
+  envLayer: 
+  shrubRoots: {fileID: 0}
+  attacking: 0
+  attackTime: 0
+--- !u!95 &7160580134105488698
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8281444766967710037}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f04528f775b50e643a0ccf165631de0e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6181672533819527650}
   - component: {fileID: 6181672533819527649}
   - component: {fileID: 2729408655323150346}
+  - component: {fileID: 8782249212851806534}
   m_Layer: 0
   m_Name: MeleeTower
   m_TagString: Untagged
@@ -115,7 +116,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvlList:
-  - NewLvLCost: 1
+  - LvLCost: 0
     AttackSpeed: 1
     Damage: 1
     Range: 3
+--- !u!95 &8782249212851806534
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6181672533819527653}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f04528f775b50e643a0ccf165631de0e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -1,42 +1,92 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [Serializable]
 public struct LvL
 {
-    public float NewLvLCost;
+    public float LvLCost;
     public float AttackSpeed;
     public float Damage;
     public float Range;
+
+    public float GetCooldown() => 1f / AttackSpeed;
+
+    public LvL(float lvLCost, float attackSpeed, float damage, float range)
+    {
+        LvLCost = lvLCost;
+        AttackSpeed = attackSpeed;
+        Damage = damage;
+        Range = range;
+    }
 }
 
 public class Tower : MonoBehaviour
 {
+    #region Variable
     [SerializeField] protected List<LvL> lvlList;
-
     protected int currentLvL;
 
-    protected List<GameObject> enemylist = new List<GameObject>();
-
+    protected List<GameObject> enemylist;
     protected float lastAttackTime;
-    protected CircleCollider2D AttackRangeCollider;
+    protected CircleCollider2D attackRangeCollider;
+    protected Animator animator;
+
+    private bool isCompleted;
+    #endregion
+
+    #region UNITY Func
     void Start()
     {
         lastAttackTime = Time.time;
         currentLvL = 0;
-        AttackRangeCollider = GetComponent<CircleCollider2D>();
-        AttackRangeCollider.radius = lvlList[currentLvL].Range;
+        isCompleted = false;
+ 
+        enemylist = new List<GameObject>();
+        animator = GetComponent<Animator>();
+        animator.SetBool("Build", true);
+        attackRangeCollider = GetComponent<CircleCollider2D>();
+        attackRangeCollider.radius = lvlList[currentLvL].Range;
     }
 
     void Update()
     {
-        if (enemylist.Count > 0 && Time.time - lastAttackTime >= lvlList[currentLvL].AttackSpeed)
-        {
-            Attack();
+        if (isCompleted) {
+            if (enemylist.Count > 0 && Time.time - lastAttackTime >= lvlList[currentLvL].GetCooldown())
+            {
+                Attack();
+            } 
         }
     }
+    #endregion
 
+    #region GET Func
+    public LvL GetLvLInfo(int LvL)
+    {
+        if (!lvlList[LvL].IsUnityNull()) return lvlList[LvL];
+        else return lvlList[lvlList.Count];
+    }
+    public LvL GetUpdateInfo() 
+    {
+        LvL newLvLInfo;
+        if (!lvlList[currentLvL + 1].IsUnityNull())
+        {
+            newLvLInfo = new LvL();
+            newLvLInfo.LvLCost = lvlList[currentLvL].LvLCost - lvlList[currentLvL + 1].LvLCost;
+            newLvLInfo.AttackSpeed = lvlList[currentLvL + 1].AttackSpeed - lvlList[currentLvL].AttackSpeed == 0 ? 0: lvlList[currentLvL + 1].AttackSpeed - lvlList[currentLvL].AttackSpeed;
+            newLvLInfo.Damage = lvlList[currentLvL + 1].Damage - lvlList[currentLvL].Damage == 0 ? 0: lvlList[currentLvL + 1].Damage - lvlList[currentLvL].Damage;
+            newLvLInfo.Range = lvlList[currentLvL + 1].Range - lvlList[currentLvL].Range == 0 ? 0: lvlList[currentLvL + 1].Range - lvlList[currentLvL].Range;
+        }
+        else 
+        {
+            newLvLInfo = new LvL(0,0,0,0);
+        }
+        return newLvLInfo;
+    }
+    #endregion
+
+    #region Trigger Func
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<EnemyDetect>() != null)
@@ -48,14 +98,30 @@ public class Tower : MonoBehaviour
     {
             enemylist.Remove(collision.gameObject);
     }
-  
+    #endregion
+
+    #region Other Func
+    public virtual void OnAnimationTrigger() 
+    {
+        animator.SetBool("Attack", false);
+        animator.SetBool("Idle", true);
+        animator.speed = 1;
+    }
+    public void OnBuildCompleted()
+    {
+        isCompleted = true;
+        animator.SetBool("Build", false);
+        animator.SetBool("Idle", true);
+    }
     virtual protected void Attack() 
     {
-       
+        animator.speed = lvlList[currentLvL].AttackSpeed;
+        animator.SetBool("Idle", false);
+        animator.SetBool("Attack", true);
     }
     public bool Upgrade(float money) 
     {
-        if (money >= lvlList[currentLvL].NewLvLCost)
+        if (money >= lvlList[currentLvL].LvLCost)
         {
             currentLvL++;
             return true;
@@ -63,10 +129,10 @@ public class Tower : MonoBehaviour
         else return false;
        
     }
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lvlList[currentLvL].Range);
     }
+    #endregion
 }

@@ -55,20 +55,25 @@ public class ShrubsTower : Tower
     {
         if (!attacking)
         {
-            pathObj = GameObject.Find(pathLayer).GetComponent<Tilemap>();
-            envObj = GameObject.Find(envLayer).GetComponent<Tilemap>();
-
-            List<Vector3Int> wereToSpawn = FindPathCells(transform.position);
-   
-            attacking = true;
-
-            foreach (Vector3Int cell in wereToSpawn)
-            {
-               GameObject root =  Instantiate(shrubRoots, new Vector2(cell.x + 0.5f, cell.y + 0.5f), Quaternion.identity);
-               root.GetComponent<ShrubRoots>().SpawnRoot(attackTime);
-            }
-
-            StartCoroutine(Attacking());
+            base.Attack();
         }
+    }
+    public override void OnAnimationTrigger()
+    {
+        base.OnAnimationTrigger();
+        pathObj = GameObject.Find(pathLayer).GetComponent<Tilemap>();
+        envObj = GameObject.Find(envLayer).GetComponent<Tilemap>();
+
+        List<Vector3Int> wereToSpawn = FindPathCells(transform.position);
+
+        attacking = true;
+
+        foreach (Vector3Int cell in wereToSpawn)
+        {
+            GameObject root = Instantiate(shrubRoots, new Vector2(cell.x + 0.5f, cell.y + 0.5f), Quaternion.identity);
+            root.GetComponent<ShrubRoots>().SpawnRoot(attackTime);
+        }
+
+        StartCoroutine(Attacking());
     }
 }
