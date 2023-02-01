@@ -10,12 +10,17 @@ public class BuildTowers : MonoBehaviour
     [SerializeField] private GameObject tower; //змінти з часом
     [SerializeField] private Tile[] roots;
 
+    private GameObject destroedTower;
+
     private Tilemap tilemap;
     [SerializeField]private List<GameObject> towers = new List<GameObject>();
     private void Start()
     {
         tilemap = GameObject.Find(rootsLayer).GetComponent<Tilemap>();
         mainCamera = Camera.main;
+        Tower.onDestroyTower += InstantiateRoot;
+
+
     }
 
     private bool IsTileRoot(Vector3 mousePos, out Vector3Int tilePos) 
@@ -29,21 +34,22 @@ public class BuildTowers : MonoBehaviour
         tilemap.SetTile(tilePos, null);
     }
 
-    private void InstantiateRoot(Vector3 towerPos) 
+    private void InstantiateRoot() 
     {
-        foreach (GameObject tower in towers)
-        {
-            if (tower.transform.position.Equals(towerPos))
-            {
-                Destroy(tower);
-                towers.Remove(tower);
-                break;
-            }
-        }
-        Vector3Int tile = tilemap.WorldToCell(towerPos);
+        Destroy(destroedTower);
+        Vector3Int tile = tilemap.WorldToCell(destroedTower.transform.position);
         tilemap.SetTile(tile, roots[Random.Range(0, roots.Length)]);
     }
 
+    public void DestroyTower(GameObject tower)
+    {
+        if (!tower.IsUnityNull())
+        {
+            destroedTower = tower;
+            towers.Remove(destroedTower);
+            tower.GetComponent<Tower>().BeforeDestroy();
+        }
+    }
 
     private void Update()
     {
@@ -57,7 +63,7 @@ public class BuildTowers : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(1)) 
         {
-            InstantiateRoot(towers[0].transform.position);
+            DestroyTower(towers[0].IsUnityNull()? null : towers[0]);
         }
     }
 }

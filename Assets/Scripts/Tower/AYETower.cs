@@ -18,21 +18,21 @@ public class AYETower : Tower
   
     }
 
-    IEnumerator Attacking()
+    IEnumerator Attacking(GameObject newAYEArea)
     {
         yield return new WaitForSeconds(attackTime);
         lastAttackTime = Time.time;
-        AYEobj.SetActive(false);
+        Destroy(newAYEArea);
         attacking = false;
     }
 
     public override void OnAnimationTrigger()
     {
         base.OnAnimationTrigger();
-        AYEobj.SetActive(true);
+        GameObject newAYEArea = Instantiate(AYEobj, transform);
         attacking = true;
-        AYEobj.transform.localScale = new Vector2(lvlList[currentLvL].Range * 2, lvlList[currentLvL].Range * 2);
-        StartCoroutine(Attacking());
+        newAYEArea.transform.localScale = new Vector2(lvlList[currentLvL].Range * 2, lvlList[currentLvL].Range * 2);
+        StartCoroutine(Attacking(newAYEArea));
     }
 
 }

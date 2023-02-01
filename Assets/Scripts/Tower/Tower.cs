@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 [Serializable]
 public struct LvL
@@ -34,6 +35,15 @@ public class Tower : MonoBehaviour
     protected Animator animator;
 
     private bool isCompleted;
+
+    private string currentState;
+    const string IDLE_STATE = "Idle";
+    const string DESTROY_STATE = "Destroy";
+    const string ATTACK_STATE = "Attack";
+    const string BUILD_STATE = "Build";
+
+
+    static public Action onDestroyTower;
     #endregion
 
     #region UNITY Func
@@ -45,7 +55,7 @@ public class Tower : MonoBehaviour
  
         enemylist = new List<GameObject>();
         animator = GetComponent<Animator>();
-        animator.SetBool("Build", true);
+        ChangeAnimState(BUILD_STATE);
         attackRangeCollider = GetComponent<CircleCollider2D>();
         attackRangeCollider.radius = lvlList[currentLvL].Range;
     }
@@ -101,24 +111,39 @@ public class Tower : MonoBehaviour
     #endregion
 
     #region Other Func
-    public virtual void OnAnimationTrigger() 
+    private void ChangeAnimState(string newState) 
     {
-        animator.SetBool("Attack", false);
-        animator.SetBool("Idle", true);
+        if (currentState == newState) return;
+
+        animator.Play(newState);
+
+        currentState = newState;
+    }
+
+    public virtual void OnAnimationTrigger()
+    { 
         animator.speed = 1;
+        ChangeAnimState(IDLE_STATE);
     }
     public void OnBuildCompleted()
     {
         isCompleted = true;
-        animator.SetBool("Build", false);
-        animator.SetBool("Idle", true);
+        ChangeAnimState(IDLE_STATE);
+    }
+    public void BeforeDestroy()
+    {
+        ChangeAnimState(DESTROY_STATE);
+    }
+    public void OnDestroyCompleted()
+    {
+        onDestroyTower?.Invoke();
     }
     virtual protected void Attack() 
     {
         animator.speed = lvlList[currentLvL].AttackSpeed;
-        animator.SetBool("Idle", false);
-        animator.SetBool("Attack", true);
+        ChangeAnimState(ATTACK_STATE);
     }
+
     public bool Upgrade(float money) 
     {
         if (money >= lvlList[currentLvL].LvLCost)
