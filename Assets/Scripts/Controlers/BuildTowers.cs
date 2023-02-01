@@ -40,7 +40,15 @@ public class BuildTowers : MonoBehaviour
         Vector3Int tile = tilemap.WorldToCell(destroedTower.transform.position);
         tilemap.SetTile(tile, roots[Random.Range(0, roots.Length)]);
     }
-
+    public void BuildNewTower(GameObject tower, Vector3 placeForBuid) 
+    {
+        if (IsTileRoot(placeForBuid, out Vector3Int tilePos))
+        {
+            towers.Add(Instantiate(tower, new Vector2(tilePos.x + 0.5f, tilePos.y + 0.5f), Quaternion.identity));
+            HideRoot(tilePos);
+        }
+        return;
+    }
     public void DestroyTower(GameObject tower)
     {
         if (!tower.IsUnityNull())
@@ -55,11 +63,8 @@ public class BuildTowers : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (IsTileRoot(mainCamera.ScreenToWorldPoint(Input.mousePosition), out Vector3Int tilePos))
-            {
-                HideRoot(tilePos);
-                towers.Add(Instantiate(tower, new Vector2(tilePos.x + 0.5f, tilePos.y + 0.5f), Quaternion.identity));
-            }
+            BuildNewTower(tower, mainCamera.ScreenToWorldPoint(Input.mousePosition));
+     
         }
         if (Input.GetMouseButtonDown(1)) 
         {

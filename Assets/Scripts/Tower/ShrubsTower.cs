@@ -71,7 +71,7 @@ public class ShrubsTower : Tower
         foreach (Vector3Int cell in wereToSpawn)
         {
             GameObject root = Instantiate(shrubRoots, new Vector2(cell.x + 0.5f, cell.y + 0.5f), Quaternion.identity);
-            root.GetComponent<ShrubRoots>().SpawnRoot(attackTime);
+            root.GetComponent<ShrubRoots>().SpawnRoot(attackTime, lvlList[currentLvL].Damage);
         }
 
         StartCoroutine(Attacking());

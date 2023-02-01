@@ -13,6 +13,7 @@ public class RangeTower : Tower
             lastAttackTime = Time.time;
             var bullet = Instantiate(prefabForAttack, spawnPointForAttack.position, Quaternion.identity);
             bullet.GetComponent<Bullet>().target = enemylist[0];
+            bullet.GetComponent<Bullet>().SetDamage(lvlList[currentLvL].Damage);
         }
     }
 }

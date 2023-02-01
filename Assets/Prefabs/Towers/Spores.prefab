@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5534836653392072919}
   - component: {fileID: 4054136998596451786}
   - component: {fileID: 7594789731446034774}
+  - component: {fileID: 4324293895622895276}
   m_Layer: 0
   m_Name: Spores
   m_TagString: Untagged
@@ -101,3 +102,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &4324293895622895276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8329859813531045337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff24a0cceb5367f4b9c5f0770ea39fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poisonDuration: 2
+  poisonInterval: 2

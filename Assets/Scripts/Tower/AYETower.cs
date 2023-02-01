@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AYETower : Tower
@@ -13,26 +11,28 @@ public class AYETower : Tower
     {
         if (!attacking)
         {
+            Debug.Log("Mushroom attack");
             base.Attack();
         }
   
     }
 
-    IEnumerator Attacking(GameObject newAYEArea)
+    IEnumerator Attacking()
     {
         yield return new WaitForSeconds(attackTime);
+
         lastAttackTime = Time.time;
-        Destroy(newAYEArea);
         attacking = false;
     }
 
     public override void OnAnimationTrigger()
     {
         base.OnAnimationTrigger();
-        GameObject newAYEArea = Instantiate(AYEobj, transform);
-        attacking = true;
+        GameObject newAYEArea = Instantiate(AYEobj, transform.position, Quaternion.identity);
         newAYEArea.transform.localScale = new Vector2(lvlList[currentLvL].Range * 2, lvlList[currentLvL].Range * 2);
-        StartCoroutine(Attacking(newAYEArea));
+        newAYEArea.GetComponent<Spores>().SpawnSpore(attackTime, lvlList[currentLvL].Damage);
+        attacking = true;
+        StartCoroutine(Attacking());
     }
 
 }

@@ -99,7 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  moveSpeed: 13.57
+  whatIsBullet: 0
+  damage: 0
+  moveSpeed: 1
 --- !u!58 &1633441202359323136
 CircleCollider2D:
   m_ObjectHideFlags: 0

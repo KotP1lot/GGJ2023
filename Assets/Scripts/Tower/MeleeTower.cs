@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 public class MeleeTower : Tower
 {
@@ -39,8 +37,8 @@ public class MeleeTower : Tower
 
         foreach (Collider2D collider in colliders)
         {
-            if (collider.GetComponent<Enemy>() != null)
-                Debug.Log("Hit");
+            if (collider.gameObject.TryGetComponent<EnemyDetect>(out EnemyDetect enemy)) return;//«Ã≤Õ»“» Õ¿ ≈Õ≈Ã≤
+             //   Debug.Log("Hit");
         }
     }
     protected override void Attack()
