@@ -135,7 +135,6 @@ public class Tower : MonoBehaviour
         animator.speed = 1;
         ChangeAnimState(IDLE_STATE);
         isAttacking = false;
-        Debug.Log("FinishAttack");
     }
     public virtual void OnBuildCompleted()
     {

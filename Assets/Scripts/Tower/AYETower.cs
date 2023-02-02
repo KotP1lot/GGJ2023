@@ -22,6 +22,7 @@ public class AYETower : Tower
 
         lastAttackTime = Time.time;
         attacking = false;
+        isAttacking = false;
     }
 
     public override void OnAnimationTrigger()
