@@ -7,14 +7,14 @@ using UnityEngine.Events;
 [Serializable]
 public struct LvL
 {
-    public float LvLCost;
+    public int LvLCost;
     public float AttackSpeed;
     public int Damage;
     public float Range;
 
     public float GetCooldown() => 1f / AttackSpeed;
 
-    public LvL(float lvLCost, float attackSpeed, int damage, float range)
+    public LvL(int lvLCost, float attackSpeed, int damage, float range)
     {
         LvLCost = lvLCost;
         AttackSpeed = attackSpeed;
@@ -45,6 +45,10 @@ public class Tower : MonoBehaviour
 
 
     static public Action onDestroyTower;
+
+    public string towerName;
+    public string towerDescription;
+
     #endregion
 
     #region UNITY Func
@@ -80,8 +84,8 @@ public class Tower : MonoBehaviour
     #region GET Func
     public LvL GetLvLInfo(int LvL)
     {
-        if (!lvlList[LvL].IsUnityNull()) return lvlList[LvL];
-        else return lvlList[lvlList.Count];
+        if (LvL < lvlList.Count) return lvlList[LvL];
+        else return lvlList[lvlList.Count-1];
     }
     public LvL GetUpdateInfo() 
     {

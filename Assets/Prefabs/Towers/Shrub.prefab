@@ -120,6 +120,8 @@ MonoBehaviour:
     AttackSpeed: 2
     Damage: 90
     Range: 4
+  towerName: ROSE
+  towerDescription: Puts vines that slow enemies
   pathLayer: Path
   envLayer: Ground
   shrubRoots: {fileID: 1665784834624057553, guid: 51efad089cee4ce44b35cc2b1b2e68e8, type: 3}

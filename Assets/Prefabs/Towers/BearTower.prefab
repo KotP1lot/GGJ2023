@@ -156,6 +156,8 @@ MonoBehaviour:
     AttackSpeed: 2
     Damage: 2
     Range: 3
+  towerName: BEAR
+  towerDescription: Gigachad
   prefabForAttack: {fileID: 4779018594819824861, guid: 86d49877d7c85a042a0f3b2d4d3569c5, type: 3}
   spawnPointForAttack: {fileID: 3150514284430528037}
   PetPrefab: {fileID: 4079773152210653978}

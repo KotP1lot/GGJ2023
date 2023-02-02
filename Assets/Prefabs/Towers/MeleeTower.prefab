@@ -84,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &6181672533819527649
@@ -120,6 +120,8 @@ MonoBehaviour:
     AttackSpeed: 1
     Damage: 2
     Range: 1
+  towerName: WHIP
+  towerDescription: Spanks enemies
 --- !u!95 &8782249212851806534
 Animator:
   serializedVersion: 4

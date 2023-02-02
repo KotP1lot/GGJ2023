@@ -81,7 +81,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.125, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -244,6 +244,8 @@ MonoBehaviour:
     AttackSpeed: 2
     Damage: 2
     Range: 3
+  towerName: SQUIRREL
+  towerDescription: Throws acorns at enemies
   prefabForAttack: {fileID: 4779018594819824861, guid: aa5df49afa7360248a96013d15fafe9b, type: 3}
   spawnPointForAttack: {fileID: 4501296353538446375}
   PetPrefab: {fileID: 2089884741794781423}
