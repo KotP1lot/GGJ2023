@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8281444766967710037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.86, y: 6.121256, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -1179767977, guid: 9804e415ff6f85a4b8b66bbd98ba308d, type: 3}
+  m_Sprite: {fileID: -449654023, guid: eaabf73b8f3ea644ab3df57f223db4d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -119,7 +119,7 @@ MonoBehaviour:
   - LvLCost: 0
     AttackSpeed: 2
     Damage: 90
-    Range: 1
+    Range: 4
   pathLayer: Path
   envLayer: Ground
   shrubRoots: {fileID: 1665784834624057553, guid: 51efad089cee4ce44b35cc2b1b2e68e8, type: 3}
@@ -135,7 +135,7 @@ Animator:
   m_GameObject: {fileID: 8281444766967710037}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f04528f775b50e643a0ccf165631de0e, type: 2}
+  m_Controller: {fileID: 9100000, guid: e3f13ec3f89be5a418b88f511c77dfcc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

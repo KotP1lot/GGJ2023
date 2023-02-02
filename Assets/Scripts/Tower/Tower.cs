@@ -35,6 +35,7 @@ public class Tower : MonoBehaviour
     protected Animator animator;
 
     private bool isCompleted;
+    private bool isAttacking;
 
     private string currentState;
     const string IDLE_STATE = "Idle";
@@ -52,7 +53,7 @@ public class Tower : MonoBehaviour
         lastAttackTime = Time.time;
         currentLvL = 0;
         isCompleted = false;
- 
+        isAttacking = false;
         enemylist = new List<GameObject>();
         animator = GetComponent<Animator>();
         ChangeAnimState(BUILD_STATE);
@@ -62,11 +63,16 @@ public class Tower : MonoBehaviour
 
     void Update()
     {
-        if (isCompleted) {
-            if (enemylist.Count > 0 && Time.time - lastAttackTime >= lvlList[currentLvL].GetCooldown())
+        if (isCompleted) 
+        {
+            if (!isAttacking)
             {
-                Attack();
-            } 
+                if (enemylist.Count > 0 && Time.time - lastAttackTime >= lvlList[currentLvL].GetCooldown())
+                {
+                    Attack();
+                    isAttacking = true;
+                }
+            }
         }
     }
     #endregion
@@ -124,13 +130,14 @@ public class Tower : MonoBehaviour
     { 
         animator.speed = 1;
         ChangeAnimState(IDLE_STATE);
+        isAttacking = false;
     }
-    public void OnBuildCompleted()
+    public virtual void OnBuildCompleted()
     {
         isCompleted = true;
         ChangeAnimState(IDLE_STATE);
     }
-    public void BeforeDestroy()
+    public virtual void BeforeDestroy()
     {
         ChangeAnimState(DESTROY_STATE);
     }

@@ -46,6 +46,7 @@ public class ShrubsTower : Tower
     {
         yield return new WaitForSeconds(attackTime);
 
+        Debug.Log("Attack");
         lastAttackTime = Time.time;
         attacking = false;
     }
