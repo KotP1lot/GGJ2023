@@ -4,11 +4,16 @@ public class RangeTower : Tower
 {
     [SerializeField] protected GameObject prefabForAttack;
     [SerializeField] protected Transform spawnPointForAttack;
-    override protected void Attack()
+
+    public override void OnAnimationTrigger()
     {
-        lastAttackTime = Time.time;
-      //  Debug.Log("Attack " + enemylist[0].GetComponent<Enemy>().indexEnemy);
-        var bullet = Instantiate(prefabForAttack, spawnPointForAttack.position, Quaternion.identity);
-        bullet.GetComponent<Bullet>().target = enemylist[0];
+        base.OnAnimationTrigger();
+        if (enemylist.Count > 0)
+        {
+            lastAttackTime = Time.time;
+            var bullet = Instantiate(prefabForAttack, spawnPointForAttack.position, Quaternion.identity);
+            bullet.GetComponent<Bullet>().target = enemylist[0];
+            bullet.GetComponent<Bullet>().SetDamage(lvlList[currentLvL].Damage);
+        }
     }
 }

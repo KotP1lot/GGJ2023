@@ -1,12 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private Vector3 startPosition;
-    [SerializeField] public GameObject target;
 
+    private enum BulletType
+    {
+    Log,
+    Acorn
+    }
+
+    private Vector3 startPosition;
+    public GameObject target;
+    [SerializeField] private BulletType whatIsBullet;
+    private int damage;
     private float pathLength;
     private float totalTimeForPath;
     private float startTime;
@@ -14,32 +20,55 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     void Start()
     {
-        startPosition = gameObject.transform.position;
+        startPosition = transform.position;
         startTime = Time.time;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject == target)
         {
-            Enemy enemyDate = target.GetComponent<Enemy>();
-           // int targetHP = enemyDate.hp--;
-            //if (targetHP <= 0)
-            //{
-            //    gameContoler.gold += enemyDate.coinAfterKill;
-            //    Destroy(target);
-            //}
+            Enemy enemy = target.GetComponent<Enemy>();
+            enemy.TakeDamage(damage);
+            if (whatIsBullet == BulletType.Log) 
+            {
+                enemy.StartStun(1f); 
+            }
             Destroy(gameObject);
         }
+    }
+
+    public void SetDamage(int damage) => this.damage = damage; 
+    private void RotateIntoMoveDirection(Vector3 start, Vector3 target)
+    {
+        Vector3 newDirection = (target - start);
+        float x = newDirection.x;
+        float y = newDirection.y;
+        float rotationAngle = Mathf.Atan2(y, x) * 180 / Mathf.PI;
+        gameObject.transform.rotation = Quaternion.AngleAxis(rotationAngle,
+       Vector3.forward);
+    }
+    private void RotateByZ() 
+    {
+        Vector3 rotation = new Vector3(0f,0f,transform.rotation.z + 10f);
+        transform.Rotate(rotation);
+    }
+    private void MoveIntoPoint(Vector3 start, Vector3 target) 
+    {
+        pathLength = Vector2.Distance(start, target);
+        totalTimeForPath = pathLength / moveSpeed;
+        float currentTimeOnPath = Time.time - startTime;
+        gameObject.transform.position = Vector2.Lerp(startPosition,
+        target, currentTimeOnPath / totalTimeForPath);
     }
     void FixedUpdate()
     {
         if (target != null)
         {
-            pathLength = Vector2.Distance(startPosition, target.transform.position);
-            totalTimeForPath = pathLength / moveSpeed;
-            float currentTimeOnPath = Time.time - startTime;
-            gameObject.transform.position = Vector2.Lerp(startPosition,
-            target.transform.position, currentTimeOnPath / totalTimeForPath);
+            MoveIntoPoint(startPosition, target.transform.position);
+            if (whatIsBullet == BulletType.Log)
+                RotateIntoMoveDirection(startPosition, target.transform.position);
+            else if (whatIsBullet == BulletType.Acorn)
+                RotateByZ();
         }
         else
         {

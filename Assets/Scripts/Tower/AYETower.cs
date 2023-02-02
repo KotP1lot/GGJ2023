@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AYETower : Tower
@@ -12,10 +11,7 @@ public class AYETower : Tower
     {
         if (!attacking)
         {
-            AYEobj.SetActive(true);
-            attacking = true;
-            AYEobj.transform.localScale = new Vector2(lvlList[currentLvL].Range * 2, lvlList[currentLvL].Range * 2);
-            StartCoroutine("Attacking");
+            base.Attack();
         }
   
     }
@@ -23,11 +19,19 @@ public class AYETower : Tower
     IEnumerator Attacking()
     {
         yield return new WaitForSeconds(attackTime);
+
         lastAttackTime = Time.time;
-        AYEobj.SetActive(false);
         attacking = false;
     }
 
-
+    public override void OnAnimationTrigger()
+    {
+        base.OnAnimationTrigger();
+        GameObject newAYEArea = Instantiate(AYEobj, transform.position, Quaternion.identity);
+        newAYEArea.transform.localScale = new Vector2(lvlList[currentLvL].Range * 2, lvlList[currentLvL].Range * 2);
+        newAYEArea.GetComponent<Spores>().SpawnSpore(attackTime, lvlList[currentLvL].Damage);
+        attacking = true;
+        StartCoroutine(Attacking());
+    }
 
 }
