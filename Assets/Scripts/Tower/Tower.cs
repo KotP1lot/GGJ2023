@@ -35,7 +35,7 @@ public class Tower : MonoBehaviour
     protected Animator animator;
 
     private bool isCompleted;
-    private bool isAttacking;
+    protected bool isAttacking;
 
     private string currentState;
     const string IDLE_STATE = "Idle";
@@ -63,7 +63,7 @@ public class Tower : MonoBehaviour
 
     void Update()
     {
-        if (isCompleted) 
+        if (isCompleted)
         {
             if (!isAttacking)
             {
@@ -131,6 +131,7 @@ public class Tower : MonoBehaviour
         animator.speed = 1;
         ChangeAnimState(IDLE_STATE);
         isAttacking = false;
+        Debug.Log("FinishAttack");
     }
     public virtual void OnBuildCompleted()
     {
