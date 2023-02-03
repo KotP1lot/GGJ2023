@@ -12166,17 +12166,9 @@ MonoBehaviour:
     - enemy: {fileID: 4509330595844827365, guid: 0e2d341f9ed83f24fa7b0b78064a93f0, type: 3}
       spawner: {fileID: 1961077598}
       spawnDelay: 1
-    - enemy: {fileID: 4509330595844827365, guid: 13870b715d26a854da51815b39e278b6, type: 3}
-      spawner: {fileID: 531917935}
-      spawnDelay: 1
-    - enemy: {fileID: 4509330595844827365, guid: 13870b715d26a854da51815b39e278b6, type: 3}
-      spawner: {fileID: 129428596}
-      spawnDelay: 1
-    - enemy: {fileID: 5121045608615617633, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
-      spawner: {fileID: 1273004551}
-      spawnDelay: 1
-    - enemy: {fileID: 5121045608615617633, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
-      spawner: {fileID: 1332275664}
+  - waveSettings:
+    - enemy: {fileID: 4509330595844827365, guid: 0e2d341f9ed83f24fa7b0b78064a93f0, type: 3}
+      spawner: {fileID: 1961077598}
       spawnDelay: 1
   mainTree: {fileID: 1075350678}
 --- !u!4 &841910576
