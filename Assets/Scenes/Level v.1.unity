@@ -12445,13 +12445,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - waveSettings:
-    - enemy: {fileID: 4509330595844827365, guid: 0e2d341f9ed83f24fa7b0b78064a93f0, type: 3}
+    - enemyCount:
+        enemySmall: 0
+        enemyMedium: 0
+        enemyLarge: 0
+      spawner: {fileID: 1961077598}
+      spawnDelay: 1
+    - enemyCount:
+        enemySmall: 0
+        enemyMedium: 0
+        enemyLarge: 0
+      spawner: {fileID: 1961077598}
+      spawnDelay: 1
+    - enemyCount:
+        enemySmall: 0
+        enemyMedium: 0
+        enemyLarge: 0
       spawner: {fileID: 1961077598}
       spawnDelay: 1
   - waveSettings:
-    - enemy: {fileID: 4509330595844827365, guid: 0e2d341f9ed83f24fa7b0b78064a93f0, type: 3}
+    - enemyCount:
+        enemySmall: 0
+        enemyMedium: 0
+        enemyLarge: 0
       spawner: {fileID: 1961077598}
       spawnDelay: 1
+  enemies: []
   mainTree: {fileID: 1075350678}
 --- !u!4 &841910576
 Transform:
