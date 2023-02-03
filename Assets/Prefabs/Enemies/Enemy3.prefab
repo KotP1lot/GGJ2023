@@ -398,12 +398,12 @@ SpriteRenderer:
   m_SortingLayerID: -1564482443
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1642530354, guid: 530b000b8b41d8a4c9e57f76e0940f21, type: 3}
+  m_Sprite: {fileID: -243945786, guid: 275d1b1f1cd0eae49961f0431e96d207, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.5, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -442,7 +442,7 @@ MonoBehaviour:
   mainTree: {fileID: 0}
 --- !u!95 &7561320310902029401
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -450,7 +450,7 @@ Animator:
   m_GameObject: {fileID: 4509330595844827365}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 856e40d86bb394b4ea935c53b10a7f46, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2eb2c33cb9b0bc24288677264561eba3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -459,7 +459,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!58 &-1560063941187830336
 CircleCollider2D:
   m_ObjectHideFlags: 0

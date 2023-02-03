@@ -245,7 +245,7 @@ SpriteRenderer:
   m_SortingLayerID: -1564482443
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1993477011, guid: 530b000b8b41d8a4c9e57f76e0940f21, type: 3}
+  m_Sprite: {fileID: -1829854265, guid: f9c01173cdb278440bc6cdc5befe8eca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -289,7 +289,7 @@ MonoBehaviour:
   mainTree: {fileID: 0}
 --- !u!95 &1355355178572258522
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -306,7 +306,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!50 &-2481857617763207066
 Rigidbody2D:
   serializedVersion: 4
