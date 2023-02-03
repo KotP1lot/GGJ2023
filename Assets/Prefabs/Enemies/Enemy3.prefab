@@ -430,7 +430,7 @@ MonoBehaviour:
   mainTree: {fileID: 0}
 --- !u!95 &7561320310902029401
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -447,7 +447,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!58 &-1560063941187830336
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -461,9 +461,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1}
+  m_Offset: {x: 0, y: 0.592723}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.592723
 --- !u!50 &4605364473290920474
 Rigidbody2D:
   serializedVersion: 4

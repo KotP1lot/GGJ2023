@@ -58,31 +58,31 @@ public class Enemy : Unit
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            TakeDamage(1);
-        }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            StopCoroutine("Poison");
-            StartCoroutine(Poison(3f, 1f, 1));
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Slow(90);
-        }
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            Unslow();
-        }
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            StartStun(2);
-        }
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            StartStun(5);
-        }
+        //if (Input.GetKeyDown(KeyCode.K))
+        //{
+        //    TakeDamage(1);
+        //}
+        //if (Input.GetKeyDown(KeyCode.P))
+        //{
+        //    StopCoroutine("Poison");
+        //    StartCoroutine(Poison(3f, 1f, 1));
+        //}
+        //if (Input.GetKeyDown(KeyCode.S))
+        //{
+        //    Slow(90);
+        //}
+        //if (Input.GetKeyDown(KeyCode.U))
+        //{
+        //    Unslow();
+        //}
+        //if (Input.GetKeyDown(KeyCode.T))
+        //{
+        //    StartStun(2);
+        //}
+        //if (Input.GetKeyDown(KeyCode.Y))
+        //{
+        //    StartStun(5);
+        //}
         StopMovement();
         Move();
     }
