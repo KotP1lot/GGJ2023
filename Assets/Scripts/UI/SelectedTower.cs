@@ -85,7 +85,7 @@ public class SelectedTower : MonoBehaviour
 
         GameObject.Find("Overlay").GetComponent<TilemapRenderer>().enabled = true;
 
-        //towerRange.gameObject.SetActive(true);
-        //towerRange.radius = range;
+        towerRange.gameObject.SetActive(true);
+        towerRange.radius = range;
     }
 }

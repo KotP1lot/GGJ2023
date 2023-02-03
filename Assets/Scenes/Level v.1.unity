@@ -772,6 +772,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1214292624, guid: 547892ffad12ddb4aa317bbf62a11b1c, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 281098869}
     - target: {fileID: 1290712323152661103, guid: 547892ffad12ddb4aa317bbf62a11b1c, type: 3}
       propertyPath: builder
       value: 
@@ -12446,27 +12450,27 @@ MonoBehaviour:
   waves:
   - waveSettings:
     - enemyCount:
-        enemySmall: 3
-        enemyMedium: 2
+        enemySmall: 0
+        enemyMedium: 0
         enemyLarge: 1
       spawner: {fileID: 1961077598}
       spawnDelay: 1
     - enemyCount:
         enemySmall: 1
-        enemyMedium: 3
-        enemyLarge: 2
+        enemyMedium: 1
+        enemyLarge: 0
       spawner: {fileID: 129428596}
       spawnDelay: 1
     - enemyCount:
         enemySmall: 1
-        enemyMedium: 3
-        enemyLarge: 3
+        enemyMedium: 1
+        enemyLarge: 1
       spawner: {fileID: 1273004551}
       spawnDelay: 1
   - waveSettings:
     - enemyCount:
-        enemySmall: 3
-        enemyMedium: 2
+        enemySmall: 1
+        enemyMedium: 1
         enemyLarge: 1
       spawner: {fileID: 1961077598}
       spawnDelay: 1

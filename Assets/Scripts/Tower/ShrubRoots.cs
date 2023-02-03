@@ -36,7 +36,7 @@ public class ShrubRoots : MonoBehaviour
     public void SpawnRoot(float time, int slowDebuff)
     {
         animator = GetComponent<Animator>();
-        this.slowDebuff = slowDebuff;
+        this.slowDebuff = slowDebuff * 10;
         timeToDestroy = time;
         StartCoroutine(DestroyMe());
         animator.Play("SR_Build");
