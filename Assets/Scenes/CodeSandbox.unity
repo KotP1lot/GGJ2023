@@ -4554,6 +4554,14 @@ PrefabInstance:
       propertyPath: tilemapOverlay
       value: 
       objectReference: {fileID: 409381232}
+    - target: {fileID: 6575977933283985829, guid: 01216c3280b4efa4b999049ae17be82e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8286476
+      objectReference: {fileID: 0}
+    - target: {fileID: 6575977933283985829, guid: 01216c3280b4efa4b999049ae17be82e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.15114081
+      objectReference: {fileID: 0}
     - target: {fileID: 6575977933283985848, guid: 01216c3280b4efa4b999049ae17be82e, type: 3}
       propertyPath: m_RootOrder
       value: 1
