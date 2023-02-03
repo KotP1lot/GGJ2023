@@ -25,7 +25,7 @@ public class GlobalData : MonoBehaviour
     public int currentWave { get; private set; }
 
     public enum TowerType { Squirrel, Bigroot, Shroom, Rose, Bear }
-    public enum CursorType { Click, Hand, Grab, Cross }
+    public enum CursorType { Click, Hand, Grab, Cross, Point }
 
     private void Awake()
     {
@@ -78,14 +78,7 @@ public class GlobalData : MonoBehaviour
     public void GetSkulls(int amount)
     {
         skulls += amount;
-        if (skulls > 99) skulls = 99;
-
-        skullsText.text = skulls.ToString();
-    }
-    public void SpendSkullss(int amount)
-    {
-        skulls -= amount;
-        if (skulls < 0) skulls = 0;
+        if (skulls > 999) skulls = 999;
 
         skullsText.text = skulls.ToString();
     }
@@ -107,11 +100,14 @@ public class GlobalData : MonoBehaviour
         waveText.text = $"WAVE {currentWave}";
     }
 
+    public float Distance(Vector2 v1, Vector2 v2)
+    {
+        Vector3 difference = new Vector3(v1.x - v2.x, v1.y - v2.y);
+        return Mathf.Sqrt(Mathf.Pow(difference.x, 2f) + Mathf.Pow(difference.y, 2f));
+    }
+
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-            HealTree(10);
-        }
+
     }
 }

@@ -48,6 +48,9 @@ public class Tower : MonoBehaviour
 
     public string towerName;
     public string towerDescription;
+    
+    [HideInInspector] public Camera mainCamera;
+    public Canvas canvas;
 
     #endregion
 
@@ -63,6 +66,8 @@ public class Tower : MonoBehaviour
         ChangeAnimState(BUILD_STATE);
         attackRangeCollider = GetComponent<CircleCollider2D>();
         attackRangeCollider.radius = lvlList[currentLvL].Range;
+
+        canvas.worldCamera = mainCamera;
     }
 
     void Update()
@@ -103,6 +108,15 @@ public class Tower : MonoBehaviour
             newLvLInfo = new LvL(0,0,0,0);
         }
         return newLvLInfo;
+    }
+    public int GetCurrentLvL()
+    {
+        return currentLvL;
+    }
+
+    public bool isMaxLvl()
+    {
+        return currentLvL == lvlList.Count-1;
     }
     #endregion
 
@@ -155,16 +169,19 @@ public class Tower : MonoBehaviour
         ChangeAnimState(ATTACK_STATE);
     }
 
-    public bool Upgrade(float money) 
+    public bool Upgrade() 
     {
-        if (money >= lvlList[currentLvL].LvLCost)
+        if (GlobalData.instance.bones >= lvlList[currentLvL+1].LvLCost)
         {
             currentLvL++;
+            GlobalData.instance.SpendBones(lvlList[currentLvL].LvLCost);
+
             return true;
         }
         else return false;
        
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

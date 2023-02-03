@@ -48,29 +48,32 @@ public class BuildTowers : MonoBehaviour
     public bool BuildNewTower(GameObject tower, Vector3 placeForBuid) 
     {
         //Debug.Log(mainCamera.ScreenToWorldPoint(Input.mousePosition).x + ":" + mainCamera.ScreenToWorldPoint(Input.mousePosition).y);
-        if (IsTileRoot(placeForBuid, out Vector3Int tilePos) && Distance(transform.position, mainCamera.ScreenToWorldPoint(Input.mousePosition)) < player.buildRadius)
+        if (IsTileRoot(placeForBuid, out Vector3Int tilePos) && GlobalData.instance.Distance(transform.position, mainCamera.ScreenToWorldPoint(Input.mousePosition)) < player.buildRadius)
         {
+            tower.GetComponent<Tower>().mainCamera = mainCamera;
+            GlobalData.instance.SpendBones(tower.GetComponent<Tower>().GetLvLInfo(0).LvLCost);
             towers.Add(Instantiate(tower, new Vector2(tilePos.x + 0.5f, tilePos.y + 0.5f), Quaternion.identity));
             HideRoot(tilePos);
             return true;
+
+            
         }
         return false;
     }
-    public void DestroyTower(GameObject tower)
+    public bool DestroyTower(GameObject tower)
     {
         if (!tower.IsUnityNull())
         {
             destroedTower = tower;
             towers.Remove(destroedTower);
             tower.GetComponent<Tower>().BeforeDestroy();
+
+            return true;
         }
+        return false;
     }
 
-    private float Distance(Vector2 v1, Vector2 v2)
-    {
-        Vector3 difference = new Vector3(v1.x - v2.x,v1.y - v2.y);
-        return Mathf.Sqrt(Mathf.Pow(difference.x, 2f) +Mathf.Pow(difference.y, 2f));
-    }
+    
 
     private void Update()
     {
