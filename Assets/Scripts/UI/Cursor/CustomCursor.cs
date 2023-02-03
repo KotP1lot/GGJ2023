@@ -15,9 +15,9 @@ public class CustomCursor : MonoBehaviour
 
     private Dictionary<GlobalData.CursorType, Sprite> cursorSprites;
 
-    private Image image; 
+    private Image image;
+    public GameObject hoveredObj { get; private set; }
 
-    // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = false;
@@ -29,26 +29,32 @@ public class CustomCursor : MonoBehaviour
         cursorSprites.Add(GlobalData.CursorType.Hand, cursorHand);
         cursorSprites.Add(GlobalData.CursorType.Grab, cursorGrab);
         cursorSprites.Add(GlobalData.CursorType.Cross, cursorCross);
+        cursorSprites.Add(GlobalData.CursorType.Point, cursorPoint);
     }
 
-    // Update is called once per frame
     void Update()
     {
         var elements = RaycastMouse();
 
-        if (elements.Count == 0) image.sprite = cursorPoint;
+        if (elements.Count == 0) 
+        {
+            hoveredObj = null;
+            image.sprite = cursorPoint;
+        }
         else
         {
             foreach (var element in elements)
             {
                 CursorChanger cursorChanger;
-                if (element.gameObject.TryGetComponent<CursorChanger>(out cursorChanger))
+                if (element.gameObject.TryGetComponent(out cursorChanger))
                 {
+                    hoveredObj = cursorChanger.gameObject;
                     image.sprite = cursorSprites[cursorChanger.ChangeTo];
                     break;
                 }
                 else
                 {
+                    hoveredObj = null;
                     image.sprite = cursorPoint;
                 }
             }
@@ -69,5 +75,11 @@ public class CustomCursor : MonoBehaviour
         EventSystem.current.RaycastAll(pointerData, results);
 
         return results;
+    }
+
+    public bool isObjectHovered(GameObject gameObject)
+    {
+        if(hoveredObj == null) return false;
+        return hoveredObj.gameObject == gameObject;
     }
 }

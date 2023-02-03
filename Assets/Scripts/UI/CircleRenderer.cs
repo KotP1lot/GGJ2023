@@ -7,6 +7,7 @@ public class CircleRenderer : MonoBehaviour
     private LineRenderer circleRenderer;
     public Camera cam;
     public float radius;
+    public bool snapToMouse;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +39,9 @@ public class CircleRenderer : MonoBehaviour
             float x = xScaled * radius;
             float y = yScaled * radius;
 
-            Vector3 currentPosition = new Vector3 (cam.ScreenToWorldPoint(Input.mousePosition).x+ x, cam.ScreenToWorldPoint(Input.mousePosition).y + y, 0);
+            Vector3 currentPosition;
+            if(snapToMouse) currentPosition = new Vector3 (cam.ScreenToWorldPoint(Input.mousePosition).x+ x, cam.ScreenToWorldPoint(Input.mousePosition).y + y, 0);
+            else currentPosition = new Vector3(transform.position.x + x, transform.position.y + y, 0);
 
             circleRenderer.SetPosition(i, currentPosition);
         }
