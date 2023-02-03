@@ -26,6 +26,11 @@ public class MeleeRoot : MonoBehaviour
 
         currentState = newState;
     }
+
+    public void RotateReset() 
+    {
+        transform.rotation = Quaternion.identity;
+    }
     public void RotateIntoMoveDirection(Vector3 target)
     {
         Vector3 newDirection = (target - transform.position);

@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   animator: {fileID: 6575977933648716703}
-  buildRadius: 1
+  buildRadius: 3
   mask: {fileID: 2085360616}
 --- !u!61 &6575977933283985829
 BoxCollider2D:

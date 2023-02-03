@@ -71,6 +71,7 @@ public class MeleeTower : Tower
     public override void OnAnimationTrigger()
     {
         base.OnAnimationTrigger();
+        root.RotateReset();
         lastAttackTime = Time.time;
         DoDamage();
         root.ChangeToIDLEState();

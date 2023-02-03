@@ -64,14 +64,14 @@ public class SelectedTower : MonoBehaviour
 
             builder.BuildNewTower( prefabs[currentSelect.ToString()], builder.mainCamera.ScreenToWorldPoint(Input.mousePosition));
 
-            GameObject.Find("EnvOverlay").GetComponent<TilemapRenderer>().enabled = false;
+            GameObject.Find("Overlay").GetComponent<TilemapRenderer>().enabled = false;
             towerRange.gameObject.SetActive(false);
         }
         if (image.enabled && Input.GetMouseButtonDown(1)) {
             image.enabled = false;
             cursorChanger.enabled = false;
 
-            GameObject.Find("EnvOverlay").GetComponent<TilemapRenderer>().enabled = false ;
+            GameObject.Find("Overlay").GetComponent<TilemapRenderer>().enabled = false ;
             towerRange.gameObject.SetActive(false);
         }
     }
@@ -83,9 +83,9 @@ public class SelectedTower : MonoBehaviour
         image.sprite = spriteNames[type.ToString()];
         currentSelect = type;
 
-        GameObject.Find("EnvOverlay").GetComponent<TilemapRenderer>().enabled = true;
+        GameObject.Find("Overlay").GetComponent<TilemapRenderer>().enabled = true;
 
-        towerRange.gameObject.SetActive(true);
-        towerRange.radius = range;
+        //towerRange.gameObject.SetActive(true);
+        //towerRange.radius = range;
     }
 }

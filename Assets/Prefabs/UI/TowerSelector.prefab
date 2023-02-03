@@ -171,12 +171,7 @@ MonoBehaviour:
   statWindow: {fileID: 0}
   selected: {fileID: 0}
   type: 0
-  header: SQUIRREL
-  cost: 10
-  DMG: 2.3
-  SPD: 2.5
-  RNG: 1.5
-  description: Throws acorns at enemies.
+  tower: {fileID: 81401993541199030, guid: e479da93911766643ad777ed1b932037, type: 3}
 --- !u!114 &7224503617482599918
 MonoBehaviour:
   m_ObjectHideFlags: 0

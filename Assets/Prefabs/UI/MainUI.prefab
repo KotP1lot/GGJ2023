@@ -61,11 +61,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedTower: {fileID: 3959497023631790608}
+  builder: {fileID: 0}
   squirrel: {fileID: 1791138781, guid: 9804e415ff6f85a4b8b66bbd98ba308d, type: 3}
   bigroot: {fileID: 872305841, guid: 9804e415ff6f85a4b8b66bbd98ba308d, type: 3}
   rose: {fileID: 616296617, guid: 9804e415ff6f85a4b8b66bbd98ba308d, type: 3}
   shroom: {fileID: -819973465, guid: 9804e415ff6f85a4b8b66bbd98ba308d, type: 3}
   bear: {fileID: 1963998641, guid: 9804e415ff6f85a4b8b66bbd98ba308d, type: 3}
+  squirrelObj: {fileID: 4501296352636344133, guid: e479da93911766643ad777ed1b932037, type: 3}
+  bigrootObj: {fileID: 6181672533819527653, guid: c75d250988296094ca470a179f976d20, type: 3}
+  roseObj: {fileID: 8281444766967710037, guid: 9d6259b5f455c1840b2954f6ed5f405a, type: 3}
+  shroomObj: {fileID: 6652610880512826914, guid: 3dd485d9e6fbd754188e936864e4b07f, type: 3}
+  bearObj: {fileID: 3150514285341019463, guid: 3c56d7af035e82049a17a6e45e72aa1a, type: 3}
+  towerRange: {fileID: 0}
 --- !u!1 &3959497023399904481
 GameObject:
   m_ObjectHideFlags: 0
