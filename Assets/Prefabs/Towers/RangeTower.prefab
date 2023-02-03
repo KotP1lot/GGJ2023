@@ -248,7 +248,7 @@ MonoBehaviour:
   towerDescription: Throws acorns at enemies
   prefabForAttack: {fileID: 4779018594819824861, guid: aa5df49afa7360248a96013d15fafe9b, type: 3}
   spawnPointForAttack: {fileID: 4501296353538446375}
-  PetPrefab: {fileID: 2089884741794781423}
+  pet: {fileID: 1147482116825171092}
 --- !u!95 &1244655113922315562
 Animator:
   serializedVersion: 4

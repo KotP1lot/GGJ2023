@@ -4,19 +4,19 @@ public class RangeTower : Tower
 {
     [SerializeField] protected GameObject prefabForAttack;
     [SerializeField] protected Transform spawnPointForAttack;
-    [SerializeField] protected GameObject PetPrefab;
+    [SerializeField] protected Pet pet;
 
     public override void BeforeDestroy()
     {
         base.BeforeDestroy();
-        PetPrefab.GetComponent<Pet>().ChangeToDESTROYState();
+        pet.ChangeToDESTROYState();
     }
 
     public override void OnAnimationTrigger()
     {
         base.OnAnimationTrigger();
-        PetPrefab.GetComponent<Pet>().ChangeToIDLEState();
-        PetPrefab.GetComponent<Animator>().speed = 1;
+        pet.ChangeToIDLEState();
+        pet.GetComponent<Animator>().speed = 1;
         if (enemylist.Count > 0)
         {
             lastAttackTime = Time.time;
@@ -29,15 +29,15 @@ public class RangeTower : Tower
     public override void OnBuildCompleted()
     {
         base.OnBuildCompleted();
-        PetPrefab.GetComponent<Pet>().ChangeToIDLEState();
+        pet.ChangeToIDLEState();
     }
 
     protected override void Attack()
     {
         base.Attack();
         Vector2 target = enemylist[0].transform.position - transform.position;
-        PetPrefab.GetComponent<Pet>().Flip(target);
-      PetPrefab.GetComponent<Pet>().ChangeToATTACKState();
-        PetPrefab.GetComponent<Animator>().speed = lvlList[currentLvL].AttackSpeed;
+        pet.Flip(target);
+      pet.ChangeToATTACKState();
+        pet.GetComponent<Animator>().speed = lvlList[currentLvL].AttackSpeed;
     }
 }
