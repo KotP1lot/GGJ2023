@@ -18,6 +18,7 @@ public class Enemy : Unit
     private float stunTimeElapsed = 0;
     private bool isSlowed = false;
     private bool isStunned = false;
+    private bool isDead = false;
 
     public MainTree mainTree;
     private Animator anim;
@@ -57,44 +58,27 @@ public class Enemy : Unit
     }
     private void Update()
     {
-
-        //if (Input.GetKeyDown(KeyCode.K))
-        //{
-        //    TakeDamage(1);
-        //}
-        //if (Input.GetKeyDown(KeyCode.P))
-        //{
-        //    StopCoroutine("Poison");
-        //    StartCoroutine(Poison(3f, 1f, 1));
-        //}
-        //if (Input.GetKeyDown(KeyCode.S))
-        //{
-        //    Slow(90);
-        //}
-        //if (Input.GetKeyDown(KeyCode.U))
-        //{
-        //    Unslow();
-        //}
-        //if (Input.GetKeyDown(KeyCode.T))
-        //{
-        //    StartStun(2);
-        //}
-        //if (Input.GetKeyDown(KeyCode.Y))
-        //{
-        //    StartStun(5);
-        //}
-        StopMovement();
-        Move();
+        if(!isDead)
+        {
+            StopMovement();
+            Move();
+        } 
     }
     public override void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth, maxHealth);
-        if (currentHealth <= 0)
+        if (!isDead)
         {
-            gameObject.GetComponent<Collider2D>().enabled = false;
-            anim.SetTrigger("Death");
+            currentHealth -= damage;
+            healthBar.SetHealth(currentHealth, maxHealth);
+            if (currentHealth <= 0)
+            {
+                gameObject.GetComponent<Collider2D>().enabled = false;
+                StopAllCoroutines();
+                isDead = true;
+                anim.SetTrigger("Death");
+            }
         }
+        
     }
     public void DealingDamage()
     {
