@@ -15,33 +15,78 @@ public class WaveSpawner : MonoBehaviour
     private void Start()
     {
         enemiesLeftToSpawn = EnemiesInWave(0);
+        currentWave = -1;
+        currentSetting = 0;
         StartNewWave();
     }
-    private IEnumerator EnemySpawn()
+    private IEnumerator EnemySpawn(List<EnemyType> enemyTypes)
     {
-        if(enemiesLeftToSpawn > 0)
+        while (enemyTypes.Count != 0)
         {
             yield return new WaitForSeconds(waves[currentWave].WaveSettings[currentSetting].SpawnDelay);
-            //GameObject enemy = Instantiate(waves[currentWave].WaveSettings[currentEnemy].Enemy, waves[currentWave].WaveSettings[currentEnemy].Spawner.transform.position, Quaternion.identity);
-            //enemy.GetComponent<Enemy>().StartMoving(waves[currentWave].WaveSettings[currentEnemy].Spawner.GetComponent<SpawnController>().MovingPoints);
-            //enemy.GetComponent<Enemy>().mainTree = mainTree;
-            //enemiesLeftToSpawn--;
-            //currentEnemy++;
-            StartCoroutine(EnemySpawn());
-        } else
-        {
-            if(currentWave < waves.Length - 1)
+            int random = UnityEngine.Random.Range(0, enemyTypes.Count);
+            EnemyType enemy = enemyTypes[random];
+            enemyTypes.Remove(enemy);
+            GameObject ememyToSpawn;
+            switch (enemy)
             {
-                currentWave++;
-                enemiesLeftToSpawn = EnemiesInWave(currentWave);
-                currentEnemy = 0;
+                case EnemyType.SMALL:
+                    ememyToSpawn = enemies[0];
+                    break;
+                case EnemyType.MEDIUM:
+                    ememyToSpawn = enemies[1];
+                    break;
+                case EnemyType.LARGE:
+                    ememyToSpawn = enemies[2];
+                    break;
+                default:
+                    ememyToSpawn = enemies[0];
+                    break;
             }
+            GameObject enemySpawned = Instantiate(ememyToSpawn, waves[currentWave].WaveSettings[currentSetting].Spawner.transform.position, Quaternion.identity);
+            enemySpawned.GetComponent<Enemy>().StartMoving(waves[currentWave].WaveSettings[currentSetting].Spawner.GetComponent<SpawnController>().MovingPoints);
+            enemySpawned.GetComponent<Enemy>().mainTree = mainTree;
         }
+        currentSetting++;
+        if (currentSetting >= waves[currentWave].WaveSettings.Length)
+        {
+            currentSetting = 0;
+        }
+        else
+        {
+            StartCoroutine(EnemySpawn(waves[currentWave].WaveSettings[currentSetting].EnemyCount.GetEnemyList()));
+        }
+        //if(enemiesLeftToSpawn > 0)
+        //{
+        //    yield return new WaitForSeconds(waves[currentWave].WaveSettings[currentSetting].SpawnDelay);
+        //    //GameObject enemy = Instantiate(waves[currentWave].WaveSettings[currentEnemy].Enemy, waves[currentWave].WaveSettings[currentEnemy].Spawner.transform.position, Quaternion.identity);
+        //    //enemy.GetComponent<Enemy>().StartMoving(waves[currentWave].WaveSettings[currentEnemy].Spawner.GetComponent<SpawnController>().MovingPoints);
+        //    //enemy.GetComponent<Enemy>().mainTree = mainTree;
+        //    //enemiesLeftToSpawn--;
+        //    //currentEnemy++;
+        //    StartCoroutine(EnemySpawn());
+        //} else
+        //{
+        //    if(currentWave < waves.Length - 1)
+        //    {
+        //        currentWave++;
+        //        enemiesLeftToSpawn = EnemiesInWave(currentWave);
+        //        currentEnemy = 0;
+        //    }
+        //}
     }
 
     public void StartNewWave()
     {
-        StartCoroutine(EnemySpawn());
+        currentWave++;
+        if (currentWave >= waves.Length)
+        {
+            Debug.Log("¬—≤ «¿—œ¿¬Õ≈Õ≤");
+        }
+        else
+        {
+            StartCoroutine(EnemySpawn(waves[currentWave].WaveSettings[currentSetting].EnemyCount.GetEnemyList()));
+        }
     }
 
     public int EnemiesInWave(int waveIndex)
