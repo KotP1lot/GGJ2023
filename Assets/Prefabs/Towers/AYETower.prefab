@@ -118,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvlList:
   - LvLCost: 0
-    AttackSpeed: 0.8
+    AttackSpeed: 0.5
     Damage: 1
     Range: 2
   - LvLCost: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   canvas: {fileID: 5040266348955124404}
   AYEobj: {fileID: 8329859813531045337, guid: 87f32f023ec01e14497eca00addf06f7, type: 3}
   attacking: 0
-  attackTime: 6
+  attackTime: 1.5
 --- !u!95 &4850764684174366521
 Animator:
   serializedVersion: 4

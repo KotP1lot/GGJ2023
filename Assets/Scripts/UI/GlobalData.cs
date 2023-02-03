@@ -37,8 +37,6 @@ public class GlobalData : MonoBehaviour
         {
             instance = this;
         }
-
-
     }
 
     private void Start()
@@ -53,11 +51,6 @@ public class GlobalData : MonoBehaviour
         GetBones(startingBones);
         GetSkulls(startingSkulls);
         NextWave();
-    }
-
-    public void Yo(string type)
-    {
-        Debug.Log("yo " + type);
     }
 
     public void GetBones(int amount)
