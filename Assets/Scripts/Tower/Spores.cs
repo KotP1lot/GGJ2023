@@ -15,7 +15,7 @@ public class Spores : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<Enemy>(out Enemy enemy))
         {
-             StartCoroutine(enemy.Poison(poisonDuration, poisonInterval, poisonDamage));
+             enemy.StartCoroutine(enemy.Poison(poisonDuration, poisonInterval, poisonDamage));
         }
     }
 

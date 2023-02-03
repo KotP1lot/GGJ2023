@@ -23,12 +23,22 @@ public class Enemy : Unit
     public MainTree mainTree;
     private Animator anim;
 
+    [Space(7)]
+    [Header("Particles")]
+    public ParticleSystem poisonParticles;
+    public ParticleSystem slowParticles;
+    public ParticleSystem stunParticles;
+    public float stunFlipPointX;
+    private Vector3 stunDefaultPoint;
+
     protected override void Start()
     {
         base.Start();
         startSpeed = moveSpeed;
         healthBar.SetHealth(currentHealth, maxHealth);
         anim = GetComponent<Animator>();
+
+        stunDefaultPoint = stunParticles.transform.localPosition;
     }
     public void StartMoving(List<Transform> movingPoints)
     {
@@ -62,7 +72,7 @@ public class Enemy : Unit
         {
             StopMovement();
             Move();
-        } 
+        }
     }
     public override void TakeDamage(int damage)
     {
@@ -92,6 +102,8 @@ public class Enemy : Unit
 
         float poisonCounter = 0;
 
+        poisonParticles.Play();
+
         while (poisonCounter < poisonDuration)
         {
             isPoisoned = true;
@@ -100,6 +112,8 @@ public class Enemy : Unit
             poisonCounter += poisonInterval;
         }
         isPoisoned = false;
+
+        poisonParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
     }
     public void Slow(float slowPercent)
     {
@@ -107,6 +121,8 @@ public class Enemy : Unit
         {
             moveSpeed -= startSpeed * slowPercent / 100;
             isSlowed = true;
+
+            slowParticles.Play();
         }
 
     }
@@ -117,11 +133,15 @@ public class Enemy : Unit
             anim.SetBool("IsStunned", false);
             moveSpeed = startSpeed;
             isSlowed = false;
+
+            slowParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         }
 
     }
     public IEnumerator Stun()
     {
+        stunParticles.Play();
+
         isStunned = true;
         moveSpeed = 0;
         anim.SetBool("IsStunned", true);
@@ -130,6 +150,8 @@ public class Enemy : Unit
         stunTimeElapsed++;
         if (stunTimeElapsed == stunDuration)
         {
+            stunParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+
             Unslow();
             stunDuration = 0;
             isStunned = false;
@@ -169,6 +191,9 @@ public class Enemy : Unit
         {
             isRight = !isRight;
             transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+
+            if (!isRight) stunParticles.gameObject.transform.localPosition = stunDefaultPoint;
+            else stunParticles.gameObject.transform.localPosition = new Vector3(stunFlipPointX, stunDefaultPoint.y, stunDefaultPoint.z);
         }
     }
 }
