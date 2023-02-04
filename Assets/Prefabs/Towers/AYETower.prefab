@@ -124,7 +124,7 @@ MonoBehaviour:
   - LvLCost: 0
     AttackSpeed: 1
     Damage: 1
-    Range: 1
+    Range: 3
   towerName: SHROOM
   towerDescription: Poisons enemies around it
   mainCamera: {fileID: 0}

@@ -10,6 +10,8 @@ public class Spores : MonoBehaviour
     [SerializeField] private float poisonInterval;
     [SerializeField] private ParticleSystem particles;
 
+    [HideInInspector] public float range;
+
     public void SetSlowDebuffValue(int poisonDamage) => this.poisonDamage = poisonDamage;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,6 +23,8 @@ public class Spores : MonoBehaviour
 
     public void SpawnSpore(float time, int poisonDamage)
     {
+        particles.startSpeed = range + 1;
+
         this.poisonDamage = poisonDamage;
         timeToDestroy = time;
         particles.Play();
