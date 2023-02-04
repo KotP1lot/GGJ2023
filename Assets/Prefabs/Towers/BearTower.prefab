@@ -149,14 +149,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvlList:
-  - LvLCost: 0
-    AttackSpeed: 1
-    Damage: 1
-    Range: 9
-  - LvLCost: 0
-    AttackSpeed: 2
-    Damage: 2
-    Range: 3
+  - LvLCost: 5
+    AttackSpeed: 0.5
+    Damage: 5
+    Range: 6
+  - LvLCost: 2
+    AttackSpeed: 0.6
+    Damage: 6
+    Range: 6.2
+  - LvLCost: 3
+    AttackSpeed: 0
+    Damage: 0
+    Range: 0
+  - LvLCost: 4
+    AttackSpeed: 0
+    Damage: 0
+    Range: 0
+  - LvLCost: 5
+    AttackSpeed: 0
+    Damage: 0
+    Range: 0
   towerName: BEAR
   towerDescription: Gigachad
   mainCamera: {fileID: 0}
