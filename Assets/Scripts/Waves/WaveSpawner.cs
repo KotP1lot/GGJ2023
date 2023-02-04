@@ -79,11 +79,6 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
-    {
-        StopAllCoroutines();
-    }
-
     public int EnemiesInWave(int waveIndex)
     {
         int allEnemies = 0;
