@@ -21,6 +21,7 @@ public class Spores : MonoBehaviour
         }
     }
 
+    [System.Obsolete]
     public void SpawnSpore(float time, int poisonDamage)
     {
         particles.startSpeed = range + 1;

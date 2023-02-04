@@ -5,6 +5,13 @@ public class MeleeTower : Tower
     private float _angle;
     private Vector2 centerPoint;
     [SerializeField]private MeleeRoot root;
+
+    public override void Start()
+    {
+        base.Start();
+        MeleeRoot.attacked += DoDamage;
+    }
+
     private void OnDrawGizmos()
     {
         Quaternion orientation = Quaternion.Euler(0, 0, _angle);
@@ -73,7 +80,6 @@ public class MeleeTower : Tower
         base.OnAnimationTrigger();
         root.RotateReset();
         lastAttackTime = Time.time;
-        DoDamage();
         root.ChangeToIDLEState();
         root.GetComponent<Animator>().speed = 1;
     }

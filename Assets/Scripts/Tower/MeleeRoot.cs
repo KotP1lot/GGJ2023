@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -47,6 +48,12 @@ public class MeleeRoot : MonoBehaviour
             isRight = !isRight;
             transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
         }
+    }
+
+    static public Action attacked;
+    public void AttackTrigger()
+    {
+        attacked?.Invoke();
     }
     public void ChangeToIDLEState() => ChangeAnimState(IDLE_STATE);
     public void ChangeToDESTROYState() => ChangeAnimState(DESTROY_STATE);

@@ -56,7 +56,7 @@ public class Tower : MonoBehaviour
     #endregion
 
     #region UNITY Func
-    void Start()
+    public virtual void Start()
     {
         lastAttackTime = Time.time;
         currentLvL = 0;
