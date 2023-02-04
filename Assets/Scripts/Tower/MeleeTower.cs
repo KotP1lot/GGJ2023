@@ -9,7 +9,7 @@ public class MeleeTower : Tower
     public override void Start()
     {
         base.Start();
-        MeleeRoot.attacked += DoDamage;
+        root.Attacking += DoDamage;
     }
 
     private void OnDrawGizmos()
@@ -42,11 +42,14 @@ public class MeleeTower : Tower
     private void DoDamage() 
     {
         Collider2D[] colliders = GetHitColliders();
-
+        Debug.Log("HIT");
         foreach (Collider2D collider in colliders)
         {
             if (collider.gameObject.TryGetComponent<Enemy>(out Enemy enemy))
+            {
+            
                 enemy.TakeDamage(lvlList[currentLvL].Damage);
+            }
         }
     }
     public override void BeforeDestroy()

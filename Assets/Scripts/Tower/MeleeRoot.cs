@@ -50,10 +50,11 @@ public class MeleeRoot : MonoBehaviour
         }
     }
 
-    static public Action attacked;
+    public delegate void attacked();
+    public event attacked Attacking;
     public void AttackTrigger()
     {
-        attacked?.Invoke();
+        Attacking?.Invoke();
     }
     public void ChangeToIDLEState() => ChangeAnimState(IDLE_STATE);
     public void ChangeToDESTROYState() => ChangeAnimState(DESTROY_STATE);

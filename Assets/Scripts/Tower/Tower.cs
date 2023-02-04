@@ -44,8 +44,8 @@ public class Tower : MonoBehaviour
     const string ATTACK_STATE = "Attack";
     const string BUILD_STATE = "Build";
 
-
-    static public Action onDestroyTower;
+    public delegate void OnDestroy();
+    public event OnDestroy onDestroyTower;
 
     public string towerName;
     public string towerDescription;
