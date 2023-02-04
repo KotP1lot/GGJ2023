@@ -31,6 +31,15 @@ public class LoadSceneManager : MonoBehaviour
 
     public async void LoadScene(string sceneName)
     {
+        var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        if (enemies.Length != 0)
+        {
+            foreach (var enemy in enemies)
+            {
+                Destroy(enemy);
+            }
+        }
+
         Time.timeScale = 1;
         _onLoadingStart?.Invoke();
 
