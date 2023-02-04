@@ -81,7 +81,7 @@ public class GlobalData : MonoBehaviour
         treeHP.value -= amount;
     }
 
-    public void HealTree(int amount)
+    public void HealTree(float amount)
     {
         treeHP.value += amount;
     }

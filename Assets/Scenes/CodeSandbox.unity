@@ -4344,6 +4344,10 @@ PrefabInstance:
       value: 0.8286476
       objectReference: {fileID: 0}
     - target: {fileID: 6575977933283985829, guid: 01216c3280b4efa4b999049ae17be82e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6575977933283985829, guid: 01216c3280b4efa4b999049ae17be82e, type: 3}
       propertyPath: m_Offset.y
       value: 0.15114081
       objectReference: {fileID: 0}
@@ -4408,37 +4412,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -4033456401065557281, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
-      propertyPath: maxHealth
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: -4033456401065557281, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
-      propertyPath: slowParticles
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: -4033456401065557281, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
-      propertyPath: stunParticles
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: -4033456401065557281, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
-      propertyPath: poisonParticles
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 467992806680895736, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1980544349, guid: f9c01173cdb278440bc6cdc5befe8eca, type: 3}
-    - target: {fileID: 467992806680895736, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5121045608615617633, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
       propertyPath: m_Name
       value: Enemy1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5121045608615617633, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7270191894581883359, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
       propertyPath: m_RootOrder
@@ -4446,11 +4422,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7270191894581883359, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.5
+      value: -17.51
       objectReference: {fileID: 0}
     - target: {fileID: 7270191894581883359, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.36
+      value: 3.11
       objectReference: {fileID: 0}
     - target: {fileID: 7270191894581883359, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4498,14 +4474,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6196979331710972076, guid: 76cff670967ea3849b59d1e288604a12, type: 3}
-      propertyPath: m_XDamping
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6196979331710972076, guid: 76cff670967ea3849b59d1e288604a12, type: 3}
-      propertyPath: m_YDamping
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6196979332439350430, guid: 76cff670967ea3849b59d1e288604a12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4513,10 +4481,6 @@ PrefabInstance:
     - target: {fileID: 6196979332439350430, guid: 76cff670967ea3849b59d1e288604a12, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6196979332439350431, guid: 76cff670967ea3849b59d1e288604a12, type: 3}
-      propertyPath: orthographic size
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6196979332439350499, guid: 76cff670967ea3849b59d1e288604a12, type: 3}
       propertyPath: Parent
