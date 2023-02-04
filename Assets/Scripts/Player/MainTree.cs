@@ -6,7 +6,7 @@ using UnityEngine;
 public class MainTree : Unit
 {
     //Запускає вікно поразки
-    [SerializeField] private UnityEvent _onDefeat;
+    
 
     private bool _isDead;
 
@@ -24,7 +24,7 @@ public class MainTree : Unit
             if (currentHealth <= 0)
             {
                 //Запускає ось тут
-                _onDefeat?.Invoke();
+                //_onDefeat?.Invoke();
                 _isDead = true;
                 //Death();
             }

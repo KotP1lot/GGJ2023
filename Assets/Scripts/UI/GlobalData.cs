@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using Cinemachine;
 
 public class GlobalData : MonoBehaviour
 {
@@ -19,6 +21,12 @@ public class GlobalData : MonoBehaviour
     public TextMeshProUGUI waveText;
     public Slider treeHP;
 
+    [Space(6)]
+    [Header("Defeat")]
+    [SerializeField] private UnityEvent _onDefeat;
+    public Transform treeTransform;
+    public CinemachineVirtualCamera virCam;
+    public float waitBeforeLost = 3;
 
     public int bones { get; private set; }
     public int skulls { get; private set; }
@@ -79,6 +87,20 @@ public class GlobalData : MonoBehaviour
     public void DamageTree(float amount)
     {
         treeHP.value -= amount;
+
+        if(treeHP.value == 0)
+        {
+            virCam.Follow = treeTransform;
+            Time.timeScale = 0;
+
+            StartCoroutine(endGame());
+        }
+    }
+
+    private IEnumerator endGame()
+    {
+        yield return new WaitForSecondsRealtime(waitBeforeLost);
+        _onDefeat?.Invoke();
     }
 
     public void HealTree(float amount)

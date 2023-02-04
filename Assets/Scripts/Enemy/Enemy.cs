@@ -108,7 +108,7 @@ public class Enemy : Unit
     {
         if (!isStunned)
         {
-            mainTree.TakeDamage(damage);
+            GlobalData.instance.DamageTree(damage);
         }
     }
     public IEnumerator Poison(float poisonDuration, float poisonInterval, float poisonDamage)
