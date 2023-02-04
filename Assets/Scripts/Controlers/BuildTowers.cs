@@ -21,7 +21,6 @@ public class BuildTowers : MonoBehaviour
     private void Start()
     {
         mainCamera = Camera.main;
-        Tower.onDestroyTower += InstantiateRoot;
 
         player = GetComponent<PlayerMovement>();
     }
@@ -50,9 +49,11 @@ public class BuildTowers : MonoBehaviour
         //Debug.Log(mainCamera.ScreenToWorldPoint(Input.mousePosition).x + ":" + mainCamera.ScreenToWorldPoint(Input.mousePosition).y);
         if (IsTileRoot(placeForBuid, out Vector3Int tilePos) && GlobalData.instance.Distance(transform.position, mainCamera.ScreenToWorldPoint(Input.mousePosition)) < player.buildRadius)
         {
-            tower.GetComponent<Tower>().mainCamera = mainCamera;
             GlobalData.instance.SpendBones(tower.GetComponent<Tower>().GetLvLInfo(0).LvLCost);
-            towers.Add(Instantiate(tower, new Vector2(tilePos.x + 0.5f, tilePos.y + 0.5f), Quaternion.identity));
+            GameObject towerNew = Instantiate(tower, new Vector2(tilePos.x + 0.5f, tilePos.y + 0.5f), Quaternion.identity);
+            towerNew.GetComponent<Tower>().mainCamera = mainCamera;
+            towerNew.GetComponent<Tower>().onDestroyTower += InstantiateRoot;
+            towers.Add(towerNew);
             HideRoot(tilePos);
             return true;
 

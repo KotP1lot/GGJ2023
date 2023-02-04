@@ -5,6 +5,13 @@ public class MeleeTower : Tower
     private float _angle;
     private Vector2 centerPoint;
     [SerializeField]private MeleeRoot root;
+
+    public override void Start()
+    {
+        base.Start();
+        root.Attacking += DoDamage;
+    }
+
     private void OnDrawGizmos()
     {
         Quaternion orientation = Quaternion.Euler(0, 0, _angle);
@@ -36,11 +43,14 @@ public class MeleeTower : Tower
     {
         AudioManager.instance.Play("BigRoot");
         Collider2D[] colliders = GetHitColliders();
-
+        Debug.Log("HIT");
         foreach (Collider2D collider in colliders)
         {
             if (collider.gameObject.TryGetComponent<Enemy>(out Enemy enemy))
+            {
+            
                 enemy.TakeDamage(lvlList[currentLvL].Damage);
+            }
         }
     }
     public override void BeforeDestroy()
@@ -74,7 +84,6 @@ public class MeleeTower : Tower
         base.OnAnimationTrigger();
         root.RotateReset();
         lastAttackTime = Time.time;
-        DoDamage();
         root.ChangeToIDLEState();
         root.GetComponent<Animator>().speed = 1;
     }

@@ -117,13 +117,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvlList:
-  - LvLCost: 0
+  - LvLCost: 4
     AttackSpeed: 0.5
     Damage: 1
     Range: 2
-  - LvLCost: 0
+  - LvLCost: 2
+    AttackSpeed: 0.8
+    Damage: 1.2
+    Range: 2
+  - LvLCost: 3
     AttackSpeed: 1
-    Damage: 1
+    Damage: 1.5
+    Range: 2.5
+  - LvLCost: 4
+    AttackSpeed: 1.2
+    Damage: 1.8
+    Range: 2.5
+  - LvLCost: 5
+    AttackSpeed: 1.5
+    Damage: 2
     Range: 3
   towerName: SHROOM
   towerDescription: Poisons enemies around it

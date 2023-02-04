@@ -75,7 +75,7 @@ public class WaveSpawner : MonoBehaviour
         }
         else
         {
-            StartCoroutine(EnemySpawn(waves[currentWave].WaveSettings[currentSetting].EnemyCount.GetEnemyList()));
+            if(this!=null) StartCoroutine(EnemySpawn(waves[currentWave].WaveSettings[currentSetting].EnemyCount.GetEnemyList()));
         }
     }
 

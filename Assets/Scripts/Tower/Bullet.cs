@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
     private Vector3 startPosition;
     public GameObject target;
     [SerializeField] private BulletType whatIsBullet;
-    private int damage;
+    private float damage;
     private float pathLength;
     private float totalTimeForPath;
     private float startTime;
@@ -37,7 +37,7 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    public void SetDamage(int damage) => this.damage = damage; 
+    public void SetDamage(float damage) => this.damage = damage; 
     private void RotateIntoMoveDirection(Vector3 start, Vector3 target)
     {
         Vector3 newDirection = (target - start);

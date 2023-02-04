@@ -9,7 +9,7 @@ public struct LvL
 {
     public int LvLCost;
     public float AttackSpeed;
-    public int Damage;
+    public float Damage;
     public float Range;
 
     public float GetCooldown() => 1f / AttackSpeed;
@@ -44,8 +44,8 @@ public class Tower : MonoBehaviour
     const string ATTACK_STATE = "Attack";
     const string BUILD_STATE = "Build";
 
-
-    static public Action onDestroyTower;
+    public delegate void OnDestroy();
+    public event OnDestroy onDestroyTower;
 
     public string towerName;
     public string towerDescription;
@@ -56,7 +56,7 @@ public class Tower : MonoBehaviour
     #endregion
 
     #region UNITY Func
-    void Start()
+    public virtual void Start()
     {
         lastAttackTime = Time.time;
         currentLvL = 0;
@@ -118,6 +118,16 @@ public class Tower : MonoBehaviour
     public bool isMaxLvl()
     {
         return currentLvL == lvlList.Count-1;
+    }
+
+    public int GetCurrentCost()
+    {
+        int res = 0;
+        for(int i = 0; i <= currentLvL; i++)
+        {
+            res += lvlList[i].LvLCost;
+        }
+        return res;
     }
     #endregion
 

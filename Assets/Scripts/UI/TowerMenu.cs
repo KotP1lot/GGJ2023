@@ -164,7 +164,7 @@ public class TowerMenu : MonoBehaviour
 
     public void Destroy()
     {
-        int returnMoney = Mathf.CeilToInt(tower.GetLvLInfo(tower.GetCurrentLvL()).LvLCost * 0.35f);
+        int returnMoney = Mathf.CeilToInt(tower.GetCurrentCost() * 0.35f);
         if (towerBuilder.DestroyTower(tower.gameObject))
         {
             MenuEnabled(false);
