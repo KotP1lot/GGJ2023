@@ -236,25 +236,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvlList:
-  - LvLCost: 2
+  - LvLCost: 20
     AttackSpeed: 0.7
-    Damage: 4
+    Damage: 2
     Range: 2
-  - LvLCost: 2
+  - LvLCost: 20
     AttackSpeed: 0.8
-    Damage: 5
+    Damage: 2.5
     Range: 2
-  - LvLCost: 3
+  - LvLCost: 30
     AttackSpeed: 1
-    Damage: 5.5
+    Damage: 3.2
     Range: 2.5
-  - LvLCost: 4
+  - LvLCost: 40
     AttackSpeed: 1.4
-    Damage: 6
+    Damage: 4
     Range: 2.5
-  - LvLCost: 5
+  - LvLCost: 50
     AttackSpeed: 1.8
-    Damage: 6.5
+    Damage: 4.5
     Range: 3
   towerName: WHIP
   towerDescription: Spanks enemies

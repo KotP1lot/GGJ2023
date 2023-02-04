@@ -5243,7 +5243,7 @@ MonoBehaviour:
   moveSpeed: 1
   damage: 10
   healthBar: {fileID: 4725519762855297076}
-  moneyOnKill: 3
+  moneyOnKill: 25
   LEGENDARY: 0
   poisonParticles: {fileID: 3877347801522031543}
   slowParticles: {fileID: 1695127064422189467}

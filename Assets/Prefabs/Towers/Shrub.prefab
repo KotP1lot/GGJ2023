@@ -117,26 +117,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvlList:
-  - LvLCost: 2
+  - LvLCost: 20
     AttackSpeed: 1
     Damage: 4
-    Range: 2
-  - LvLCost: 1
+    Range: 2.3
+  - LvLCost: 10
     AttackSpeed: 1.5
     Damage: 5
-    Range: 2
-  - LvLCost: 2
+    Range: 2.3
+  - LvLCost: 20
     AttackSpeed: 2
     Damage: 6
-    Range: 2
-  - LvLCost: 3
+    Range: 2.3
+  - LvLCost: 30
     AttackSpeed: 2.5
     Damage: 7
-    Range: 2
-  - LvLCost: 4
+    Range: 2.3
+  - LvLCost: 40
     AttackSpeed: 3
     Damage: 8
-    Range: 2
+    Range: 2.3
   towerName: ROSE
   towerDescription: Puts vines that slow enemies
   mainCamera: {fileID: 0}

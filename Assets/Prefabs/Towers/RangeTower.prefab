@@ -237,23 +237,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvlList:
-  - LvLCost: 2
+  - LvLCost: 20
     AttackSpeed: 1
     Damage: 2
     Range: 3
-  - LvLCost: 1
+  - LvLCost: 10
     AttackSpeed: 1.5
     Damage: 2.3
     Range: 3
-  - LvLCost: 2
+  - LvLCost: 20
     AttackSpeed: 2
     Damage: 2.6
     Range: 3.5
-  - LvLCost: 3
+  - LvLCost: 30
     AttackSpeed: 2.5
     Damage: 3
     Range: 3.5
-  - LvLCost: 4
+  - LvLCost: 40
     AttackSpeed: 3
     Damage: 4
     Range: 4
