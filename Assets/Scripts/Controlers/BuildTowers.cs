@@ -5,22 +5,25 @@ using UnityEngine.Tilemaps;
 
 public class BuildTowers : MonoBehaviour
 {
-    [SerializeField] private Camera mainCamera;
-    [SerializeField] private string rootsLayer;
-    [SerializeField] private GameObject tower; //змінти з часом
+    public Camera mainCamera;
+    //[SerializeField] private GameObject tower; //змінти з часом
     [SerializeField] private Tile[] roots;
 
     private GameObject destroedTower;
 
-    private Tilemap tilemap;
+    [SerializeField] private Tilemap tilemap;
+    [SerializeField] private Tilemap tilemapOverlay;
+    [SerializeField] private Tile overlayGreen;
+    [SerializeField] private Tile overlayRed;
     [SerializeField]private List<GameObject> towers = new List<GameObject>();
+
+    private PlayerMovement player;
     private void Start()
     {
-        tilemap = GameObject.Find(rootsLayer).GetComponent<Tilemap>();
         mainCamera = Camera.main;
         Tower.onDestroyTower += InstantiateRoot;
 
-
+        player = GetComponent<PlayerMovement>();
     }
 
     private bool IsTileRoot(Vector3 mousePos, out Vector3Int tilePos) 
@@ -32,6 +35,7 @@ public class BuildTowers : MonoBehaviour
     private void HideRoot(Vector3Int tilePos) 
     {
         tilemap.SetTile(tilePos, null);
+        tilemapOverlay.SetTile(tilePos, overlayRed);
     }
 
     private void InstantiateRoot() 
@@ -39,36 +43,48 @@ public class BuildTowers : MonoBehaviour
         Destroy(destroedTower);
         Vector3Int tile = tilemap.WorldToCell(destroedTower.transform.position);
         tilemap.SetTile(tile, roots[Random.Range(0, roots.Length)]);
+        tilemapOverlay.SetTile(tile, overlayGreen);
     }
-    public void BuildNewTower(GameObject tower, Vector3 placeForBuid) 
+    public bool BuildNewTower(GameObject tower, Vector3 placeForBuid) 
     {
-        if (IsTileRoot(placeForBuid, out Vector3Int tilePos))
+        //Debug.Log(mainCamera.ScreenToWorldPoint(Input.mousePosition).x + ":" + mainCamera.ScreenToWorldPoint(Input.mousePosition).y);
+        if (IsTileRoot(placeForBuid, out Vector3Int tilePos) && GlobalData.instance.Distance(transform.position, mainCamera.ScreenToWorldPoint(Input.mousePosition)) < player.buildRadius)
         {
+            tower.GetComponent<Tower>().mainCamera = mainCamera;
+            GlobalData.instance.SpendBones(tower.GetComponent<Tower>().GetLvLInfo(0).LvLCost);
             towers.Add(Instantiate(tower, new Vector2(tilePos.x + 0.5f, tilePos.y + 0.5f), Quaternion.identity));
             HideRoot(tilePos);
+            return true;
+
+            
         }
-        return;
+        return false;
     }
-    public void DestroyTower(GameObject tower)
+    public bool DestroyTower(GameObject tower)
     {
         if (!tower.IsUnityNull())
         {
             destroedTower = tower;
             towers.Remove(destroedTower);
             tower.GetComponent<Tower>().BeforeDestroy();
+
+            return true;
         }
+        return false;
     }
+
+    
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            BuildNewTower(tower, mainCamera.ScreenToWorldPoint(Input.mousePosition));
-     
-        }
-        if (Input.GetMouseButtonDown(1)) 
-        {
-            DestroyTower(towers[0].IsUnityNull()? null : towers[0]);
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    BuildNewTower(tower, mainCamera.ScreenToWorldPoint(Input.mousePosition));
+
+        //}
+        //if (Input.GetMouseButtonDown(1)) 
+        //{
+        //    DestroyTower(towers[0].IsUnityNull()? null : towers[0]);
+        //}
     }
 }

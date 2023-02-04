@@ -7,14 +7,14 @@ using UnityEngine.Events;
 [Serializable]
 public struct LvL
 {
-    public float LvLCost;
+    public int LvLCost;
     public float AttackSpeed;
     public int Damage;
     public float Range;
 
     public float GetCooldown() => 1f / AttackSpeed;
 
-    public LvL(float lvLCost, float attackSpeed, int damage, float range)
+    public LvL(int lvLCost, float attackSpeed, int damage, float range)
     {
         LvLCost = lvLCost;
         AttackSpeed = attackSpeed;
@@ -35,6 +35,7 @@ public class Tower : MonoBehaviour
     protected Animator animator;
 
     private bool isCompleted;
+    protected bool isAttacking;
 
     private string currentState;
     const string IDLE_STATE = "Idle";
@@ -44,6 +45,13 @@ public class Tower : MonoBehaviour
 
 
     static public Action onDestroyTower;
+
+    public string towerName;
+    public string towerDescription;
+    
+    [HideInInspector] public Camera mainCamera;
+    public Canvas canvas;
+
     #endregion
 
     #region UNITY Func
@@ -52,21 +60,28 @@ public class Tower : MonoBehaviour
         lastAttackTime = Time.time;
         currentLvL = 0;
         isCompleted = false;
- 
+        isAttacking = false;
         enemylist = new List<GameObject>();
         animator = GetComponent<Animator>();
         ChangeAnimState(BUILD_STATE);
         attackRangeCollider = GetComponent<CircleCollider2D>();
         attackRangeCollider.radius = lvlList[currentLvL].Range;
+
+        canvas.worldCamera = mainCamera;
     }
 
     void Update()
     {
-        if (isCompleted) {
-            if (enemylist.Count > 0 && Time.time - lastAttackTime >= lvlList[currentLvL].GetCooldown())
+        if (isCompleted)
+        {
+            if (!isAttacking)
             {
-                Attack();
-            } 
+                if (enemylist.Count > 0 && Time.time - lastAttackTime >= lvlList[currentLvL].GetCooldown())
+                {
+                    Attack();
+                    isAttacking = true;
+                }
+            }
         }
     }
     #endregion
@@ -74,8 +89,8 @@ public class Tower : MonoBehaviour
     #region GET Func
     public LvL GetLvLInfo(int LvL)
     {
-        if (!lvlList[LvL].IsUnityNull()) return lvlList[LvL];
-        else return lvlList[lvlList.Count];
+        if (LvL < lvlList.Count) return lvlList[LvL];
+        else return lvlList[lvlList.Count-1];
     }
     public LvL GetUpdateInfo() 
     {
@@ -93,6 +108,15 @@ public class Tower : MonoBehaviour
             newLvLInfo = new LvL(0,0,0,0);
         }
         return newLvLInfo;
+    }
+    public int GetCurrentLvL()
+    {
+        return currentLvL;
+    }
+
+    public bool isMaxLvl()
+    {
+        return currentLvL == lvlList.Count-1;
     }
     #endregion
 
@@ -124,13 +148,14 @@ public class Tower : MonoBehaviour
     { 
         animator.speed = 1;
         ChangeAnimState(IDLE_STATE);
+        isAttacking = false;
     }
-    public void OnBuildCompleted()
+    public virtual void OnBuildCompleted()
     {
         isCompleted = true;
         ChangeAnimState(IDLE_STATE);
     }
-    public void BeforeDestroy()
+    public virtual void BeforeDestroy()
     {
         ChangeAnimState(DESTROY_STATE);
     }
@@ -144,16 +169,19 @@ public class Tower : MonoBehaviour
         ChangeAnimState(ATTACK_STATE);
     }
 
-    public bool Upgrade(float money) 
+    public bool Upgrade() 
     {
-        if (money >= lvlList[currentLvL].LvLCost)
+        if (GlobalData.instance.bones >= lvlList[currentLvL+1].LvLCost)
         {
             currentLvL++;
+            GlobalData.instance.SpendBones(lvlList[currentLvL].LvLCost);
+
             return true;
         }
         else return false;
        
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

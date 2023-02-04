@@ -7,6 +7,7 @@ public class ShrubRoots : MonoBehaviour
     private float timeToDestroy;
     private List<Enemy> enemyList = new List<Enemy>();
     private int slowDebuff;
+    private Animator animator;
     public void Reset(float time)
     {
         timeToDestroy = time;
@@ -30,19 +31,23 @@ public class ShrubRoots : MonoBehaviour
             enemy.Unslow();
         }
     }
+    public void OnDestroyCompleted() => Destroy(gameObject);
+    public void OnBuildCompleted() => animator.Play("SR_Idle");
     public void SpawnRoot(float time, int slowDebuff)
     {
-        this.slowDebuff = slowDebuff;
+        animator = GetComponent<Animator>();
+        this.slowDebuff = slowDebuff * 10;
         timeToDestroy = time;
         StartCoroutine(DestroyMe());
+        animator.Play("SR_Build");
     }
     IEnumerator DestroyMe()
-    {
+    {     
         yield return new WaitForSeconds(timeToDestroy);
+        animator.Play("SR_Destroy");
         foreach (Enemy enemy in enemyList) 
         {
             enemy.Unslow();
         }
-        Destroy(gameObject);
     }
 }

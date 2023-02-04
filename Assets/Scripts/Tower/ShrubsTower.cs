@@ -48,6 +48,7 @@ public class ShrubsTower : Tower
 
         lastAttackTime = Time.time;
         attacking = false;
+        isAttacking = false;
     }
 
     protected override void Attack()

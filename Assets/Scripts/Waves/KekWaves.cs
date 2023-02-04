@@ -8,7 +8,7 @@ public class KekWaves : MonoBehaviour
 
     private void Awake()
     {
-        waveSpawner = GameObject.Find("Wave Controller").GetComponent<WaveSpawner>();
+        waveSpawner = GameObject.Find("SpawnManager").GetComponent<WaveSpawner>();
     }
 
     private void OnDestroy()

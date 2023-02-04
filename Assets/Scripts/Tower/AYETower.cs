@@ -22,16 +22,15 @@ public class AYETower : Tower
 
         lastAttackTime = Time.time;
         attacking = false;
+        isAttacking = false;
     }
 
-    public override void OnAnimationTrigger()
+    public void Fart()
     {
-        base.OnAnimationTrigger();
         GameObject newAYEArea = Instantiate(AYEobj, transform.position, Quaternion.identity);
         newAYEArea.transform.localScale = new Vector2(lvlList[currentLvL].Range * 2, lvlList[currentLvL].Range * 2);
         newAYEArea.GetComponent<Spores>().SpawnSpore(attackTime, lvlList[currentLvL].Damage);
         attacking = true;
         StartCoroutine(Attacking());
     }
-
 }

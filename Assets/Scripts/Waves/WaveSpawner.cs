@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -6,40 +7,96 @@ using UnityEngine;
 public class WaveSpawner : MonoBehaviour
 {
     [SerializeField] private Waves[] waves;
-    private int currentEnemy;
+    [SerializeField] private GameObject[] enemies;
+    private int currentSetting;
     private int currentWave;
     private int enemiesLeftToSpawn;
     public MainTree mainTree;
     private void Start()
     {
-        enemiesLeftToSpawn = waves[0].WaveSettings.Length;
+        enemiesLeftToSpawn = EnemiesInWave(0);
+        currentWave = -1;
+        currentSetting = 0;
         StartNewWave();
     }
-    private IEnumerator EnemySpawn()
+    private IEnumerator EnemySpawn(List<EnemyType> enemyTypes)
     {
-        if(enemiesLeftToSpawn > 0)
+        while (enemyTypes.Count != 0)
         {
-            yield return new WaitForSeconds(waves[currentWave].WaveSettings[currentEnemy].SpawnDelay);
-            GameObject enemy = Instantiate(waves[currentWave].WaveSettings[currentEnemy].Enemy, waves[currentWave].WaveSettings[currentEnemy].Spawner.transform.position, Quaternion.identity);
-            enemy.GetComponent<Enemy>().StartMoving(waves[currentWave].WaveSettings[currentEnemy].Spawner.GetComponent<SpawnController>().MovingPoints);
-            enemy.GetComponent<Enemy>().mainTree = mainTree; 
-            enemiesLeftToSpawn--;
-            currentEnemy++;
-            StartCoroutine(EnemySpawn());
-        } else
-        {
-            if(currentWave < waves.Length - 1)
+            yield return new WaitForSeconds(waves[currentWave].WaveSettings[currentSetting].SpawnDelay);
+            int random = UnityEngine.Random.Range(0, enemyTypes.Count);
+            EnemyType enemy = enemyTypes[random];
+            enemyTypes.Remove(enemy);
+            GameObject ememyToSpawn;
+            switch (enemy)
             {
-                currentWave++;
-                enemiesLeftToSpawn = waves[currentWave].WaveSettings.Length;
-                currentEnemy = 0;
+                case EnemyType.SMALL:
+                    ememyToSpawn = enemies[0];
+                    break;
+                case EnemyType.MEDIUM:
+                    ememyToSpawn = enemies[1];
+                    break;
+                case EnemyType.LARGE:
+                    ememyToSpawn = enemies[2];
+                    break;
+                default:
+                    ememyToSpawn = enemies[0];
+                    break;
             }
+            GameObject enemySpawned = Instantiate(ememyToSpawn, waves[currentWave].WaveSettings[currentSetting].Spawner.transform.position, Quaternion.identity);
+            enemySpawned.GetComponent<Enemy>().StartMoving(waves[currentWave].WaveSettings[currentSetting].Spawner.GetComponent<SpawnController>().MovingPoints);
+            enemySpawned.GetComponent<Enemy>().mainTree = mainTree;
         }
+        currentSetting++;
+        if (currentSetting >= waves[currentWave].WaveSettings.Length)
+        {
+            currentSetting = 0;
+        }
+        else
+        {
+            StartCoroutine(EnemySpawn(waves[currentWave].WaveSettings[currentSetting].EnemyCount.GetEnemyList()));
+        }
+        //if(enemiesLeftToSpawn > 0)
+        //{
+        //    yield return new WaitForSeconds(waves[currentWave].WaveSettings[currentSetting].SpawnDelay);
+        //    //GameObject enemy = Instantiate(waves[currentWave].WaveSettings[currentEnemy].Enemy, waves[currentWave].WaveSettings[currentEnemy].Spawner.transform.position, Quaternion.identity);
+        //    //enemy.GetComponent<Enemy>().StartMoving(waves[currentWave].WaveSettings[currentEnemy].Spawner.GetComponent<SpawnController>().MovingPoints);
+        //    //enemy.GetComponent<Enemy>().mainTree = mainTree;
+        //    //enemiesLeftToSpawn--;
+        //    //currentEnemy++;
+        //    StartCoroutine(EnemySpawn());
+        //} else
+        //{
+        //    if(currentWave < waves.Length - 1)
+        //    {
+        //        currentWave++;
+        //        enemiesLeftToSpawn = EnemiesInWave(currentWave);
+        //        currentEnemy = 0;
+        //    }
+        //}
     }
 
     public void StartNewWave()
     {
-        StartCoroutine(EnemySpawn());
+        currentWave++;
+        if (currentWave >= waves.Length)
+        {
+            Debug.Log("¬—≤ «¿—œ¿¬Õ≈Õ≤");
+        }
+        else
+        {
+            StartCoroutine(EnemySpawn(waves[currentWave].WaveSettings[currentSetting].EnemyCount.GetEnemyList()));
+        }
+    }
+
+    public int EnemiesInWave(int waveIndex)
+    {
+        int allEnemies = 0;
+        foreach (var waveSetting in waves[waveIndex].WaveSettings)
+        {
+            allEnemies += waveSetting.AllEnemies();
+        }
+        return allEnemies;
     }
 }
 
@@ -55,8 +112,8 @@ public class Waves
 
 public class WaveSettings
 {
-    [SerializeField] private GameObject enemy;
-    public GameObject Enemy { get { return enemy; } }
+    [SerializeField] private EnemyCount enemyCount;
+    public EnemyCount EnemyCount { get { return enemyCount; } }
 
     [SerializeField] private GameObject spawner;
     public GameObject Spawner { get { return spawner; } }
@@ -64,4 +121,45 @@ public class WaveSettings
     [SerializeField] private float spawnDelay;
     public float SpawnDelay { get { return spawnDelay; } }
 
+    public int AllEnemies()
+    {
+        return EnemyCount.EnemiesQuantity();
+    }
+}
+[Serializable]
+public struct EnemyCount
+{
+    [SerializeField] private int enemySmall;
+    [SerializeField] private int enemyMedium;
+    [SerializeField] private int enemyLarge;
+    
+    public int EnemiesQuantity()
+    {
+        return enemySmall + enemyMedium + enemyLarge;
+    }
+
+    public List<EnemyType> GetEnemyList()
+    {
+        List<EnemyType> enemyTypes = new List<EnemyType>();
+        for (int i = 0; i < enemySmall; i++)
+        {
+            enemyTypes.Add(EnemyType.SMALL);
+        }
+
+        for (int i = 0; i < enemyMedium; i++)
+        {
+            enemyTypes.Add(EnemyType.MEDIUM);
+        }
+
+        for (int i = 0; i < enemyLarge; i++)
+        {
+            enemyTypes.Add(EnemyType.LARGE);
+        }
+        return enemyTypes;
+    }
+}
+
+public enum EnemyType
+{
+    SMALL , MEDIUM, LARGE
 }

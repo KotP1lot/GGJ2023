@@ -4,6 +4,7 @@ public class MeleeTower : Tower
 {
     private float _angle;
     private Vector2 centerPoint;
+    [SerializeField]private MeleeRoot root;
     private void OnDrawGizmos()
     {
         Quaternion orientation = Quaternion.Euler(0, 0, _angle);
@@ -41,6 +42,18 @@ public class MeleeTower : Tower
                 enemy.TakeDamage(lvlList[currentLvL].Damage);
         }
     }
+    public override void BeforeDestroy()
+    {
+        base.BeforeDestroy();
+        root.ChangeToDESTROYState();
+    }
+
+    public override void OnBuildCompleted()
+    {
+        base.OnBuildCompleted();
+        root.ChangeToIDLEState();
+    }
+
     protected override void Attack()
     {
         Vector3 direction = (enemylist[0].gameObject.transform.position - transform.position).normalized;
@@ -50,12 +63,18 @@ public class MeleeTower : Tower
             (Mathf.Cos((_angle - 90) / (180f / Mathf.PI)) * lvlList[currentLvL].Range / 2 + startPoint.x),
             (Mathf.Sin((_angle - 90) / (180f / Mathf.PI)) * lvlList[currentLvL].Range / 2 + startPoint.y)
             );
+        root.RotateIntoMoveDirection(enemylist[0].gameObject.transform.position);
+        root.ChangeToATTACKState();
+        root.GetComponent<Animator>().speed = lvlList[currentLvL].AttackSpeed;
         base.Attack();
     }
     public override void OnAnimationTrigger()
     {
         base.OnAnimationTrigger();
+        root.RotateReset();
         lastAttackTime = Time.time;
         DoDamage();
+        root.ChangeToIDLEState();
+        root.GetComponent<Animator>().speed = 1;
     }
 }

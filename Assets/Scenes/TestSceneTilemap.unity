@@ -8977,25 +8977,6 @@ MonoBehaviour:
     - enemy: {fileID: 5121045608615617633, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
       spawner: {fileID: 491459036}
       spawnDelay: 1
-    - enemy: {fileID: 4509330595844827365, guid: 13870b715d26a854da51815b39e278b6, type: 3}
-      spawner: {fileID: 491459036}
-      spawnDelay: 0.5
-    - enemy: {fileID: 4509330595844827365, guid: 0e2d341f9ed83f24fa7b0b78064a93f0, type: 3}
-      spawner: {fileID: 491459036}
-      spawnDelay: 0.5
-  - waveSettings:
-    - enemy: {fileID: 5121045608615617633, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
-      spawner: {fileID: 1069743211}
-      spawnDelay: 1
-    - enemy: {fileID: 4509330595844827365, guid: 13870b715d26a854da51815b39e278b6, type: 3}
-      spawner: {fileID: 16701446}
-      spawnDelay: 1
-    - enemy: {fileID: 4509330595844827365, guid: 13870b715d26a854da51815b39e278b6, type: 3}
-      spawner: {fileID: 53480411}
-      spawnDelay: 1
-    - enemy: {fileID: 5121045608615617633, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
-      spawner: {fileID: 491459036}
-      spawnDelay: 1
   mainTree: {fileID: 524924912}
 --- !u!4 &1779795936
 Transform:
@@ -9388,13 +9369,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1953225691}
-  rootsLayer: Roots
-  tower: {fileID: 6181672533819527653, guid: c75d250988296094ca470a179f976d20, type: 3}
   roots:
   - {fileID: 11400000, guid: d77e725c5bc3fd641bab527a4c527959, type: 2}
   - {fileID: 11400000, guid: 30a907bae69517644ac6114ddbb8ea29, type: 2}
   - {fileID: 11400000, guid: 58c5ab6bf979b7e40ac833522e8052f3, type: 2}
   - {fileID: 11400000, guid: eac3cde22aaaaed428324370140a6340, type: 2}
+  tilemap: {fileID: 0}
+  tilemapOverlay: {fileID: 0}
+  overlayGreen: {fileID: 0}
+  overlayRed: {fileID: 0}
   towers: []
 --- !u!4 &1983737131 stripped
 Transform:

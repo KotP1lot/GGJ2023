@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0d2c61a86c29c3b4e83d6f24d5b4bda2
+guid: 2365d5d5553e1d942b957627f8e6033f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,116 +101,275 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BigRoot_Appearing1
+      name: BigRoot_0
       rect:
         serializedVersion: 2
         x: 0
         y: 32
         width: 16
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1875}
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 046bf3b6b2543044e9d0644e8ed40c18
-      internalID: -1483268395
+      spriteID: cef116d7ad04b4047b54d7972d493cb3
+      internalID: -859821609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigRoot_Appearing2
+      name: BigRoot_1
       rect:
         serializedVersion: 2
         x: 16
         y: 32
         width: 16
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1875}
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feec4c673b6238d4da1e1a4df4f74198
-      internalID: -103834730
+      spriteID: 86d05a78da8053c449c224c2217ac9c5
+      internalID: 1112265379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigRoot_Appearing3
+      name: BigRoot_2
       rect:
         serializedVersion: 2
         x: 32
         y: 32
         width: 16
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1875}
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: deae760a4cea0ac4483730317355ff41
-      internalID: -1192173122
+      spriteID: c7e8cc0d889eee145ae53583c9b87661
+      internalID: -2001706495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigRoot_Appearing4
+      name: BigRoot_3
       rect:
         serializedVersion: 2
         x: 48
         y: 32
         width: 16
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1875}
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e87707c7e1af264bb5c209c186c28de
-      internalID: 1819037019
+      spriteID: 0d2b8007a2854f049bfb7217d7c400aa
+      internalID: 1794889138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigRoot_Appearing5
+      name: BigRoot_4
       rect:
         serializedVersion: 2
         x: 64
         y: 32
         width: 16
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1875}
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8a8efe029b7db644b8013e3eecf5fef
-      internalID: 1349177716
+      spriteID: 9fd48636c05bc2a44843e7549316fbf4
+      internalID: 1925412452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigRoot_Attack1_RootPart
+      name: BigRoot_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9648cb7c1fc55cc45af1686aad1c62f6
+      internalID: 939384039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigRoot_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9179378da7e81dc42a5b50aa0420c801
+      internalID: -1672424291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigRoot_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce3fbda30b3ff84eac294b599571dcf
+      internalID: -1283785022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigRoot_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 41
+        width: 16
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae6ced3ecef36f47ad56c27de68651a
+      internalID: -1290982286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigRoot_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 41
+        width: 16
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d13a0ebade701449308f797002b1a4
+      internalID: 604944270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigRoot_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 41
+        width: 16
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497cbac6793f3784f875bef05102d377
+      internalID: 1548281741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigRoot_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 41
+        width: 16
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b844c2b208ba57458e48b2faad055fd
+      internalID: -2111951649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigRoot_12
       rect:
         serializedVersion: 2
         x: 0
@@ -218,20 +377,20 @@ TextureImporter:
         width: 16
         height: 23
       alignment: 9
-      pivot: {x: 0.375, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2b9b09cb9dd53042b087d928bdeab5b
-      internalID: -1027185754
+      spriteID: 88e01544822db8e468848f68f9670b2d
+      internalID: 1574253841
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigRoot_Attack2_RootPart
+      name: BigRoot_13
       rect:
         serializedVersion: 2
         x: 16
@@ -239,41 +398,20 @@ TextureImporter:
         width: 16
         height: 23
       alignment: 9
-      pivot: {x: 0.4375, y: -0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdc42a1717cd1a24bb15cda56ec009fd
-      internalID: -648684113
+      spriteID: 947ad99ced58e6e45956399e7ec6ef9c
+      internalID: 2070199125
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigRoot_Attack_MainPart
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 11
-      alignment: 9
-      pivot: {x: 0.5, y: 0.54545456}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f17235976e410d4788a1287e44fa89c
-      internalID: -1078441942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BigRoot_Attack3_RootPart
+      name: BigRoot_14
       rect:
         serializedVersion: 2
         x: 32
@@ -281,20 +419,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 9
-      pivot: {x: 0.3125, y: 0}
+      pivot: {x: 0.375, y: -0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b395970bc8d324e46958c9ddce1747df
-      internalID: 317421857
+      spriteID: 570a0f1412485524eb152087c279884e
+      internalID: 315171578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigRoot_Attack4_RootPart
+      name: BigRoot_15
       rect:
         serializedVersion: 2
         x: 54
@@ -308,29 +446,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ce549707fa1ce5488ecd0010394248e
-      internalID: 924531406
+      spriteID: 9218f1335e374e345b2aeb47b5dbcc6a
+      internalID: 580344986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigRoot_Attack5_RootPart
+      name: BigRoot_16
       rect:
         serializedVersion: 2
         x: 54
         y: 0
         width: 23
-        height: 7
+        height: 9
       alignment: 9
-      pivot: {x: 0.13043478, y: 0.5714286}
+      pivot: {x: 0.13043478, y: 0.44444445}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e33c7221fa3fc442b2f8d64e6d02b09
-      internalID: -45384187
+      spriteID: f9e9be7bf48c62b4c82903f4028d39c6
+      internalID: 1469464320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigRoot_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 41
+        width: 16
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3224ed9eec672e84aa4a421f7b1ab819
+      internalID: -1230707100
       vertices: []
       indices: 
       edges: []
@@ -346,17 +505,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BigRoot_Attack4_RootPart: -1192173122
-      BigRoot_Appearing3: -1027185754
-      BigRoot_Attack1_RootPart: -1027185754
-      BigRoot_Appearing1: 1349177716
-      BigRoot_Attack2_RootPart: -648684113
-      BigRoot_Appearing5: 317421857
-      BigRoot_Attack3_RootPart: -1078441942
-      BigRoot_Attack_MainPart: 1819037019
-      BigRoot_Appearing4: -103834730
-      BigRoot_Appearing2: -45384187
-      BigRoot_Attack5_RootPart: -648684113
+      BigRoot_11: -2111951649
+      BigRoot_0: -859821609
+      BigRoot_6: -1672424291
+      BigRoot_3: 1794889138
+      BigRoot_10: 1548281741
+      BigRoot_15: 580344986
+      BigRoot_17: -1230707100
+      BigRoot_2: -2001706495
+      BigRoot_4: 1925412452
+      BigRoot_8: -1290982286
+      BigRoot_5: 939384039
+      BigRoot_9: 604944270
+      BigRoot_12: 1574253841
+      BigRoot_1: 1112265379
+      BigRoot_13: 2070199125
+      BigRoot_16: 1469464320
+      BigRoot_7: -1283785022
+      BigRoot_14: 315171578
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
