@@ -119,6 +119,16 @@ public class Tower : MonoBehaviour
     {
         return currentLvL == lvlList.Count-1;
     }
+
+    public int GetCurrentCost()
+    {
+        int res = 0;
+        for(int i = 0; i <= currentLvL; i++)
+        {
+            res += lvlList[i].LvLCost;
+        }
+        return res;
+    }
     #endregion
 
     #region Trigger Func
