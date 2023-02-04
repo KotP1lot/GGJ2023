@@ -19,8 +19,6 @@ public class FullScreenChanger : MonoBehaviour
         {
             _isFullScreen = value;
             Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, _isFullScreen);
-            Debug.Log(_isFullScreen);
-            Debug.Log(Screen.fullScreen);
         }
     }
 }
