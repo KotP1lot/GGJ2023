@@ -13,17 +13,7 @@ public class Enemy : Unit
     [SerializeField] private int damage = 3;
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private int moneyOnKill = 0;
-
-    [HideInInspector] public bool isPoisoned;
-    private bool isRight = false;
-    private float stunDuration = 0;
-    private float stunTimeElapsed = 0;
-    private bool isSlowed = false;
-    private bool isStunned = false;
-    private bool isDead = false;
-
-    public MainTree mainTree;
-    private Animator anim;
+    [SerializeField] private bool LEGENDARY = false;
 
     [Space(7)]
     [Header("Particles")]
@@ -33,12 +23,26 @@ public class Enemy : Unit
     public float stunFlipPointX;
     private Vector3 stunDefaultPoint;
 
+    [HideInInspector] public bool isPoisoned;
+    private bool isRight = false;
+    private float stunDuration = 0;
+    private float stunTimeElapsed = 0;
+    private bool isSlowed = false;
+    private bool isStunned = false;
+    private bool isDead = false;
+
+    [HideInInspector] public MainTree mainTree;
+    private Animator anim;
+    private SpriteRenderer spriteRenderer;
+    private float RGBSpeed = 0.7f;
+
     protected override void Start()
     {
         base.Start();
         startSpeed = moveSpeed;
         healthBar.SetHealth(currentHealth, maxHealth);
         anim = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         stunDefaultPoint = stunParticles.transform.localPosition;
     }
@@ -70,6 +74,11 @@ public class Enemy : Unit
     }
     private void Update()
     {
+        if (LEGENDARY)
+        {
+            spriteRenderer.color = Color.HSVToRGB(Mathf.PingPong(Time.time * RGBSpeed, 1), 0.3f, 1);
+        }
+
         if(!isDead)
         {
             StopMovement();

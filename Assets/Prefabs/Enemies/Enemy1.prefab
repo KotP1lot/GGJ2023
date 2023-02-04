@@ -14956,12 +14956,13 @@ MonoBehaviour:
   damage: 1
   healthBar: {fileID: 2726302244929795790}
   moneyOnKill: 1
-  isPoisoned: 0
-  mainTree: {fileID: 0}
+  LEGENDARY: 0
   poisonParticles: {fileID: 1486579239}
   slowParticles: {fileID: 53457669}
   stunParticles: {fileID: 2113403268}
   stunFlipPointX: -0.671
+  isPoisoned: 0
+  mainTree: {fileID: 0}
 --- !u!95 &2455592300198231747
 Animator:
   serializedVersion: 4
