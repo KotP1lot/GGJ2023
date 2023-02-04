@@ -88,7 +88,7 @@ public class GlobalData : MonoBehaviour
     {
         treeHP.value -= amount;
 
-        if(treeHP.value == 0)
+        if(treeHP.value == 0 && virCam.Follow != treeTransform)
         {
             virCam.Follow = treeTransform;
             Time.timeScale = 0;
