@@ -176,6 +176,8 @@ public class Tower : MonoBehaviour
         if (GlobalData.instance.bones >= lvlList[currentLvL+1].LvLCost)
         {
             currentLvL++;
+            attackRangeCollider = GetComponent<CircleCollider2D>();
+            attackRangeCollider.radius = lvlList[currentLvL].Range;
             GlobalData.instance.SpendBones(lvlList[currentLvL].LvLCost);
 
             return true;
