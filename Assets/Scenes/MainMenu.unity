@@ -366,8 +366,9 @@ GameObject:
   m_Component:
   - component: {fileID: 141355201}
   - component: {fileID: 141355202}
+  - component: {fileID: 141355203}
   m_Layer: 5
-  m_Name: Toggle
+  m_Name: FullScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -441,8 +442,32 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 141355203}
+        m_TargetAssemblyTypeName: FullScreenChanger, Assembly-CSharp
+        m_MethodName: set_IsFullScreen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
+--- !u!114 &141355203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141355200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b5b7601ac08b6048898edecf018af98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &189730049
 GameObject:
   m_ObjectHideFlags: 0
