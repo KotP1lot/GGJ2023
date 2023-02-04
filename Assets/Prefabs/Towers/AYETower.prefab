@@ -119,24 +119,24 @@ MonoBehaviour:
   lvlList:
   - LvLCost: 40
     AttackSpeed: 0.5
-    Damage: 1
-    Range: 2
-  - LvLCost: 20
-    AttackSpeed: 0.8
-    Damage: 1.2
+    Damage: 0.7
     Range: 2
   - LvLCost: 30
-    AttackSpeed: 1
-    Damage: 1.5
-    Range: 2.5
+    AttackSpeed: 0.8
+    Damage: 0.9
+    Range: 2
   - LvLCost: 40
+    AttackSpeed: 1
+    Damage: 1.1
+    Range: 2.5
+  - LvLCost: 45
     AttackSpeed: 1.2
-    Damage: 1.8
+    Damage: 1.2
     Range: 2.5
   - LvLCost: 50
-    AttackSpeed: 1.5
-    Damage: 2
-    Range: 3
+    AttackSpeed: 1.4
+    Damage: 1.2
+    Range: 2.5
   towerName: SHROOM
   towerDescription: Poisons enemies around it
   mainCamera: {fileID: 0}

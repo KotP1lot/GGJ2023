@@ -238,25 +238,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvlList:
   - LvLCost: 20
-    AttackSpeed: 1
+    AttackSpeed: 1.2
     Damage: 2
-    Range: 3
+    Range: 3.5
   - LvLCost: 10
     AttackSpeed: 1.5
-    Damage: 2.3
-    Range: 3
+    Damage: 2.2
+    Range: 3.5
   - LvLCost: 20
-    AttackSpeed: 2
-    Damage: 2.6
-    Range: 3.5
-  - LvLCost: 30
-    AttackSpeed: 2.5
-    Damage: 3
-    Range: 3.5
-  - LvLCost: 40
-    AttackSpeed: 3
-    Damage: 4
+    AttackSpeed: 1.8
+    Damage: 2.4
     Range: 4
+  - LvLCost: 30
+    AttackSpeed: 2
+    Damage: 2.5
+    Range: 4
+  - LvLCost: 40
+    AttackSpeed: 2.5
+    Damage: 2.5
+    Range: 4.5
   towerName: SQUIRREL
   towerDescription: Throws acorns at enemies
   mainCamera: {fileID: 0}
