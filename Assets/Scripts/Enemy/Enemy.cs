@@ -12,6 +12,8 @@ public class Enemy : Unit
     [SerializeField] private float moveSpeed = 2.0f;
     [SerializeField] private int damage = 3;
     [SerializeField] private HealthBar healthBar;
+    [SerializeField] private int moneyOnKill = 0;
+
     [HideInInspector] public bool isPoisoned;
     private bool isRight = false;
     private float stunDuration = 0;
@@ -86,6 +88,9 @@ public class Enemy : Unit
                 StopAllCoroutines();
                 isDead = true;
                 anim.SetTrigger("Death");
+
+                GlobalData.instance.GetBones(moneyOnKill);
+                GlobalData.instance.GetSkulls(1);
             }
         }
         

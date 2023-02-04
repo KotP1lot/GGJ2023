@@ -84,10 +84,11 @@ public class WaveSpawner : MonoBehaviour
     public void StartNewWave()
     {
         currentWave++;
+        GlobalData.instance.NextWave();
+
         if (currentWave >= waves.Length)
         {
-            //Запускає ось тут
-            //Debug.Log("ВСІ ЗАСПАВНЕНІ");
+
             _onWin?.Invoke();
         }
         else
