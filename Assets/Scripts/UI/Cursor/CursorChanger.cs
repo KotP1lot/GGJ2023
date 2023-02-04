@@ -10,6 +10,7 @@ public class CursorChanger : MonoBehaviour
     public bool Enabled = true;
 
     private CustomCursor cursor;
+    private bool soundPlay = false;
     public bool isHovered { get; private set; }
 
     private void Start()
@@ -24,11 +25,17 @@ public class CursorChanger : MonoBehaviour
         {
             ChangeTo = selectedType;
             isHovered = cursor.isObjectHovered(gameObject);
+            if(isHovered && !soundPlay)
+            {
+                AudioManager.instance.Play("UIHover");
+                soundPlay = true;
+            }
         }
         else 
         { 
             ChangeTo = GlobalData.CursorType.Point; 
             isHovered = false;
+            soundPlay = false;
         }
     }
 }

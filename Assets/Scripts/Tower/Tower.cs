@@ -158,6 +158,7 @@ public class Tower : MonoBehaviour
     }
     public virtual void BeforeDestroy()
     {
+        AudioManager.instance.Play("DestroyTower");
         ChangeAnimState(DESTROY_STATE);
         isDying = true;
     }
@@ -175,6 +176,7 @@ public class Tower : MonoBehaviour
     {
         if (GlobalData.instance.bones >= lvlList[currentLvL+1].LvLCost)
         {
+            AudioManager.instance.Play("UpgradeTower");
             currentLvL++;
             attackRangeCollider = GetComponent<CircleCollider2D>();
             attackRangeCollider.radius = lvlList[currentLvL].Range;

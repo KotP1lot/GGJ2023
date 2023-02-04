@@ -1,13 +1,15 @@
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sfx;
 
     public static AudioManager instance;
-    // Start is called before the first frame update
+    public AudioMixer mixer;
+
     void Awake()
     {
         if (instance == null)
@@ -28,7 +30,13 @@ public class AudioManager : MonoBehaviour
             sound.source.volume = sound.volume;
             sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
+            sound.source.outputAudioMixerGroup = sound.mixerGroup;
         }
+        
+    }
+    public void Start()
+    {
+        Play("Theme");
     }
     public void Play(string name)
     {
