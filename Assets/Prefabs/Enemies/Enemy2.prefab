@@ -4924,8 +4924,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.995697, y: 25.800003}
-  m_SizeDelta: {x: 24.3, y: 1.8216}
+  m_AnchoredPosition: {x: -3.9406, y: 24.2109}
+  m_SizeDelta: {x: 50, y: 7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20764234300280571
 MonoBehaviour:
@@ -5097,7 +5097,7 @@ MonoBehaviour:
   stunFlipPointX: -0.688
 --- !u!95 &1355355178572258522
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5114,7 +5114,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!50 &-2481857617763207066
 Rigidbody2D:
   serializedVersion: 4
@@ -10100,7 +10100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 20764234300280571}
-  offset: {x: 0, y: 1, z: 0}
+  offset: {x: 0, y: 1.1, z: 0}
 --- !u!1 &8417203591149403837
 GameObject:
   m_ObjectHideFlags: 0

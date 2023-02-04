@@ -61,24 +61,6 @@ public class WaveSpawner : MonoBehaviour
         {
             StartCoroutine(EnemySpawn(waves[currentWave].WaveSettings[currentSetting].EnemyCount.GetEnemyList()));
         }
-        //if(enemiesLeftToSpawn > 0)
-        //{
-        //    yield return new WaitForSeconds(waves[currentWave].WaveSettings[currentSetting].SpawnDelay);
-        //    //GameObject enemy = Instantiate(waves[currentWave].WaveSettings[currentEnemy].Enemy, waves[currentWave].WaveSettings[currentEnemy].Spawner.transform.position, Quaternion.identity);
-        //    //enemy.GetComponent<Enemy>().StartMoving(waves[currentWave].WaveSettings[currentEnemy].Spawner.GetComponent<SpawnController>().MovingPoints);
-        //    //enemy.GetComponent<Enemy>().mainTree = mainTree;
-        //    //enemiesLeftToSpawn--;
-        //    //currentEnemy++;
-        //    StartCoroutine(EnemySpawn());
-        //} else
-        //{
-        //    if(currentWave < waves.Length - 1)
-        //    {
-        //        currentWave++;
-        //        enemiesLeftToSpawn = EnemiesInWave(currentWave);
-        //        currentEnemy = 0;
-        //    }
-        //}
     }
 
     public void StartNewWave()
@@ -95,6 +77,11 @@ public class WaveSpawner : MonoBehaviour
         {
             StartCoroutine(EnemySpawn(waves[currentWave].WaveSettings[currentSetting].EnemyCount.GetEnemyList()));
         }
+    }
+
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
     }
 
     public int EnemiesInWave(int waveIndex)
