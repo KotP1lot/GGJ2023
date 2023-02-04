@@ -5085,18 +5085,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14d24b840e00b844a966a90582132eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 7
+  maxHealth: 10
   currentHealth: 0
   moveSpeed: 2
   damage: 5
   healthBar: {fileID: 3484750640613566692}
-  moneyOnKill: 2
-  isPoisoned: 0
-  mainTree: {fileID: 0}
+  moneyOnKill: 1
+  LEGENDARY: 0
   poisonParticles: {fileID: 8723912135561311294}
   slowParticles: {fileID: 5276851288988880762}
   stunParticles: {fileID: 980452365549687228}
   stunFlipPointX: -0.688
+  isPoisoned: 0
+  mainTree: {fileID: 0}
 --- !u!95 &1355355178572258522
 Animator:
   serializedVersion: 4

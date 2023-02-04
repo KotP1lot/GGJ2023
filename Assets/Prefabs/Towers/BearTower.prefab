@@ -158,17 +158,17 @@ MonoBehaviour:
     Damage: 6
     Range: 6.2
   - LvLCost: 3
-    AttackSpeed: 0
-    Damage: 0
-    Range: 0
+    AttackSpeed: 0.8
+    Damage: 7
+    Range: 6.5
   - LvLCost: 4
-    AttackSpeed: 0
-    Damage: 0
-    Range: 0
+    AttackSpeed: 1
+    Damage: 8
+    Range: 7
   - LvLCost: 5
-    AttackSpeed: 0
-    Damage: 0
-    Range: 0
+    AttackSpeed: 1
+    Damage: 10
+    Range: 7.5
   towerName: BEAR
   towerDescription: Gigachad
   mainCamera: {fileID: 0}
