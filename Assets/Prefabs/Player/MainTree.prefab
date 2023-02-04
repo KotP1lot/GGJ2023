@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5467591914488765253}
   - component: {fileID: 286152831791086358}
   - component: {fileID: 5729525903007210357}
+  - component: {fileID: 72156658378570909}
   m_Layer: 0
   m_Name: MainTree
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 954528267
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1487555473, guid: 1f2bfc13d3887c149bee7389948500b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4520020962817c6438b033ceecd03e71, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,3 +100,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+--- !u!70 &72156658378570909
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2333315851449629992}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.041173108, y: -1.015854}
+  m_Size: {x: 4.439567, y: 1.4782335}
+  m_Direction: 1

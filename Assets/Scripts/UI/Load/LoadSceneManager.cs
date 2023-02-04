@@ -31,6 +31,7 @@ public class LoadSceneManager : MonoBehaviour
 
     public async void LoadScene(string sceneName)
     {
+        Time.timeScale = 1;
         _onLoadingStart?.Invoke();
 
         Animator loadAnimator = _loadScreenCanvas.GetComponent<Animator>();

@@ -2,12 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
     [SerializeField] private Waves[] waves;
     [SerializeField] private GameObject[] enemies;
+
+    //Запускає вікно перемоги
+    [SerializeField] private UnityEvent _onWin;
+
     private int currentSetting;
     private int currentWave;
     private int enemiesLeftToSpawn;
@@ -81,7 +86,9 @@ public class WaveSpawner : MonoBehaviour
         currentWave++;
         if (currentWave >= waves.Length)
         {
-            Debug.Log("ВСІ ЗАСПАВНЕНІ");
+            //Запускає ось тут
+            //Debug.Log("ВСІ ЗАСПАВНЕНІ");
+            _onWin?.Invoke();
         }
         else
         {

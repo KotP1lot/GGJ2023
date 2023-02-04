@@ -219,6 +219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeTo: 0
+  selectedType: 0
+  Enabled: 1
 --- !u!1 &109268558
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +724,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeTo: 0
+  selectedType: 0
+  Enabled: 1
 --- !u!1 &332034388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,6 +1053,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeTo: 1
+  selectedType: 0
+  Enabled: 1
 --- !u!1 &473919843
 GameObject:
   m_ObjectHideFlags: 0
@@ -2773,6 +2779,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeTo: 1
+  selectedType: 0
+  Enabled: 1
 --- !u!1 &1179914047
 GameObject:
   m_ObjectHideFlags: 0
@@ -3040,6 +3048,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeTo: 0
+  selectedType: 0
+  Enabled: 1
 --- !u!114 &1195787783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3283,6 +3293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeTo: 0
+  selectedType: 0
+  Enabled: 1
 --- !u!114 &1332765943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4491,6 +4503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeTo: 0
+  selectedType: 0
+  Enabled: 1
 --- !u!114 &1583061989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4733,6 +4747,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeTo: 0
+  selectedType: 0
+  Enabled: 1
 --- !u!1 &1659427227
 GameObject:
   m_ObjectHideFlags: 0
@@ -4827,7 +4843,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainMenu
+          m_StringArgument: Level v.1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1659427230
@@ -4881,6 +4897,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeTo: 0
+  selectedType: 0
+  Enabled: 1
 --- !u!1 &1659657179
 GameObject:
   m_ObjectHideFlags: 0
@@ -9955,7 +9973,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4354514501858896668, guid: d1357f11b87d3de42aceff60e3d79a55, type: 3}
       propertyPath: m_Name
-      value: Main Camera (1)
+      value: Main Camera
       objectReference: {fileID: 0}
     - target: {fileID: 4354514501858896671, guid: d1357f11b87d3de42aceff60e3d79a55, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -10603,10 +10621,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoadSystem
       objectReference: {fileID: 0}
-    - target: {fileID: 6071390813659695847, guid: 0fa29b7c9a9e99a43aad1f996c3a1557, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fa29b7c9a9e99a43aad1f996c3a1557, type: 3}
 --- !u!1 &6359569547293389318
@@ -10662,11 +10676,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedTower: {fileID: 9176866386400619125}
+  builder: {fileID: 0}
   squirrel: {fileID: 1791138781, guid: 9804e415ff6f85a4b8b66bbd98ba308d, type: 3}
   bigroot: {fileID: 872305841, guid: 9804e415ff6f85a4b8b66bbd98ba308d, type: 3}
   rose: {fileID: 616296617, guid: 9804e415ff6f85a4b8b66bbd98ba308d, type: 3}
   shroom: {fileID: -819973465, guid: 9804e415ff6f85a4b8b66bbd98ba308d, type: 3}
   bear: {fileID: 1963998641, guid: 9804e415ff6f85a4b8b66bbd98ba308d, type: 3}
+  squirrelObj: {fileID: 0}
+  bigrootObj: {fileID: 0}
+  roseObj: {fileID: 0}
+  shroomObj: {fileID: 0}
+  bearObj: {fileID: 0}
+  towerRange: {fileID: 0}
 --- !u!222 &6359569547293389323
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10859,3 +10880,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeTo: 2
+  selectedType: 0
+  Enabled: 1

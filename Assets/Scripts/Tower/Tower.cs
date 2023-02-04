@@ -35,6 +35,7 @@ public class Tower : MonoBehaviour
     protected Animator animator;
 
     private bool isCompleted;
+    private bool isDying = false;
     protected bool isAttacking;
 
     private string currentState;
@@ -72,7 +73,7 @@ public class Tower : MonoBehaviour
 
     void Update()
     {
-        if (isCompleted)
+        if (isCompleted && !isDying)
         {
             if (!isAttacking)
             {
@@ -158,6 +159,7 @@ public class Tower : MonoBehaviour
     public virtual void BeforeDestroy()
     {
         ChangeAnimState(DESTROY_STATE);
+        isDying = true;
     }
     public void OnDestroyCompleted()
     {

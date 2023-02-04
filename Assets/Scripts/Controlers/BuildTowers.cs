@@ -40,10 +40,10 @@ public class BuildTowers : MonoBehaviour
 
     private void InstantiateRoot() 
     {
-        Destroy(destroedTower);
         Vector3Int tile = tilemap.WorldToCell(destroedTower.transform.position);
         tilemap.SetTile(tile, roots[Random.Range(0, roots.Length)]);
         tilemapOverlay.SetTile(tile, overlayGreen);
+        Destroy(destroedTower);
     }
     public bool BuildNewTower(GameObject tower, Vector3 placeForBuid) 
     {
