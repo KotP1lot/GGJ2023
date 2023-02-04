@@ -9,7 +9,7 @@ public struct LvL
 {
     public int LvLCost;
     public float AttackSpeed;
-    public int Damage;
+    public float Damage;
     public float Range;
 
     public float GetCooldown() => 1f / AttackSpeed;

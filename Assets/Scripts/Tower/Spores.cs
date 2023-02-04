@@ -5,14 +5,14 @@ using UnityEngine;
 public class Spores : MonoBehaviour
 {
     private float timeToDestroy;
-    private int poisonDamage;
+    private float poisonDamage;
     [SerializeField] private float poisonDuration; 
     [SerializeField] private float poisonInterval;
     [SerializeField] private ParticleSystem particles;
 
     [HideInInspector] public float range;
 
-    public void SetSlowDebuffValue(int poisonDamage) => this.poisonDamage = poisonDamage;
+    public void SetSlowDebuffValue(float poisonDamage) => this.poisonDamage = poisonDamage;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent<Enemy>(out Enemy enemy))
@@ -22,7 +22,7 @@ public class Spores : MonoBehaviour
     }
 
     [System.Obsolete]
-    public void SpawnSpore(float time, int poisonDamage)
+    public void SpawnSpore(float time, float poisonDamage)
     {
         particles.startSpeed = range + 1;
 

@@ -237,12 +237,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvlList:
-  - LvLCost: 20
+  - LvLCost: 2
     AttackSpeed: 1
-    Damage: 1
+    Damage: 2
     Range: 3
-  - LvLCost: 0
+  - LvLCost: 1
+    AttackSpeed: 1.5
+    Damage: 2
+    Range: 3
+  - LvLCost: 2
     AttackSpeed: 2
+    Damage: 2
+    Range: 3
+  - LvLCost: 3
+    AttackSpeed: 2.5
+    Damage: 2
+    Range: 3
+  - LvLCost: 4
+    AttackSpeed: 3
     Damage: 2
     Range: 3
   towerName: SQUIRREL

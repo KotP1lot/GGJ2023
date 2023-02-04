@@ -76,7 +76,7 @@ public class GlobalData : MonoBehaviour
         skullsText.text = skulls.ToString();
     }
 
-    public void DamageTree(int amount)
+    public void DamageTree(float amount)
     {
         treeHP.value -= amount;
     }

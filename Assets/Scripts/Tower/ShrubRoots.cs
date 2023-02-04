@@ -6,7 +6,7 @@ public class ShrubRoots : MonoBehaviour
 {
     private float timeToDestroy;
     private List<Enemy> enemyList = new List<Enemy>();
-    private int slowDebuff;
+    private float slowDebuff;
     private Animator animator;
     public void Reset(float time)
     {
@@ -33,7 +33,7 @@ public class ShrubRoots : MonoBehaviour
     }
     public void OnDestroyCompleted() => Destroy(gameObject);
     public void OnBuildCompleted() => animator.Play("SR_Idle");
-    public void SpawnRoot(float time, int slowDebuff)
+    public void SpawnRoot(float time, float slowDebuff)
     {
         animator = GetComponent<Animator>();
         this.slowDebuff = slowDebuff * 10;

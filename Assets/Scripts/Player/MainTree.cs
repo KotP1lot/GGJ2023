@@ -15,7 +15,7 @@ public class MainTree : Unit
         base.Start();
     }
 
-    public override void TakeDamage(int damage)
+    public override void TakeDamage(float damage)
     {
         if (!_isDead)
         {
