@@ -85,7 +85,7 @@ public class Enemy : Unit
             Move();
         }
     }
-    public override void TakeDamage(int damage)
+    public override void TakeDamage(float damage)
     {
         if (!isDead)
         {
@@ -111,7 +111,7 @@ public class Enemy : Unit
             mainTree.TakeDamage(damage);
         }
     }
-    public IEnumerator Poison(float poisonDuration, float poisonInterval, int poisonDamage)
+    public IEnumerator Poison(float poisonDuration, float poisonInterval, float poisonDamage)
     {
 
         float poisonCounter = 0;

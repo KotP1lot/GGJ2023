@@ -6,10 +6,10 @@ using UnityEngine;
 public abstract class Unit : MonoBehaviour
 {
     [Header("Health")]
-    public int maxHealth = 5;
-    public int currentHealth;
+    public float maxHealth = 5;
+    public float currentHealth;
 
-    public abstract void TakeDamage(int damage);
+    public abstract void TakeDamage(float damage);
 
     protected virtual void Start()
     {

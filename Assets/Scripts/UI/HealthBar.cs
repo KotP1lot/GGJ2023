@@ -13,7 +13,7 @@ public class HealthBar : MonoBehaviour
         slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + offset);
     }
 
-    public void SetHealth(int currentHealth, int maxHealth)
+    public void SetHealth(float currentHealth, float maxHealth)
     {
         slider.gameObject.SetActive(currentHealth < maxHealth);
         slider.value = currentHealth;
