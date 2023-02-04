@@ -92,6 +92,7 @@ public class GlobalData : MonoBehaviour
         {
             virCam.Follow = treeTransform;
             Time.timeScale = 0;
+            treeTransform.GetComponent<Animator>().SetTrigger("Death");
 
             StartCoroutine(endGame());
         }

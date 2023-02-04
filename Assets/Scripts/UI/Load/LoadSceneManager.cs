@@ -46,13 +46,11 @@ public class LoadSceneManager : MonoBehaviour
 
         while (loadAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
         {
-            Debug.Log("Aga 1");
             await Task.Delay(100);
         }
 
         while (scene.progress < 0.9f)
         {
-            Debug.Log("Aga 2");
             await Task.Delay(100);
         }
 
