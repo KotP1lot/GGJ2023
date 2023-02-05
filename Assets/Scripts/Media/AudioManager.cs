@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sfx;
+    public Sound[] steps;
 
     public static AudioManager instance;
     public AudioMixer mixer;
@@ -32,7 +33,16 @@ public class AudioManager : MonoBehaviour
             sound.source.loop = sound.loop;
             sound.source.outputAudioMixerGroup = sound.mixerGroup;
         }
-        
+        foreach (Sound sound in steps)
+        {
+            sound.source = gameObject.AddComponent<AudioSource>();
+            sound.source.clip = sound.clip;
+
+            sound.source.volume = sound.volume;
+            sound.source.pitch = sound.pitch;
+            sound.source.loop = sound.loop;
+            sound.source.outputAudioMixerGroup = sound.mixerGroup;
+        }
     }
     public void Start()
     {
@@ -46,6 +56,12 @@ public class AudioManager : MonoBehaviour
             Debug.Log("Sound" + name + "not found");
             return;
         }
+        s.source.Play();
+    }
+
+    public void Step()
+    {
+        Sound s = steps[UnityEngine.Random.Range(0, steps.Length)];
         s.source.Play();
     }
 }

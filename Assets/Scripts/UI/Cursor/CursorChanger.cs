@@ -23,19 +23,24 @@ public class CursorChanger : MonoBehaviour
     {
         if (Enabled)
         {
+
             ChangeTo = selectedType;
             isHovered = cursor.isObjectHovered(gameObject);
-            if(isHovered && !soundPlay)
+            if (isHovered && !soundPlay)
             {
                 AudioManager.instance.Play("UIHover");
                 soundPlay = true;
             }
+            if (!isHovered)
+            {
+                soundPlay = false;
+            }
         }
-        else 
-        { 
-            ChangeTo = GlobalData.CursorType.Point; 
+        else
+        {
+            ChangeTo = GlobalData.CursorType.Point;
             isHovered = false;
-            soundPlay = false;
+           
         }
     }
 }

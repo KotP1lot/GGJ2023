@@ -35,6 +35,12 @@ public class SliderSoundsChanger : MonoBehaviour
     }
     private void Start()
     {
+        PauseController.pauseChanger += UpdateSlider;
+        sliderSounds.value = GetSoundsLevel();
+        sliderMusic.value = GetMusicLevel();
+    }
+    public void UpdateSlider()
+    {
         sliderSounds.value = GetSoundsLevel();
         sliderMusic.value = GetMusicLevel();
     }

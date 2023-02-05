@@ -66,7 +66,7 @@ public class ShrubsTower : Tower
         List<Vector3Int> wereToSpawn = FindPathCells(transform.position);
 
         attacking = true;
-
+        AudioManager.instance.Play("Rose");
         foreach (Vector3Int cell in wereToSpawn)
         {
             GameObject root = Instantiate(shrubRoots, new Vector2(cell.x + 0.5f, cell.y + 0.5f), Quaternion.identity);

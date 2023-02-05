@@ -89,7 +89,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &5138687971861134638
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -106,7 +106,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &1147482116825171092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,9 +264,10 @@ MonoBehaviour:
   prefabForAttack: {fileID: 4779018594819824861, guid: aa5df49afa7360248a96013d15fafe9b, type: 3}
   spawnPointForAttack: {fileID: 4501296353538446375}
   pet: {fileID: 1147482116825171092}
+  isSquirrel: 1
 --- !u!95 &1244655113922315562
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -283,7 +284,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &4501296353538446374
 GameObject:
   m_ObjectHideFlags: 0

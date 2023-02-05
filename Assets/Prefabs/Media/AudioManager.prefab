@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfx:
   - name: Theme
-    clip: {fileID: 8300000, guid: 26416ce257150314fbac9190785f2031, type: 3}
+    clip: {fileID: 8300000, guid: d135fdd0e801da34a8e9cff2e6550772, type: 3}
     volume: 1
     pitch: 1
     loop: 1
@@ -60,7 +60,7 @@ MonoBehaviour:
     mixerGroup: {fileID: -2940716709565618628, guid: 8013e399b63378343a5a6b6b578c9ac2, type: 2}
     source: {fileID: 0}
   - name: BigRoot
-    clip: {fileID: 8300000, guid: 162feee94d7313c48814e4215dfc519b, type: 3}
+    clip: {fileID: 8300000, guid: d3ff85aa5605efd4f884acd013ccc9be, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -82,6 +82,34 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Mushroom
     clip: {fileID: 8300000, guid: 3aef1ac6ef560914c91accebfac85b34, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: -2940716709565618628, guid: 8013e399b63378343a5a6b6b578c9ac2, type: 2}
+    source: {fileID: 0}
+  - name: UIHover
+    clip: {fileID: 8300000, guid: 935902d8a74d88e488f23dcc2895e8fd, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: -2940716709565618628, guid: 8013e399b63378343a5a6b6b578c9ac2, type: 2}
+    source: {fileID: 0}
+  - name: UIClick
+    clip: {fileID: 8300000, guid: e40a7e9413a66034a93e2aa649af6ccf, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: -2940716709565618628, guid: 8013e399b63378343a5a6b6b578c9ac2, type: 2}
+    source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: 4e3781a512874f54f863275de86591a9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: -2940716709565618628, guid: 8013e399b63378343a5a6b6b578c9ac2, type: 2}
+    source: {fileID: 0}
+  - name: Swing
+    clip: {fileID: 8300000, guid: f8787e1e4f1db974b8948d41b5c97d9f, type: 3}
     volume: 1
     pitch: 1
     loop: 0
