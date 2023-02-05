@@ -14952,10 +14952,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
-  moveSpeed: 2.5
+  moveSpeed: 3
   damage: 1
   healthBar: {fileID: 2726302244929795790}
-  moneyOnKill: 10
+  moneyOnKill: 15
   LEGENDARY: 0
   poisonParticles: {fileID: 1486579239}
   slowParticles: {fileID: 53457669}

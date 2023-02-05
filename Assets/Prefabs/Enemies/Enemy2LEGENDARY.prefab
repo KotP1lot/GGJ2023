@@ -5087,7 +5087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 120
   currentHealth: 0
-  moveSpeed: 2.2
+  moveSpeed: 2.3
   damage: 7
   healthBar: {fileID: 3484750640613566692}
   moneyOnKill: 75
