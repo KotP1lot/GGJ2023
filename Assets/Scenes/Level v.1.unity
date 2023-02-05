@@ -12125,6 +12125,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5045164564771978718, guid: 1eb8442965c37774697fbbecbf4c9e06, type: 3}
+      propertyPath: sfx.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a4968914dce88842963af7b2e9dcf9b, type: 3}
+    - target: {fileID: 5045164564771978718, guid: 1eb8442965c37774697fbbecbf4c9e06, type: 3}
       propertyPath: sfx.Array.data[10].clip
       value: 
       objectReference: {fileID: 8300000, guid: ff2420a5f8138a94c83dcdca6ccc63eb, type: 3}
@@ -38377,7 +38381,7 @@ PrefabInstance:
       objectReference: {fileID: 248631205}
     - target: {fileID: 6766847993313601613, guid: 8be60df4ea587634f91bf37b62e1503c, type: 3}
       propertyPath: startingBones
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6766847993313601613, guid: 8be60df4ea587634f91bf37b62e1503c, type: 3}
       propertyPath: treeTransform
