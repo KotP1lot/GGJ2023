@@ -12446,404 +12446,6 @@ MonoBehaviour:
   waves:
   - waveSettings:
     - enemyCount:
-        enemySmall: 0
-        enemyMedium: 1
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1961077598}
-      spawnDelay: 2
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 1
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1332275664}
-      spawnDelay: 4
-  - waveSettings:
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 1
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 129428596}
-      spawnDelay: 2
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 1
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1273004551}
-      spawnDelay: 4
-  - waveSettings:
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 1
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 531917935}
-      spawnDelay: 1
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 3
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1961077598}
-      spawnDelay: 1.5
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 3
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1273004551}
-      spawnDelay: 2
-  - waveSettings:
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 3
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1961077598}
-      spawnDelay: 2
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 4
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 531917935}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 4
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 129428596}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 4
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1273004551}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 4
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1332275664}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 6
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1961077598}
-      spawnDelay: 3.5
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 5
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 129428596}
-      spawnDelay: 2.5
-  - waveSettings:
-    - enemyCount:
-        enemySmall: 3
-        enemyMedium: 3
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1961077598}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 3
-        enemyMedium: 3
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 531917935}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 2
-        enemyMedium: 4
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 129428596}
-      spawnDelay: 2.5
-  - waveSettings:
-    - enemyCount:
-        enemySmall: 3
-        enemyMedium: 5
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1961077598}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 6
-        enemyMedium: 1
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 531917935}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 0
-        enemyLarge: 1
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1273004551}
-      spawnDelay: 2
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 0
-        enemyLarge: 1
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1332275664}
-      spawnDelay: 2
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 0
-        enemyLarge: 1
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1961077598}
-      spawnDelay: 2
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 0
-        enemyLarge: 1
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 531917935}
-      spawnDelay: 2
-  - waveSettings:
-    - enemyCount:
-        enemySmall: 4
-        enemyMedium: 6
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 129428596}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 2
-        enemyMedium: 2
-        enemyLarge: 1
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1273004551}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 0
-        enemyLarge: 2
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1961077598}
-      spawnDelay: 3
-  - waveSettings:
-    - enemyCount:
-        enemySmall: 3
-        enemyMedium: 3
-        enemyLarge: 4
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1961077598}
-      spawnDelay: 3.5
-    - enemyCount:
-        enemySmall: 5
-        enemyMedium: 5
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 531917935}
-      spawnDelay: 2
-    - enemyCount:
-        enemySmall: 6
-        enemyMedium: 4
-        enemyLarge: 1
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 129428596}
-      spawnDelay: 3
-    - enemyCount:
-        enemySmall: 10
-        enemyMedium: 1
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1273004551}
-      spawnDelay: 2.5
-  - waveSettings:
-    - enemyCount:
-        enemySmall: 10
-        enemyMedium: 5
-        enemyLarge: 1
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1332275664}
-      spawnDelay: 1.5
-    - enemyCount:
-        enemySmall: 5
-        enemyMedium: 10
-        enemyLarge: 1
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 129428596}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 15
-        enemyLarge: 1
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1332275664}
-      spawnDelay: 3
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 0
-        enemyLarge: 5
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 129428596}
-      spawnDelay: 5
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 0
-        enemyLarge: 5
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 1
-      spawner: {fileID: 1273004551}
-      spawnDelay: 5
-  - waveSettings:
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 10
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1961077598}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 10
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 531917935}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 10
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 129428596}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 10
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1273004551}
-      spawnDelay: 2
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 0
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 1
-        enemyLargeLeg: 0
-      spawner: {fileID: 1332275664}
-      spawnDelay: 5
-  - waveSettings:
-    - enemyCount:
-        enemySmall: 15
-        enemyMedium: 5
-        enemyLarge: 5
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 1961077598}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 15
-        enemyMedium: 5
-        enemyLarge: 5
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 531917935}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 0
-        enemyLarge: 10
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 129428596}
-      spawnDelay: 3.5
-  - waveSettings:
-    - enemyCount:
         enemySmall: 15
         enemyMedium: 0
         enemyLarge: 0
@@ -13035,7 +12637,7 @@ MonoBehaviour:
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 1961077598}
-      spawnDelay: 2.5
+      spawnDelay: 2
     - enemyCount:
         enemySmall: 5
         enemyMedium: 1
@@ -13044,7 +12646,7 @@ MonoBehaviour:
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 531917935}
-      spawnDelay: 2.5
+      spawnDelay: 1.5
     - enemyCount:
         enemySmall: 2
         enemyMedium: 3
@@ -13053,7 +12655,7 @@ MonoBehaviour:
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 129428596}
-      spawnDelay: 2.5
+      spawnDelay: 2
     - enemyCount:
         enemySmall: 0
         enemyMedium: 0
@@ -13081,7 +12683,7 @@ MonoBehaviour:
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 1961077598}
-      spawnDelay: 2.5
+      spawnDelay: 1.5
     - enemyCount:
         enemySmall: 5
         enemyMedium: 1
@@ -13090,7 +12692,7 @@ MonoBehaviour:
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 531917935}
-      spawnDelay: 2.5
+      spawnDelay: 1.5
     - enemyCount:
         enemySmall: 2
         enemyMedium: 3
@@ -13099,7 +12701,7 @@ MonoBehaviour:
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 129428596}
-      spawnDelay: 2.5
+      spawnDelay: 1.5
     - enemyCount:
         enemySmall: 0
         enemyMedium: 0
@@ -13112,12 +12714,12 @@ MonoBehaviour:
     - enemyCount:
         enemySmall: 0
         enemyMedium: 0
-        enemyLarge: 0
+        enemyLarge: 1
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 1
       spawner: {fileID: 1332275664}
-      spawnDelay: 5
+      spawnDelay: 0
   - waveSettings:
     - enemyCount:
         enemySmall: 3
@@ -13127,7 +12729,7 @@ MonoBehaviour:
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 1961077598}
-      spawnDelay: 2.5
+      spawnDelay: 1
     - enemyCount:
         enemySmall: 5
         enemyMedium: 1
@@ -13136,7 +12738,7 @@ MonoBehaviour:
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 531917935}
-      spawnDelay: 2.5
+      spawnDelay: 1
     - enemyCount:
         enemySmall: 2
         enemyMedium: 3
@@ -13145,11 +12747,11 @@ MonoBehaviour:
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 129428596}
-      spawnDelay: 2.5
+      spawnDelay: 1
     - enemyCount:
         enemySmall: 0
         enemyMedium: 0
-        enemyLarge: 1
+        enemyLarge: 2
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
@@ -13158,141 +12760,457 @@ MonoBehaviour:
     - enemyCount:
         enemySmall: 0
         enemyMedium: 0
-        enemyLarge: 0
+        enemyLarge: 2
         enemySmallLeg: 0
         enemyMediumLeg: 0
-        enemyLargeLeg: 1
+        enemyLargeLeg: 0
       spawner: {fileID: 1332275664}
-      spawnDelay: 5
+      spawnDelay: 2
   - waveSettings:
     - enemyCount:
         enemySmall: 3
-        enemyMedium: 6
-        enemyLarge: 0
+        enemyMedium: 3
+        enemyLarge: 1
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 1961077598}
-      spawnDelay: 2.5
+      spawnDelay: 0.5
     - enemyCount:
-        enemySmall: 5
-        enemyMedium: 1
+        enemySmall: 3
+        enemyMedium: 3
         enemyLarge: 0
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 531917935}
-      spawnDelay: 2.5
+      spawnDelay: 0.5
     - enemyCount:
-        enemySmall: 2
+        enemySmall: 3
         enemyMedium: 3
         enemyLarge: 0
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 129428596}
-      spawnDelay: 2.5
+      spawnDelay: 0.5
     - enemyCount:
-        enemySmall: 0
-        enemyMedium: 0
+        enemySmall: 3
+        enemyMedium: 3
         enemyLarge: 1
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 1273004551}
-      spawnDelay: 2
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 0
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1332275664}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 1
+        enemySmallLeg: 1
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1961077598}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 0
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 531917935}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 0
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 129428596}
+      spawnDelay: 0.5
+  - waveSettings:
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 531917935}
+      spawnDelay: 1
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 3
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 129428596}
+      spawnDelay: 0.5
     - enemyCount:
         enemySmall: 0
         enemyMedium: 0
         enemyLarge: 0
-        enemySmallLeg: 0
+        enemySmallLeg: 1
         enemyMediumLeg: 0
-        enemyLargeLeg: 1
-      spawner: {fileID: 1332275664}
-      spawnDelay: 5
-  - waveSettings:
+        enemyLargeLeg: 0
+      spawner: {fileID: 1273004551}
+      spawnDelay: 1.5
     - enemyCount:
         enemySmall: 3
-        enemyMedium: 6
-        enemyLarge: 0
+        enemyMedium: 3
+        enemyLarge: 3
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 531917935}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 3
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1273004551}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 3
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1332275664}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 3
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 129428596}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 3
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1273004551}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 3
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 1961077598}
-      spawnDelay: 2.5
+      spawnDelay: 0.5
     - enemyCount:
-        enemySmall: 5
-        enemyMedium: 1
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 531917935}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 2
+        enemySmall: 3
         enemyMedium: 3
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 129428596}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 0
-        enemyLarge: 1
+        enemyLarge: 3
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 1273004551}
-      spawnDelay: 2
-    - enemyCount:
-        enemySmall: 0
-        enemyMedium: 0
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 1
-      spawner: {fileID: 1332275664}
-      spawnDelay: 5
-  - waveSettings:
+      spawnDelay: 0.5
     - enemyCount:
         enemySmall: 3
-        enemyMedium: 6
-        enemyLarge: 0
+        enemyMedium: 3
+        enemyLarge: 3
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 129428596}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 3
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1332275664}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 3
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 1961077598}
-      spawnDelay: 2.5
+      spawnDelay: 0.5
     - enemyCount:
-        enemySmall: 5
-        enemyMedium: 1
-        enemyLarge: 0
-        enemySmallLeg: 0
-        enemyMediumLeg: 0
-        enemyLargeLeg: 0
-      spawner: {fileID: 531917935}
-      spawnDelay: 2.5
-    - enemyCount:
-        enemySmall: 2
+        enemySmall: 3
         enemyMedium: 3
-        enemyLarge: 0
+        enemyLarge: 3
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
-      spawner: {fileID: 129428596}
-      spawnDelay: 2.5
+      spawner: {fileID: 1961077598}
+      spawnDelay: 0.5
     - enemyCount:
-        enemySmall: 0
-        enemyMedium: 0
-        enemyLarge: 1
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 3
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 1273004551}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 3
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 531917935}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 3
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1273004551}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 3
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 129428596}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 0
+        enemyMedium: 0
+        enemyLarge: 0
+        enemySmallLeg: 1
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 531917935}
       spawnDelay: 2
+    - enemyCount:
+        enemySmall: 0
+        enemyMedium: 0
+        enemyLarge: 0
+        enemySmallLeg: 1
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1332275664}
+      spawnDelay: 1.5
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 3
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1961077598}
+      spawnDelay: 0.5
+  - waveSettings:
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1332275664}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 531917935}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 129428596}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 129428596}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 531917935}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 531917935}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1273004551}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 531917935}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1332275664}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1961077598}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1961077598}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1273004551}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1961077598}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 531917935}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1961077598}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1332275664}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 129428596}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 1273004551}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 531917935}
+      spawnDelay: 0.2
+    - enemyCount:
+        enemySmall: 5
+        enemyMedium: 5
+        enemyLarge: 5
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 531917935}
+      spawnDelay: 0.2
+  - waveSettings:
     - enemyCount:
         enemySmall: 0
         enemyMedium: 0
@@ -13300,8 +13218,44 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 1
+      spawner: {fileID: 1961077598}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 0
+        enemyMedium: 0
+        enemyLarge: 0
+        enemySmallLeg: 0
+        enemyMediumLeg: 1
+        enemyLargeLeg: 0
+      spawner: {fileID: 531917935}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 0
+        enemyMedium: 0
+        enemyLarge: 0
+        enemySmallLeg: 1
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+      spawner: {fileID: 129428596}
+      spawnDelay: 0.5
+    - enemyCount:
+        enemySmall: 0
+        enemyMedium: 0
+        enemyLarge: 0
+        enemySmallLeg: 1
+        enemyMediumLeg: 0
+        enemyLargeLeg: 5
       spawner: {fileID: 1332275664}
-      spawnDelay: 5
+      spawnDelay: 1
+    - enemyCount:
+        enemySmall: 0
+        enemyMedium: 0
+        enemyLarge: 0
+        enemySmallLeg: 1
+        enemyMediumLeg: 0
+        enemyLargeLeg: 5
+      spawner: {fileID: 1273004551}
+      spawnDelay: 1
   enemies:
   - {fileID: 5121045608615617633, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
   - {fileID: 4509330595844827365, guid: 13870b715d26a854da51815b39e278b6, type: 3}

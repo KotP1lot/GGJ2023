@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour
             enemy.TakeDamage(damage);
             if (whatIsBullet == BulletType.Log) 
             {
-                enemy.StartStun(1f); 
+                enemy.StartStun(0.4f); 
             }
             Destroy(gameObject);
         }
