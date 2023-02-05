@@ -38664,7 +38664,7 @@ PrefabInstance:
       objectReference: {fileID: 248631205}
     - target: {fileID: 6766847993313601613, guid: 8be60df4ea587634f91bf37b62e1503c, type: 3}
       propertyPath: startingBones
-      value: 999
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6766847993313601613, guid: 8be60df4ea587634f91bf37b62e1503c, type: 3}
       propertyPath: treeTransform
