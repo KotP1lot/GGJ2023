@@ -138,7 +138,7 @@ MonoBehaviour:
     Damage: 1.2
     Range: 2.5
   towerName: SHROOM
-  towerDescription: Poisons enemies around it
+  towerDescription: Poisons enemies around it. Poison deals damage over time
   mainCamera: {fileID: 0}
   canvas: {fileID: 5040266348955124404}
   AYEobj: {fileID: 8329859813531045337, guid: 87f32f023ec01e14497eca00addf06f7, type: 3}

@@ -257,7 +257,7 @@ MonoBehaviour:
     Damage: 3.2
     Range: 2.6
   towerName: WHIP
-  towerDescription: Spanks enemies
+  towerDescription: Lashes all enemies in small area
   mainCamera: {fileID: 0}
   canvas: {fileID: 5040266350149076362}
   root: {fileID: 5955699291054583036}

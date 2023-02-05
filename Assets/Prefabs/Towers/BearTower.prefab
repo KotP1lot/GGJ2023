@@ -170,12 +170,13 @@ MonoBehaviour:
     Damage: 7
     Range: 7.5
   towerName: BEAR
-  towerDescription: Gigachad
+  towerDescription: Throws logs at enemies that stun them
   mainCamera: {fileID: 0}
   canvas: {fileID: 5040266348691949997}
   prefabForAttack: {fileID: 4779018594819824861, guid: 86d49877d7c85a042a0f3b2d4d3569c5, type: 3}
   spawnPointForAttack: {fileID: 3150514284430528037}
   pet: {fileID: 2622880388463469576}
+  isSquirrel: 0
 --- !u!95 &-2719608854489264032
 Animator:
   serializedVersion: 4
