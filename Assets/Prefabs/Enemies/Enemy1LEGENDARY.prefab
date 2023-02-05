@@ -14950,9 +14950,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14d24b840e00b844a966a90582132eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 8
   currentHealth: 0
-  moveSpeed: 4
+  moveSpeed: 3.5
   damage: 3
   healthBar: {fileID: 2726302244929795790}
   moneyOnKill: 1

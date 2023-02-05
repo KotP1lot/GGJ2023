@@ -163,12 +163,12 @@ public class Enemy : Unit
         yield return new WaitForSeconds(stunDuration);
 
         stunTimeElapsed += stunDuration;
-        if (stunTimeElapsed == stunDuration)
+        if (stunTimeElapsed >= stunDuration)
         {
             stunParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
 
             Unslow();
-            stunDuration = 0;
+            this.stunDuration = 0;
             isStunned = false;
         }
         else
