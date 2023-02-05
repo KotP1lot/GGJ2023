@@ -133,7 +133,7 @@ public class Enemy : Unit
     {
         if (!isSlowed && moveSpeed > 0)
         {
-            moveSpeed -= startSpeed * slowPercent / 100;
+            moveSpeed = startSpeed - (startSpeed * slowPercent / 100);
             isSlowed = true;
 
             slowParticles.Play();
