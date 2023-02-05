@@ -43,6 +43,15 @@ public class WaveSpawner : MonoBehaviour
                     break;
                 case EnemyType.LARGE:
                     ememyToSpawn = enemies[2];
+                    break; 
+                case EnemyType.SMALL_LEG:
+                    ememyToSpawn = enemies[3];
+                    break; 
+                case EnemyType.MEDIUM_LEG:
+                    ememyToSpawn = enemies[4];
+                    break; 
+                case EnemyType.LARGE_LEG:
+                    ememyToSpawn = enemies[5];
                     break;
                 default:
                     ememyToSpawn = enemies[0];
@@ -122,6 +131,9 @@ public struct EnemyCount
     [SerializeField] private int enemySmall;
     [SerializeField] private int enemyMedium;
     [SerializeField] private int enemyLarge;
+    [SerializeField] private int enemySmallLeg;
+    [SerializeField] private int enemyMediumLeg;
+    [SerializeField] private int enemyLargeLeg;
     
     public int EnemiesQuantity()
     {
@@ -145,11 +157,23 @@ public struct EnemyCount
         {
             enemyTypes.Add(EnemyType.LARGE);
         }
+        for (int i = 0; i < enemySmallLeg; i++)
+        {
+            enemyTypes.Add(EnemyType.SMALL_LEG);
+        }
+        for (int i = 0; i < enemyMediumLeg; i++)
+        {
+            enemyTypes.Add(EnemyType.MEDIUM_LEG);
+        }
+        for (int i = 0; i < enemyLargeLeg; i++)
+        {
+            enemyTypes.Add(EnemyType.LARGE_LEG);
+        }
         return enemyTypes;
     }
 }
 
 public enum EnemyType
 {
-    SMALL , MEDIUM, LARGE
+    SMALL , MEDIUM, LARGE, SMALL_LEG, MEDIUM_LEG, LARGE_LEG,
 }

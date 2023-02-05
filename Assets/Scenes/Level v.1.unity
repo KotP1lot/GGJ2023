@@ -12519,18 +12519,27 @@ MonoBehaviour:
         enemySmall: 0
         enemyMedium: 0
         enemyLarge: 1
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
       spawner: {fileID: 1961077598}
       spawnDelay: 1
     - enemyCount:
         enemySmall: 1
         enemyMedium: 1
         enemyLarge: 0
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
       spawner: {fileID: 129428596}
       spawnDelay: 1
     - enemyCount:
         enemySmall: 1
         enemyMedium: 1
         enemyLarge: 1
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
       spawner: {fileID: 1273004551}
       spawnDelay: 1
   - waveSettings:
@@ -12538,24 +12547,36 @@ MonoBehaviour:
         enemySmall: 1
         enemyMedium: 1
         enemyLarge: 1
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
       spawner: {fileID: 1961077598}
       spawnDelay: 1
     - enemyCount:
         enemySmall: 1
         enemyMedium: 3
         enemyLarge: 2
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
       spawner: {fileID: 129428596}
       spawnDelay: 1
     - enemyCount:
         enemySmall: 1
         enemyMedium: 3
         enemyLarge: 3
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
       spawner: {fileID: 1273004551}
       spawnDelay: 1
   enemies:
   - {fileID: 5121045608615617633, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
   - {fileID: 4509330595844827365, guid: 13870b715d26a854da51815b39e278b6, type: 3}
   - {fileID: 4509330595844827365, guid: 0e2d341f9ed83f24fa7b0b78064a93f0, type: 3}
+  - {fileID: 5121045608615617633, guid: 83af56629cf9c584f8d703e1e40c0163, type: 3}
+  - {fileID: 4509330595844827365, guid: 20081e4a98082314eaf8d0e10514742e, type: 3}
+  - {fileID: 4509330595844827365, guid: 5128f7cb830c3c44e97004dd3a62e5aa, type: 3}
   _onWin:
     m_PersistentCalls:
       m_Calls:
