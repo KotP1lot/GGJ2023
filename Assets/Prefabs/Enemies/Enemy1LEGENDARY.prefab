@@ -14875,7 +14875,7 @@ Transform:
   m_GameObject: {fileID: 5121045608615617633}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1.69, y: 1.69, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7067866523448825366}
@@ -14950,12 +14950,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14d24b840e00b844a966a90582132eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   currentHealth: 0
-  moveSpeed: 3.3
+  moveSpeed: 4
   damage: 3
   healthBar: {fileID: 2726302244929795790}
-  moneyOnKill: 85
+  moneyOnKill: 1
   LEGENDARY: 1
   poisonParticles: {fileID: 1486579239}
   slowParticles: {fileID: 53457669}
