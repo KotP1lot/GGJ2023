@@ -5238,12 +5238,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14d24b840e00b844a966a90582132eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 200
   currentHealth: 0
-  moveSpeed: 1
-  damage: 10
+  moveSpeed: 1.4
+  damage: 15
   healthBar: {fileID: 4725519762855297076}
-  moneyOnKill: 20
+  moneyOnKill: 180
   LEGENDARY: 1
   poisonParticles: {fileID: 3877347801522031543}
   slowParticles: {fileID: 1695127064422189467}
