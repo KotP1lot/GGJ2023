@@ -159,6 +159,7 @@ public class Enemy : Unit
         isStunned = true;
         moveSpeed = 0;
         anim.SetBool("IsStunned", true);
+        FindObjectOfType<AudioManager>().Play("Stun");
         yield return new WaitForSeconds(1);
 
         stunTimeElapsed++;

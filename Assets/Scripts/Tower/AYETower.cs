@@ -27,6 +27,7 @@ public class AYETower : Tower
 
     public void Fart()
     {
+        AudioManager.instance.Play("Mushroom");
         GameObject newAYEArea = Instantiate(AYEobj, transform.position, Quaternion.identity);
         newAYEArea.transform.localScale = new Vector2(lvlList[currentLvL].Range * 2, lvlList[currentLvL].Range * 2);
         newAYEArea.GetComponent<Spores>().range = lvlList[currentLvL].Range;

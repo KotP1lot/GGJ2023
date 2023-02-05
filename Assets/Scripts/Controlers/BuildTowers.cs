@@ -55,6 +55,7 @@ public class BuildTowers : MonoBehaviour
             towerNew.GetComponent<Tower>().onDestroyTower += InstantiateRoot;
             towers.Add(towerNew);
             HideRoot(tilePos);
+            AudioManager.instance.Play("UIClick");
             return true;
 
             

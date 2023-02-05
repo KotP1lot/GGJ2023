@@ -8,6 +8,7 @@ public class PauseController : MonoBehaviour
 {
     [SerializeField] private UnityEvent _onPauseOpen;
     [SerializeField] private UnityEvent _onPauseClose;
+    public static Action pauseChanger;
 
     private bool _isActive = false;
 
@@ -28,12 +29,17 @@ public class PauseController : MonoBehaviour
 
             Time.timeScale = Convert.ToInt32(!_isActive);
         }
+        get
+        {
+            return _isActive;
+        }
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            pauseChanger?.Invoke();
             IsActive = !_isActive;
         }
     }

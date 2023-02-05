@@ -41,6 +41,7 @@ public class MeleeTower : Tower
         Physics2D.OverlapBoxAll(centerPoint, new Vector2(lvlList[currentLvL].Range / 3f, lvlList[currentLvL].Range), _angle);
     private void DoDamage() 
     {
+        AudioManager.instance.Play("BigRoot");
         Collider2D[] colliders = GetHitColliders();
         Debug.Log("HIT");
         foreach (Collider2D collider in colliders)

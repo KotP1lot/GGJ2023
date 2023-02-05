@@ -5,6 +5,7 @@ public class RangeTower : Tower
     [SerializeField] protected GameObject prefabForAttack;
     [SerializeField] protected Transform spawnPointForAttack;
     [SerializeField] protected Pet pet;
+    [SerializeField] protected bool isSquirrel;
 
     public override void BeforeDestroy()
     {
@@ -17,8 +18,18 @@ public class RangeTower : Tower
         base.OnAnimationTrigger();
         pet.ChangeToIDLEState();
         pet.GetComponent<Animator>().speed = 1;
+       
         if (enemylist.Count > 0)
         {
+            if(isSquirrel)
+            {
+                AudioManager.instance.Play("Squirrel");
+            }
+            else
+            {
+                AudioManager.instance.Play("Swing");
+            }
+            
             lastAttackTime = Time.time;
             var bullet = Instantiate(prefabForAttack, spawnPointForAttack.position, Quaternion.identity);
             bullet.GetComponent<Bullet>().target = enemylist[0];
