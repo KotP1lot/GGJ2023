@@ -152,7 +152,7 @@ public class Enemy : Unit
         }
 
     }
-    public IEnumerator Stun()
+    public IEnumerator Stun(float stunDuration)
     {
         stunParticles.Play();
 
@@ -160,9 +160,9 @@ public class Enemy : Unit
         moveSpeed = 0;
         anim.SetBool("IsStunned", true);
         FindObjectOfType<AudioManager>().Play("Stun");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(stunDuration);
 
-        stunTimeElapsed++;
+        stunTimeElapsed += stunDuration;
         if (stunTimeElapsed == stunDuration)
         {
             stunParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
@@ -173,7 +173,7 @@ public class Enemy : Unit
         }
         else
         {
-            StartCoroutine(Stun());
+            StartCoroutine(Stun(stunDuration));
         }
     }
     public void StartStun(float stunDuration)
@@ -182,7 +182,7 @@ public class Enemy : Unit
         {
             this.stunDuration += stunDuration;
             stunTimeElapsed = 0;
-            StartCoroutine(Stun());
+            StartCoroutine(Stun(stunDuration));
         }
         else
         {
