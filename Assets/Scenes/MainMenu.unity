@@ -1693,7 +1693,7 @@ MonoBehaviour:
   _rightButton: {fileID: 21854971}
 --- !u!95 &364324630
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1710,7 +1710,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &364324631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3645,7 +3645,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &779466296
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3662,7 +3662,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &779466297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4203,7 +4203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -6839,7 +6839,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &1408383976
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6856,7 +6856,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1408383977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14648,6 +14648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixerMusic: {fileID: 7755511580704273270, guid: 8013e399b63378343a5a6b6b578c9ac2, type: 2}
   mixerSound: {fileID: -2940716709565618628, guid: 8013e399b63378343a5a6b6b578c9ac2, type: 2}
+  pause: {fileID: 0}
 --- !u!1 &1998817576
 GameObject:
   m_ObjectHideFlags: 0
@@ -14866,7 +14867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
