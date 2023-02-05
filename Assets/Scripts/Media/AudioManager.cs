@@ -11,6 +11,8 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
     public AudioMixer mixer;
 
+    public bool muted = false;
+
     void Awake()
     {
         if (instance == null)
@@ -50,13 +52,16 @@ public class AudioManager : MonoBehaviour
     }
     public void Play(string name)
     {
-        Sound s = Array.Find(sfx, sound => sound.name == name);
-        if (s == null)
+        if(!muted || name == "UIHover" || name == "UIClick")
         {
-            Debug.Log("Sound" + name + "not found");
-            return;
+            Sound s = Array.Find(sfx, sound => sound.name == name);
+            if (s == null)
+            {
+                Debug.Log("Sound" + name + "not found");
+                return;
+            }
+            s.source.Play();
         }
-        s.source.Play();
     }
 
     public void Step()

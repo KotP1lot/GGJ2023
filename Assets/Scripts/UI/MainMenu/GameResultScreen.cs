@@ -27,5 +27,7 @@ public class GameResultScreen : MonoBehaviour
         }
 
         _animator.SetTrigger("Unhide");
+
+        AudioManager.instance.muted = true;
     }
 }
