@@ -237,25 +237,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvlList:
   - LvLCost: 30
-    AttackSpeed: 0.7
+    AttackSpeed: 0.5
     Damage: 2.2
     Range: 2
   - LvLCost: 20
-    AttackSpeed: 0.8
-    Damage: 2.5
+    AttackSpeed: 0.6
+    Damage: 2.4
     Range: 2
   - LvLCost: 30
-    AttackSpeed: 1
-    Damage: 2.7
+    AttackSpeed: 0.7
+    Damage: 2.6
     Range: 2.2
   - LvLCost: 40
-    AttackSpeed: 1
-    Damage: 3
+    AttackSpeed: 0.8
+    Damage: 2.8
     Range: 2.4
   - LvLCost: 50
-    AttackSpeed: 1
-    Damage: 3.2
-    Range: 2.6
+    AttackSpeed: 0.9
+    Damage: 3
+    Range: 2.4
   towerName: WHIP
   towerDescription: Lashes all enemies in small area
   mainCamera: {fileID: 0}

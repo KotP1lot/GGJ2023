@@ -89,7 +89,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &5138687971861134638
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -106,7 +106,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1147482116825171092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,20 +242,20 @@ MonoBehaviour:
     Damage: 2
     Range: 3.5
   - LvLCost: 10
-    AttackSpeed: 1.5
-    Damage: 2.2
+    AttackSpeed: 1.4
+    Damage: 2
     Range: 3.5
-  - LvLCost: 20
+  - LvLCost: 25
+    AttackSpeed: 1.6
+    Damage: 2
+    Range: 4
+  - LvLCost: 35
     AttackSpeed: 1.8
-    Damage: 2.4
+    Damage: 2
     Range: 4
-  - LvLCost: 30
+  - LvLCost: 45
     AttackSpeed: 2
-    Damage: 2.5
-    Range: 4
-  - LvLCost: 40
-    AttackSpeed: 2.5
-    Damage: 2.5
+    Damage: 2
     Range: 4.5
   towerName: SQUIRREL
   towerDescription: Throws acorns at enemies
@@ -267,7 +267,7 @@ MonoBehaviour:
   isSquirrel: 1
 --- !u!95 &1244655113922315562
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -284,7 +284,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4501296353538446374
 GameObject:
   m_ObjectHideFlags: 0
