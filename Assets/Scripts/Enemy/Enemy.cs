@@ -142,7 +142,7 @@ public class Enemy : Unit
     }
     public void Unslow()
     {
-        if (isSlowed || isStunned)
+        if ((isSlowed || isStunned) && anim != null)
         {
             anim.SetBool("IsStunned", false);
             moveSpeed = startSpeed;

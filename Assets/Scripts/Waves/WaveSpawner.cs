@@ -75,7 +75,7 @@ public class WaveSpawner : MonoBehaviour
     public void StartNewWave()
     {
         currentWave++;
-        GlobalData.instance.NextWave();
+        GlobalData.instance.NextWave(currentWave);
 
         if (currentWave >= waves.Length)
         {

@@ -31545,7 +31545,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixerMusic: {fileID: 7755511580704273270, guid: 8013e399b63378343a5a6b6b578c9ac2, type: 2}
   mixerSound: {fileID: -2940716709565618628, guid: 8013e399b63378343a5a6b6b578c9ac2, type: 2}
-  pause: {fileID: 1510279082}
 --- !u!1001 &1513962275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38511,6 +38510,10 @@ PrefabInstance:
     - target: {fileID: 6766847993590211210, guid: 8be60df4ea587634f91bf37b62e1503c, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766847994124760281, guid: 8be60df4ea587634f91bf37b62e1503c, type: 3}
+      propertyPath: m_text
+      value: WAVE 1
       objectReference: {fileID: 0}
     - target: {fileID: 6766847994183249459, guid: 8be60df4ea587634f91bf37b62e1503c, type: 3}
       propertyPath: m_AnchorMax.y

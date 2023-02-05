@@ -51,14 +51,13 @@ public class GlobalData : MonoBehaviour
     {
         bones = 0;
         skulls = 0;
-        currentWave = 0;
+        currentWave = 1;
 
         treeHP.maxValue = treeMaxHP;
         treeHP.value = treeMaxHP;
 
         GetBones(startingBones);
         GetSkulls(startingSkulls);
-        NextWave();
     }
 
     public void GetBones(int amount)
@@ -109,11 +108,10 @@ public class GlobalData : MonoBehaviour
         treeHP.value += amount;
     }
 
-    public void NextWave()
+    public void NextWave(int wave)
     {
-        currentWave++;
-
-        waveText.text = $"WAVE {currentWave}";
+        currentWave = wave + 1; 
+        waveText.text = $"WAVE {wave + 1}";
     }
 
     public float Distance(Vector2 v1, Vector2 v2)
