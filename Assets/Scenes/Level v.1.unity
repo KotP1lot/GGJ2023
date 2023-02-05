@@ -12893,7 +12893,7 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 1
-      spawner: {fileID: 1273004551}
+      spawner: {fileID: 129428596}
       spawnDelay: 0.5
   enemies:
   - {fileID: 5121045608615617633, guid: e456aaf917868164d8bb0fd42e9dfd91, type: 3}
