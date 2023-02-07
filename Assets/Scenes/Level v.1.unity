@@ -12539,8 +12539,8 @@ MonoBehaviour:
       spawner: {fileID: 129428596}
       spawnDelay: 2
     - enemyCount:
-        enemySmall: 0
-        enemyMedium: 4
+        enemySmall: 1
+        enemyMedium: 3
         enemyLarge: 0
         enemySmallLeg: 0
         enemyMediumLeg: 0
@@ -12548,8 +12548,8 @@ MonoBehaviour:
       spawner: {fileID: 1273004551}
       spawnDelay: 2
     - enemyCount:
-        enemySmall: 0
-        enemyMedium: 4
+        enemySmall: 2
+        enemyMedium: 3
         enemyLarge: 0
         enemySmallLeg: 0
         enemyMediumLeg: 0
@@ -12566,8 +12566,8 @@ MonoBehaviour:
       spawner: {fileID: 1961077598}
       spawnDelay: 3.5
     - enemyCount:
-        enemySmall: 0
-        enemyMedium: 5
+        enemySmall: 3
+        enemyMedium: 4
         enemyLarge: 0
         enemySmallLeg: 0
         enemyMediumLeg: 0
@@ -12689,44 +12689,53 @@ MonoBehaviour:
         enemyMedium: 5
         enemyLarge: 3
         enemySmallLeg: 0
-        enemyMediumLeg: 1
+        enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 1332275664}
       spawnDelay: 1.5
-  - waveSettings:
     - enemyCount:
-        enemySmall: 0
+        enemySmall: 1
         enemyMedium: 0
         enemyLarge: 0
         enemySmallLeg: 0
         enemyMediumLeg: 1
+        enemyLargeLeg: 0
+      spawner: {fileID: 1332275664}
+      spawnDelay: 5
+  - waveSettings:
+    - enemyCount:
+        enemySmall: 3
+        enemyMedium: 4
+        enemyLarge: 3
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 1961077598}
       spawnDelay: 2
     - enemyCount:
-        enemySmall: 0
-        enemyMedium: 0
-        enemyLarge: 0
+        enemySmall: 4
+        enemyMedium: 3
+        enemyLarge: 3
         enemySmallLeg: 0
-        enemyMediumLeg: 1
+        enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 531917935}
       spawnDelay: 2
     - enemyCount:
-        enemySmall: 0
-        enemyMedium: 0
-        enemyLarge: 0
+        enemySmall: 3
+        enemyMedium: 3
+        enemyLarge: 4
         enemySmallLeg: 0
-        enemyMediumLeg: 1
+        enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 129428596}
       spawnDelay: 2
     - enemyCount:
-        enemySmall: 0
-        enemyMedium: 0
-        enemyLarge: 0
+        enemySmall: 4
+        enemyMedium: 4
+        enemyLarge: 4
         enemySmallLeg: 0
-        enemyMediumLeg: 1
+        enemyMediumLeg: 0
         enemyLargeLeg: 0
       spawner: {fileID: 1273004551}
       spawnDelay: 2
@@ -12737,16 +12746,7 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 1
         enemyLargeLeg: 0
-      spawner: {fileID: 1332275664}
-      spawnDelay: 2
-    - enemyCount:
-        enemySmall: 5
-        enemyMedium: 5
-        enemyLarge: 3
-        enemySmallLeg: 0
-        enemyMediumLeg: 1
-        enemyLargeLeg: 0
-      spawner: {fileID: 1961077598}
+      spawner: {fileID: 129428596}
       spawnDelay: 0.5
   - waveSettings:
     - enemyCount:
