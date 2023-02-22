@@ -23,13 +23,13 @@ public class GameResultScreen : MonoBehaviour
         {
             GlobalData info = GlobalData.instance;
             _description.text =
-                $"But you killed {info.skulls} enemies in {info.currentWave} waves. Good job!";
+                $"But you defeated {info.skulls} enemies in {info.currentWave} waves. Good job!";
         }
         else
         {
             GlobalData info = GlobalData.instance;
             _description.text =
-                $"You killed all {info.skulls} enemies and saved The Big Tree! The forest is proud of you.";
+                $"You defeated all {info.skulls} enemies and saved The Big Tree! The forest is proud of you.";
         }
 
         _animator.SetTrigger("Unhide");
