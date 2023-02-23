@@ -29,7 +29,12 @@ public class LoadSceneManager : MonoBehaviour
         }
     }
 
-    public async void LoadScene(string sceneName)
+    public void LoadScene(string sceneName)
+    {
+        StartCoroutine(SceneChanger(sceneName));
+    }
+
+    private IEnumerator SceneChanger(string sceneName)
     {
         Time.timeScale = 1;
         _onLoadingStart?.Invoke();
@@ -42,27 +47,17 @@ public class LoadSceneManager : MonoBehaviour
 
         loadAnimator.SetTrigger("Unhide");
 
-        await Task.Delay(500);
+        yield return new WaitForSeconds(0.5f);
 
         while (loadAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
         {
-            await Task.Delay(100);
+            yield return new WaitForSeconds(0.1f);
         }
 
         while (scene.progress < 0.9f)
         {
-            await Task.Delay(100);
+            yield return new WaitForSeconds(0.1f);
         }
-
-        //loadAnimator.SetTrigger("Finish");
-
-        //await Task.Delay(500);
-
-        //while (loadAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
-        //{
-        //    Debug.Log("Aga 3");
-        //    await Task.Delay(100);
-        //}
 
         scene.allowSceneActivation = true;
     }

@@ -85,7 +85,7 @@ public class GlobalData : MonoBehaviour
 
     public void DamageTree(float amount)
     {
-        //treeHP.value -= amount;
+        treeHP.value -= amount;
         AudioManager.instance.Play("Hit");
         if(treeHP.value == 0 && virCam.Follow != treeTransform)
         {
