@@ -12472,6 +12472,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1961077598}
       spawnDelay: 2
     - enemyCount:
@@ -12481,6 +12485,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1332275664}
       spawnDelay: 4
   - waveSettings:
@@ -12491,6 +12499,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 129428596}
       spawnDelay: 2
     - enemyCount:
@@ -12500,6 +12512,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1273004551}
       spawnDelay: 4
   - waveSettings:
@@ -12510,24 +12526,36 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 531917935}
       spawnDelay: 1
     - enemyCount:
         enemySmall: 0
-        enemyMedium: 3
+        enemyMedium: 2
         enemyLarge: 0
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 1
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1961077598}
       spawnDelay: 1.5
     - enemyCount:
         enemySmall: 0
-        enemyMedium: 3
+        enemyMedium: 1
         enemyLarge: 0
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 2
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1273004551}
       spawnDelay: 2
   - waveSettings:
@@ -12538,24 +12566,36 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1961077598}
       spawnDelay: 2
     - enemyCount:
         enemySmall: 0
-        enemyMedium: 4
+        enemyMedium: 2
         enemyLarge: 0
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 2
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 531917935}
       spawnDelay: 2
     - enemyCount:
         enemySmall: 0
-        enemyMedium: 4
+        enemyMedium: 1
         enemyLarge: 0
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 3
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 129428596}
       spawnDelay: 2
     - enemyCount:
@@ -12565,61 +12605,89 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1273004551}
       spawnDelay: 2
     - enemyCount:
         enemySmall: 2
-        enemyMedium: 3
+        enemyMedium: 1
         enemyLarge: 0
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 2
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1332275664}
       spawnDelay: 2.5
     - enemyCount:
         enemySmall: 0
-        enemyMedium: 6
+        enemyMedium: 3
         enemyLarge: 0
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 3
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1961077598}
       spawnDelay: 3.5
     - enemyCount:
         enemySmall: 3
-        enemyMedium: 4
+        enemyMedium: 3
         enemyLarge: 0
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 1
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1273004551}
       spawnDelay: 3.5
   - waveSettings:
     - enemyCount:
-        enemySmall: 3
-        enemyMedium: 3
+        enemySmall: 2
+        enemyMedium: 2
         enemyLarge: 1
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 1
+        HogRider: 1
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1961077598}
       spawnDelay: 1.5
     - enemyCount:
-        enemySmall: 3
-        enemyMedium: 3
+        enemySmall: 1
+        enemyMedium: 0
         enemyLarge: 1
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 3
+        HogRider: 2
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 531917935}
       spawnDelay: 1.5
     - enemyCount:
-        enemySmall: 3
-        enemyMedium: 3
+        enemySmall: 0
+        enemyMedium: 1
         enemyLarge: 1
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 2
+        HogRider: 3
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 129428596}
       spawnDelay: 1.5
     - enemyCount:
@@ -12629,6 +12697,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1273004551}
       spawnDelay: 1.5
     - enemyCount:
@@ -12638,15 +12710,23 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1332275664}
       spawnDelay: 1.5
     - enemyCount:
         enemySmall: 1
         enemyMedium: 1
-        enemyLarge: 5
+        enemyLarge: 3
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 1
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 531917935}
       spawnDelay: 1.5
     - enemyCount:
@@ -12656,6 +12736,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 1
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1332275664}
       spawnDelay: 1.5
   - waveSettings:
@@ -12666,6 +12750,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1961077598}
       spawnDelay: 0.5
     - enemyCount:
@@ -12675,6 +12763,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 531917935}
       spawnDelay: 0.5
     - enemyCount:
@@ -12684,6 +12776,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 129428596}
       spawnDelay: 0.5
     - enemyCount:
@@ -12693,6 +12789,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1273004551}
       spawnDelay: 0.5
     - enemyCount:
@@ -12702,6 +12802,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1332275664}
       spawnDelay: 1
     - enemyCount:
@@ -12711,6 +12815,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1332275664}
       spawnDelay: 1.5
     - enemyCount:
@@ -12720,25 +12828,37 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 1
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1332275664}
       spawnDelay: 5
   - waveSettings:
     - enemyCount:
-        enemySmall: 3
-        enemyMedium: 4
-        enemyLarge: 3
+        enemySmall: 1
+        enemyMedium: 2
+        enemyLarge: 2
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 2
+        HogRider: 2
+        Golem: 1
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1961077598}
       spawnDelay: 2
     - enemyCount:
-        enemySmall: 4
-        enemyMedium: 3
-        enemyLarge: 3
+        enemySmall: 0
+        enemyMedium: 2
+        enemyLarge: 2
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 1
+        HogRider: 4
+        Golem: 1
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 531917935}
       spawnDelay: 2
     - enemyCount:
@@ -12748,15 +12868,23 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 129428596}
       spawnDelay: 2
     - enemyCount:
         enemySmall: 4
-        enemyMedium: 4
-        enemyLarge: 4
+        enemyMedium: 0
+        enemyLarge: 0
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 4
+        HogRider: 0
+        Golem: 4
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1273004551}
       spawnDelay: 2
     - enemyCount:
@@ -12766,6 +12894,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 1
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 129428596}
       spawnDelay: 0.5
   - waveSettings:
@@ -12776,15 +12908,23 @@ MonoBehaviour:
         enemySmallLeg: 20
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1961077598}
       spawnDelay: 0.3
     - enemyCount:
         enemySmall: 0
         enemyMedium: 0
         enemyLarge: 0
-        enemySmallLeg: 20
+        enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 20
       spawner: {fileID: 531917935}
       spawnDelay: 0.3
     - enemyCount:
@@ -12794,15 +12934,23 @@ MonoBehaviour:
         enemySmallLeg: 20
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 129428596}
       spawnDelay: 0.3
     - enemyCount:
         enemySmall: 0
         enemyMedium: 0
         enemyLarge: 0
-        enemySmallLeg: 20
+        enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 20
       spawner: {fileID: 1273004551}
       spawnDelay: 0.3
     - enemyCount:
@@ -12812,24 +12960,36 @@ MonoBehaviour:
         enemySmallLeg: 20
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1332275664}
       spawnDelay: 0.3
     - enemyCount:
         enemySmall: 0
         enemyMedium: 0
         enemyLarge: 0
-        enemySmallLeg: 20
+        enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 20
       spawner: {fileID: 1961077598}
       spawnDelay: 0.3
     - enemyCount:
         enemySmall: 0
         enemyMedium: 0
         enemyLarge: 0
-        enemySmallLeg: 20
+        enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 20
       spawner: {fileID: 531917935}
       spawnDelay: 0.3
     - enemyCount:
@@ -12839,15 +12999,23 @@ MonoBehaviour:
         enemySmallLeg: 20
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 129428596}
       spawnDelay: 0.3
     - enemyCount:
         enemySmall: 0
         enemyMedium: 0
         enemyLarge: 0
-        enemySmallLeg: 20
+        enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 20
       spawner: {fileID: 1273004551}
       spawnDelay: 0.3
     - enemyCount:
@@ -12857,6 +13025,10 @@ MonoBehaviour:
         enemySmallLeg: 20
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1332275664}
       spawnDelay: 0.3
   - waveSettings:
@@ -12867,6 +13039,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 1
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1961077598}
       spawnDelay: 0.5
     - enemyCount:
@@ -12876,6 +13052,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 531917935}
       spawnDelay: 0.5
     - enemyCount:
@@ -12885,6 +13065,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 129428596}
       spawnDelay: 0.3
     - enemyCount:
@@ -12894,6 +13078,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1273004551}
       spawnDelay: 0.3
     - enemyCount:
@@ -12903,6 +13091,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 1332275664}
       spawnDelay: 0.5
   - waveSettings:
@@ -12913,6 +13105,10 @@ MonoBehaviour:
         enemySmallLeg: 0
         enemyMediumLeg: 0
         enemyLargeLeg: 1
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 129428596}
       spawnDelay: 0.5
   enemies:
@@ -12922,6 +13118,10 @@ MonoBehaviour:
   - {fileID: 5121045608615617633, guid: 83af56629cf9c584f8d703e1e40c0163, type: 3}
   - {fileID: 4509330595844827365, guid: 20081e4a98082314eaf8d0e10514742e, type: 3}
   - {fileID: 4509330595844827365, guid: 5128f7cb830c3c44e97004dd3a62e5aa, type: 3}
+  - {fileID: 4509330595844827365, guid: 4f7d3be9100842242acb341d91c83d43, type: 3}
+  - {fileID: 5121045608615617633, guid: 85a9dbf3017e5f84fb3db61a1c792622, type: 3}
+  - {fileID: 4509330595844827365, guid: 072c0ecb29bceb34797e2bd89f45e41e, type: 3}
+  - {fileID: 5121045608615617633, guid: a4e557ef692536f4cb11276394e58159, type: 3}
   _onWin:
     m_PersistentCalls:
       m_Calls:

@@ -52,6 +52,18 @@ public class WaveSpawner : MonoBehaviour
                     break; 
                 case EnemyType.LARGE_LEG:
                     ememyToSpawn = enemies[5];
+                    break;  
+                case EnemyType.WIZARD:
+                    ememyToSpawn = enemies[6];
+                    break; 
+                case EnemyType.HOG_RIDER:
+                    ememyToSpawn = enemies[7];
+                    break; 
+                case EnemyType.GOLEM:
+                    ememyToSpawn = enemies[8];
+                    break;
+                case EnemyType.HOGRIDERLEGENDARY:
+                    ememyToSpawn = enemies[9];
                     break;
                 default:
                     ememyToSpawn = enemies[0];
@@ -133,7 +145,11 @@ public struct EnemyCount
     [SerializeField] private int enemyLarge;
     [SerializeField] private int enemySmallLeg;
     [SerializeField] private int enemyMediumLeg;
-    [SerializeField] private int enemyLargeLeg;
+    [SerializeField] private int enemyLargeLeg;    
+    [SerializeField] private int Wizard;
+    [SerializeField] private int HogRider;
+    [SerializeField] private int Golem;
+    [SerializeField] private int HOGRIDERLEGENDARY;
     
     public int EnemiesQuantity()
     {
@@ -168,6 +184,22 @@ public struct EnemyCount
         for (int i = 0; i < enemyLargeLeg; i++)
         {
             enemyTypes.Add(EnemyType.LARGE_LEG);
+        }   
+        for (int i = 0; i < Wizard; i++)
+        {
+            enemyTypes.Add(EnemyType.WIZARD);
+        }
+        for (int i = 0; i < HogRider; i++)
+        {
+            enemyTypes.Add(EnemyType.HOG_RIDER);
+        }
+        for (int i = 0; i < Golem; i++)
+        {
+            enemyTypes.Add(EnemyType.GOLEM);
+        }
+        for (int i = 0; i < HOGRIDERLEGENDARY; i++)
+        {
+            enemyTypes.Add(EnemyType.HOGRIDERLEGENDARY);
         }
         return enemyTypes;
     }
@@ -175,5 +207,5 @@ public struct EnemyCount
 
 public enum EnemyType
 {
-    SMALL , MEDIUM, LARGE, SMALL_LEG, MEDIUM_LEG, LARGE_LEG,
+    SMALL , MEDIUM, LARGE, SMALL_LEG, MEDIUM_LEG, LARGE_LEG, WIZARD, HOG_RIDER, GOLEM, HOGRIDERLEGENDARY
 }
