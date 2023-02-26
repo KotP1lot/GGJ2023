@@ -1474,7 +1474,7 @@ MonoBehaviour:
   _rightButton: {fileID: 21854971}
 --- !u!95 &364324630
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1491,7 +1491,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &364324631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3437,7 +3437,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &779466296
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3454,7 +3454,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &779466297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6186,7 +6186,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &1408383976
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6203,7 +6203,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &1408383977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13145,7 +13145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f1b771d96d0bb984593eebca3ab912c3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d6597dfec54f53e4880fba18e15e8680, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14640,6 +14640,18 @@ PrefabInstance:
     - target: {fileID: 6071390813659695847, guid: 0fa29b7c9a9e99a43aad1f996c3a1557, type: 3}
       propertyPath: m_Name
       value: LoadSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6071390814334239371, guid: 0fa29b7c9a9e99a43aad1f996c3a1557, type: 3}
+      propertyPath: m_Color.b
+      value: 0.043137256
+      objectReference: {fileID: 0}
+    - target: {fileID: 6071390814334239371, guid: 0fa29b7c9a9e99a43aad1f996c3a1557, type: 3}
+      propertyPath: m_Color.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 6071390814334239371, guid: 0fa29b7c9a9e99a43aad1f996c3a1557, type: 3}
+      propertyPath: m_Color.r
+      value: 0.07450981
       objectReference: {fileID: 0}
     - target: {fileID: 6071390814334239372, guid: 0fa29b7c9a9e99a43aad1f996c3a1557, type: 3}
       propertyPath: m_SizeDelta.y
