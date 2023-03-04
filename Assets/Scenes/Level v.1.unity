@@ -39280,7 +39280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6851821307058350853, guid: 8be60df4ea587634f91bf37b62e1503c, type: 3}
       propertyPath: m_RaycastTarget
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7717579820310580309, guid: 8be60df4ea587634f91bf37b62e1503c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -39611,8 +39611,7 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -248
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 51719696150641583, guid: 8be60df4ea587634f91bf37b62e1503c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8be60df4ea587634f91bf37b62e1503c, type: 3}
 --- !u!114 &7717579821213331151 stripped
 MonoBehaviour:
