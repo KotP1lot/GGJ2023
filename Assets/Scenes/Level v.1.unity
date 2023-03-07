@@ -12596,6 +12596,72 @@ MonoBehaviour:
         HogRider: 0
         Golem: 0
         HOGRIDERLEGENDARY: 0
+      spawner: {fileID: 1332275664}
+      spawnDelay: 2
+    - enemyCount:
+        enemySmall: 0
+        enemyMedium: 0
+        enemyLarge: 0
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+        Wizard: 3
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
+      spawner: {fileID: 129428596}
+      spawnDelay: 2
+    - enemyCount:
+        enemySmall: 1
+        enemyMedium: 0
+        enemyLarge: 0
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+        Wizard: 2
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
+      spawner: {fileID: 1273004551}
+      spawnDelay: 2
+  - waveSettings:
+    - enemyCount:
+        enemySmall: 0
+        enemyMedium: 3
+        enemyLarge: 0
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+        Wizard: 0
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
+      spawner: {fileID: 1961077598}
+      spawnDelay: 2
+    - enemyCount:
+        enemySmall: 0
+        enemyMedium: 2
+        enemyLarge: 0
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+        Wizard: 1
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
+      spawner: {fileID: 531917935}
+      spawnDelay: 2
+    - enemyCount:
+        enemySmall: 0
+        enemyMedium: 1
+        enemyLarge: 0
+        enemySmallLeg: 0
+        enemyMediumLeg: 0
+        enemyLargeLeg: 0
+        Wizard: 2
+        HogRider: 0
+        Golem: 0
+        HOGRIDERLEGENDARY: 0
       spawner: {fileID: 129428596}
       spawnDelay: 2
     - enemyCount:
@@ -38136,7 +38202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4748962244614912017, guid: 517386df5a016204093051b2ff8639ba, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 517386df5a016204093051b2ff8639ba, type: 3}

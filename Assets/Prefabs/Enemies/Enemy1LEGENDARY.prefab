@@ -9752,7 +9752,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113403265}
   m_LocalRotation: {x: 0.60069925, y: 0, z: 0, w: 0.79947513}
-  m_LocalPosition: {x: 0.727, y: 0.776, z: -1.11}
+  m_LocalPosition: {x: 0.472, y: 0.776, z: -1.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14960,7 +14960,7 @@ MonoBehaviour:
   poisonParticles: {fileID: 1486579239}
   slowParticles: {fileID: 53457669}
   stunParticles: {fileID: 2113403268}
-  stunFlipPointX: -0.671
+  stunFlipPointX: -0.415
   isPoisoned: 0
   mainTree: {fileID: 0}
 --- !u!95 &2455592300198231747
