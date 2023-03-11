@@ -43,16 +43,21 @@ public class TowerSelector : MonoBehaviour
 
         if (GlobalData.instance.bones < cost) cursorChanger.ChangeTo = GlobalData.CursorType.Cross;
         else cursorChanger.ChangeTo = GlobalData.CursorType.Hand;
-        //isHighlighted = animator.GetBool("Highlighted");//animator.GetCurrentAnimatorClipInfo(0)[0].clip.name.StartsWith("Highlighted");
 
-        if(animator.GetBool("Highlighted"))
+        if(cursorChanger.isHovered)
         {
             isHighlighted = true;
+            animator.SetBool("highlighted", true);
         }
-        else if(!animator.GetCurrentAnimatorClipInfo(0)[0].clip.name.StartsWith("Highlighted") && !animator.IsInTransition(0))
+        else if(!cursorChanger.isHovered && !animator.IsInTransition(0))
         {
             isHighlighted =false;
-            
+            animator.SetBool("highlighted", false);
+        }
+
+        if(animator.GetBool("pressed") && (Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(0)))
+        {
+            animator.SetBool("pressed", false);
         }
     }
 
@@ -62,6 +67,34 @@ public class TowerSelector : MonoBehaviour
         {
             selected.SelectTower(type,RNG);
             button.Select();
+            animator.SetBool("pressed",true);
         }
     }
+
+    //void Update()
+    //{
+    //    animator.SetBool("canBuy", GlobalData.instance.bones >= cost);
+
+    //    if (GlobalData.instance.bones < cost) cursorChanger.ChangeTo = GlobalData.CursorType.Cross;
+    //    else cursorChanger.ChangeTo = GlobalData.CursorType.Hand;
+
+    //    if (animator.GetBool("Highlighted"))
+    //    {
+    //        isHighlighted = true;
+    //    }
+    //    else if (!animator.GetCurrentAnimatorClipInfo(0)[0].clip.name.StartsWith("Highlighted") && !animator.IsInTransition(0))
+    //    {
+    //        isHighlighted = false;
+
+    //    }
+    //}
+
+    //public void Select()
+    //{
+    //    if (GlobalData.instance.bones >= cost)
+    //    {
+    //        selected.SelectTower(type, RNG);
+    //        button.Select();
+    //    }
+    //}
 }
